@@ -1,3 +1,5 @@
+//CS50 - MY SOLUTION
+
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>

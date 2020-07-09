@@ -1,3 +1,5 @@
+//CS50 - MY SOLUTION
+
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>

@@ -1,3 +1,6 @@
+//FROM YOU DON'T KNOW JAVASCRIPT BOOK
+//MODIFYED BY ME
+
 const will = 250
 const phone = 200
 const acce = 15

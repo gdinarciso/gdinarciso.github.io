@@ -16,25 +16,6 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
 }
 
-.container {
-  display: flex;
-  flex-wrap: nowrap;
-  margin-top: 107px;
-}
-
-.container > div {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  margin: 1px;
-  padding: 10px;
-  width: 25%;
-}
-
-.container > div ul {
-  margin: 0;
-  padding: 10px 0 0 18px;
-}
-
 #overlay {
   position: fixed;
   display: none;
@@ -104,8 +85,6 @@ h1, h2, h3, h4, h5, p {
   text-decoration: none;
 }
 
-/* Notice that I set the same value of line-height and font-size to prevent
-the header to increase when the font gets bigger */
 .header a.logo {
   font-size: 35px;
   font-weight: bold;
@@ -140,8 +119,9 @@ the header to increase when the font gets bigger */
   display: inline-block;
   width: 30px;
   height: 17px;
-  left: 26px;
+  right: 15px;
   top: 5px;
+  caption-side: left;
 }
 
 /* Hide default HTML checkbox */
@@ -199,12 +179,31 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.content {
-  height: 4000px;
-  background: linear-gradient(45deg, #c2d1f0 50%, #1fc8db 10%, #2cb5e8 10%);
-  margin-top: 107px;
-  padding: 30px 15px 15px 30px;
+.container {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  padding-bottom: 20px;
+}
+
+.container > div {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 20px 15px 0 15px;
+  padding: 10px;
   width: 100%;
+}
+
+.container > div ul, ol {
+  margin: 0 0 10px 0;
+  padding: 10px 0 0 23px;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
 }
 
 .parallax {
@@ -213,7 +212,6 @@ input:checked + .slider:before {
   background-image: url("img_parallax.jpg");
 
   /* Full height */
-
 
   /* Create the parallax scrolling effect */
   background: linear-gradient(0deg , #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
@@ -286,18 +284,32 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  margin-top: 107px;
+  margin-top: 100px;
+}
+
+.container-contact p {
+  padding: 10px 10px 10px 0;
 }
 
 /* Media Queries ---------------------------------------------*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   .header a {
     float: none;
     display: block;
   }
   .header-nav {
     float: none;
+  }
+
+  .container, .container-contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 245px;
+  }
+
+  .header-nav i {
+    display: none;
   }
 }
 
