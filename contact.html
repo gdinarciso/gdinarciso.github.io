@@ -14,13 +14,15 @@
 </head>
 <body>
 
+  <div include-html="header.html"></div>
+
   <div>
     <p><a href="#" class="fa fa-google"></a></p>
     <p><a href="#" class="fa fa-linkedin"></a></p>
     <p>You can easily find on</p>
   </div>
 
-  <div class="container">
+  <div class="container-contact">
     <form action="action_page.php">
 
       <label for="fname">Given Name</label>
@@ -229,6 +231,9 @@
         <option value="Zambia">
         <option value="Zimbabwe">
       </datalist>
+
+      <labe for="email">e-mail</labe>
+      <input type="email" id="email" name="email" placeholder="e-mail">
 
       <label for="subject">Subject</label>
       <textarea id="subject" name="subject" placeholder="Always happy to hear from you" style="height:200px"></textarea>

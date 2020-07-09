@@ -11,28 +11,9 @@ body, html {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, p {
+p, h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
-}
-
-.container {
-  display: flex;
-  flex-wrap: nowrap;
-  margin-top: 107px;
-}
-
-.container > div {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  margin: 1px;
-  padding: 10px;
-  width: 25%;
-}
-
-.container > div ul {
-  margin: 0;
-  padding: 10px 0 0 18px;
 }
 
 #overlay {
@@ -49,34 +30,14 @@ h1, h2, h3, h4, h5, p {
   cursor: pointer
 }
 
-#text {
+#text{
   position: absolute;
-  text-align: center;
   top: 50%;
   left: 50%;
+  font-size: 30px;
   color: white;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
-}
-
-#text p {
-  margin-top: 20px;
-}
-
-#text h1, #text h2 {
-  font-family: 'Aguafina Script';font-size: 44px;
-  padding: 0;
-}
-
-#text a {
-  color: white;
-  text-decoration: none;
-}
-
-#text a:hover {
-  text-decoration: underline;
-  text-decoration-color: lightblue;
-  text-decoration-style: dashed;
 }
 
 .header {
@@ -87,18 +48,20 @@ h1, h2, h3, h4, h5, p {
   overflow: hidden;
   padding: 26px 13px;
   position: fixed;
+  text-align: center;
   top: 0;
   width: 100%;
+
 }
 
 .header a {
-  text-align: center;
   border-radius: 4px;
   color: #000000;
   display: block;
-  font-size: 17px;
+  font-size: 18px;
   float: left;
-  line-height: 20px;
+  line-height: 25px;
+  text-align: center;
   padding: 13px;
   margin: 2px;
   text-decoration: none;
@@ -107,12 +70,9 @@ h1, h2, h3, h4, h5, p {
 /* Notice that I set the same value of line-height and font-size to prevent
 the header to increase when the font gets bigger */
 .header a.logo {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   cursor: crosshair;
-  background: -webkit-linear-gradient(#000066, #3366cc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .header a.logo:hover {
@@ -132,6 +92,14 @@ the header to increase when the font gets bigger */
 
 .header-nav {
   float: right;
+}
+
+.header p {
+  font-size: 13px;
+  left: 5px;
+  margin: 0;
+  top: 2px;
+  position: absolute;
 }
 
 /* The switch - the box around the slider */
@@ -201,7 +169,7 @@ input:checked + .slider:before {
 
 .content {
   height: 4000px;
-  background: linear-gradient(45deg, #c2d1f0 50%, #1fc8db 10%, #2cb5e8 10%);
+  background: linear-gradient(45deg, #c2d1f0 10%, #1fc8db 10%, #2cb5e8 10%);
   margin-top: 107px;
   padding: 30px 15px 15px 30px;
   width: 100%;
@@ -209,14 +177,15 @@ input:checked + .slider:before {
 
 .parallax {
   padding: 30px 15px 15px 30px;
+  margin-top: 107px;
   /* The image used */
   background-image: url("img_parallax.jpg");
 
   /* Full height */
-
+  height: 100%;
 
   /* Create the parallax scrolling effect */
-  background: linear-gradient(0deg , #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(45deg, #c2d1f0 10%, #1fc8db 10%, #2cb5e8 10%);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -282,7 +251,7 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container-contact {
+.container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -295,8 +264,9 @@ input[type=submit]:hover {
   .header a {
     float: none;
     display: block;
+    text-align: left;
   }
-  .header-nav {
+  .header-right {
     float: none;
   }
 }
