@@ -9,8 +9,7 @@ body {
 }
 
 .logo {
-    align: center;
-    padding: 118px 0 19px 0;
+    padding: 160px 0 19px 0;
 }
 
 .logo-ad {
@@ -22,11 +21,11 @@ body {
 
 .menu {
     padding-top: 10px;
-    font-size: 16px;
     text-align: left;
 }
 
 .menu a {
+    font-size: 12px;
     text-decoration: none;
     padding: 0 0 0 13px;
     cursor: pointer;
@@ -38,13 +37,13 @@ body {
 
 .grid-con {
     display: grid;
-    grid-template-columns: 190px auto;
+    grid-template-columns: 210px auto;
     margin: 30px 0 0 30px;
     padding: 0;
 }
 
 .grid-it {
-    padding: 10px 0;
+    padding: 10px;
     text-align: left;
 }
 
@@ -58,8 +57,8 @@ body {
     border-color: lightgray;
     border-width: 1px;
     width: 580px;
-    height: 40px;
-    font-size: 16px;
+    height: 45px;
+    font-size: 12px;
     padding: 0 20px;
 }
 
@@ -108,4 +107,5 @@ input:focus {
     margin-top: 0;
     padding-top: 0;
     color: #4285F4;
+    font-size: 15px;
 }
