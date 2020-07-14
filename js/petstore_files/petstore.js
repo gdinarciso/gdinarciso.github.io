@@ -7,11 +7,18 @@
  * @return the total amount of pet food that should be ordered for the upcoming
  * 				 week, or -1 if the numAnimals or avgFood are less than 0 or non-numeric
  */
-function calculateFoodOrder(numAnimals, avgFood) {
+
+ function calculateFoodOrder(numAnimals, avgFood) {
     // IMPLEMENT THIS FUNCTION!
-    if (numAnimals + avgFood < 0) {
-        return -1;
-    } else {return numAnimals * avgFood;}
+    let numAnimalsN = Number(numAnimals);
+    let avgFoodN = Number(avgFood);
+    if (isNaN(avgFoodN) === false && isNaN(numAnimalsN) === false) {
+        if (numAnimalsN + avgFoodN < 0) {
+            return -1;
+        } else {
+            return (numAnimalsN * avgFoodN).toFixed(3);
+        }
+    }
 }
 
 /**
@@ -23,15 +30,36 @@ function calculateFoodOrder(numAnimals, avgFood) {
  * @param week an array of Weekday objects
  * @return a string containing the name of the most popular day of the week if there is only one most popular day, and an array of the strings containing the names of the most popular days if there are more than one that are most popular
  */
-function mostPopularDays(week) {
+
+ function mostPopularDays(week) {
     // IMPLEMENT THIS FUNCTION!
-    ler week = {}
-    for (let i = 0; i < 7; i++) {
-        let week = new Weekday('Monday')
-        if (week[i].traffic > week[i+1].traffic) {
-            let popular = week[i].traffic;
-        }
+    const DayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Firday', 'Saturday', 'Sunday'];
+    var week = [];
+    const Days = prompt("How many week's days?:");
+    for (let i = 0; i < Days; i++) {
+        let DayName = prompt("Week day's name:", DayNames[i]);
+        let DayTraffic = prompt (`How many people on ${DayName}?:`);
+        let NewWeekday = new Weekday(DayName, DayTraffic);
+        week.push(NewWeekday.name, NewWeekday.traffic);
     }
+    
+    let PopularDay = week[1];
+    let PopularDays = [week[1]];
+    for (let i = 1; i < Days; i++) {
+        if (PopularDay < week[i+2]) {
+            PopularDay = week[i+2];
+        } else if (week[i+2] === PopularDay) {
+            PopularDays.push(week[i+2]);
+        }
+        if (PopularDays.length > 1) {
+            return PopularDays;
+        } else {
+            return PopularDay;
+        }
+    } 
+
+    if (!populars === '') {alert(populars);}
+    else {alert(PopularDay)}
 }
 
 
