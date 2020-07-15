@@ -8,7 +8,7 @@
  * 				 week, or -1 if the numAnimals or avgFood are less than 0 or non-numeric
  */
 
- function calculateFoodOrder(numAnimals, avgFood) {
+function calculateFoodOrder(numAnimals, avgFood) {
     // IMPLEMENT THIS FUNCTION!
     let numAnimalsN = Number(numAnimals);
     let avgFoodN = Number(avgFood);
@@ -31,35 +31,67 @@
  * @return a string containing the name of the most popular day of the week if there is only one most popular day, and an array of the strings containing the names of the most popular days if there are more than one that are most popular
  */
 
- function mostPopularDays(week) {
-    // IMPLEMENT THIS FUNCTION!
+function week () {
     const DayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Firday', 'Saturday', 'Sunday'];
     var week = [];
     const Days = prompt("How many week's days?:");
     for (let i = 0; i < Days; i++) {
         let DayName = prompt("Week day's name:", DayNames[i]);
-        let DayTraffic = prompt (`How many people on ${DayName}?:`);
-        let NewWeekday = new Weekday(DayName, DayTraffic);
-        week.push(NewWeekday.name, NewWeekday.traffic);
+        let DayTraffic = prompt(`How many people on ${DayName}?:`);
+        DayName = new Weekday(DayName, Number(DayTraffic));
+        week.push(DayName);
     }
+    return week;
+}
+
+function mostPopularDays(week) {
+    // IMPLEMENT THIS FUNCTION!
+    var week = [];
+    var PopularDays = [];
+    var PopularDay = '';
+    const DayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Firday', 'Saturday', 'Sunday'];
+    const Days = prompt("How many week's days?:");
     
-    let PopularDay = week[1];
-    let PopularDays = [week[1]];
-    for (let i = 1; i < Days; i++) {
-        if (PopularDay < week[i+2]) {
-            PopularDay = week[i+2];
-        } else if (week[i+2] === PopularDay) {
-            PopularDays.push(week[i+2]);
+    //Populating the week array
+    for (let i = 0; i < Days; i++) {
+        let DayName = prompt("Week day's name:", DayNames[i]);
+        let DayTraffic = prompt(`How many people on ${DayName}?:`);
+        DayName = new Weekday(DayName, Number(DayTraffic));
+        week.push(DayName);
+    }
+    //Finding the most crowdy day
+    for (let i = 0; i < Days; i++) {
+        for (let j = 1; j < i; j++) {
+            if (week[i].traffic > week[j].traffic) {
+                PopularDay = week[i];
+                PopularDays = [week[i].name];
+            } else {
+                PopularDay = week[j];
+                PopularDays = [week[j].name];
+            }
         }
+    }
+    /*
+    if (PopularDay === '') {
+        return null
+    } else {
+        */
+        //Finding if there is another day with the same traffic
+        for (let i = 0; i < Days; i++) {
+            if (PopularDay.name != week[i].name) {
+                if (PopularDay.traffic === week[i].traffic) {
+                    PopularDays.push(week[i].name);
+                }
+            }
+            
+        }
+        //Print out if there is more than one winner
         if (PopularDays.length > 1) {
             return PopularDays;
         } else {
-            return PopularDay;
+            return PopularDay.name;
         }
-    } 
-
-    if (!populars === '') {alert(populars);}
-    else {alert(PopularDay)}
+    //}
 }
 
 
@@ -88,7 +120,7 @@ function createAnimalObjects(names, types, breeds) {
 /**
  * A prototype to create Weekday objects
  */
-function Weekday (name, traffic) {
+function Weekday(name, traffic) {
     this.name = name;
     this.traffic = traffic;
 }
@@ -96,19 +128,19 @@ function Weekday (name, traffic) {
 /**
  * A prototype to create Item objects
  */
-function Item (name, barcode, sellingPrice, buyingPrice) {
-     this.name = name;
-     this.barcode = barcode;
-     this.sellingPrice = sellingPrice;
-     this.buyingPrice = buyingPrice;
-}
- /**
-  * A prototype to create Animal objects
-  */
-function Animal (name, type, breed) {
+function Item(name, barcode, sellingPrice, buyingPrice) {
     this.name = name;
-     this.type = type;
-     this.breed = breed;
+    this.barcode = barcode;
+    this.sellingPrice = sellingPrice;
+    this.buyingPrice = buyingPrice;
+}
+/**
+ * A prototype to create Animal objects
+ */
+function Animal(name, type, breed) {
+    this.name = name;
+    this.type = type;
+    this.breed = breed;
 }
 
 
@@ -118,5 +150,4 @@ function Animal (name, type, breed) {
  */
 function helloworld() {
     return 'hello world!';
-}
-
+}     
