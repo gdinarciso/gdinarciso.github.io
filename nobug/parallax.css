@@ -1,13 +1,14 @@
 body, html {
   height: 100%;
   margin: 0;
+  padding: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
 }
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
-  opacity: 0.65;
+  /* opacity: 0.65; */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,12 +16,13 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("firstbug.jpg");
+  background-image: url("backgroud.png");
+  background-color: black;
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("img_parallax2.jpg");
+  background-image: url("background.png");
   min-height: 400px;
 }
 
@@ -29,10 +31,40 @@ body, html {
   min-height: 400px;
 }
 
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.logo img {
+  padding-bottom: 40px;
+}
+
+.logo p {
+  padding: 0;
+  margin: 0;
+  color: #b4b4b4;
+  font-family: Coustard;
+}
+
+.logo span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+
 .caption {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 45%;
   width: 100%;
   text-align: center;
   color: #000;
@@ -45,6 +77,7 @@ body, html {
   font-size: 25px;
   letter-spacing: 10px;
 }
+
 
 h3 {
   letter-spacing: 5px;
