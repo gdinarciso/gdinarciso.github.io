@@ -1,3 +1,7 @@
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -17,7 +21,6 @@ h3 {
 
 .home, .hardware, .software, .network {
   position: relative;
-  /* opacity: 0.65; */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,6 +34,7 @@ h3 {
   background-image: url("backgroud.jpg");
 }
 
+/*
 .hardware {
   background-image: url("hardware.jpg");
 }
@@ -42,19 +46,19 @@ h3 {
 .network {
   background-image: url("");
 }
+*/
 
 .description {
   text-align: center;
-  padding: 10% 0;
+  padding: 5%;
   background-color: #000;
   color: white;
-  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .logo-div {
   position: absolute;
   left: 0;
-  top: 30%;
+  top: 20%;
   width: 100%;
   text-align: center;
   color: #000;
@@ -66,7 +70,6 @@ h3 {
   padding-bottom: 8px;
   margin: 0;
   color: rgba(255, 255, 180, 1);
-  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .logo-div h1 {
@@ -76,23 +79,56 @@ h3 {
   font-size: 60px;
 }
 
-#logo {
-  padding-bottom: 50px;
-}
-
-.caption1, .caption2 {
+.caption, .caption2 {
   position: absolute;
   left: 0;
   height: 100%;
   width: 100%;
 }
 
-.caption1 {
-  background-image: radial-gradient(black, rgba(0,0,0,0.65), rgba(0,0,0,0.3));
+.caption {
+  background-image: radial-gradient(black, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
 }
 
-.caption2 {
-  background-color: rgba(0,0,0,0.88);
+.tablink {
+  background-color: rgba(0,0,0,1);
+  color: rgba(255,255,255,1);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 25px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  border-bottom-style: outset;
+  border-bottom-color: white;
+  border-bottom-width: 2px;
+}
+
+#Hardware, #Software, #Network {
+  height: 100%;
+}
+
+#Hardware {background-image: url("hardware.jpg"); }
+#Software {background-image: url("software.jpg");}
+#Network {background-image: url("software.jpg");}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontentback {
+  color: white;
+  display: none;
+}
+
+.tabcontentcaption {
+  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0.7));
+  height: 100%;
+}
+
+.tabcontent {
+  padding: 70px 40px;
 }
 
 .grid-container {
@@ -116,35 +152,6 @@ h3 {
   background-color: rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.5);
 }
-
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Home {background-color: red;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}
 
 /*
 #overlay {
@@ -172,32 +179,17 @@ h3 {
 }
 */
 
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
 @media only screen and (max-device-width: 1024px) {
   /* Turn off parallax scrolling for tablets and phones
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
   */
   
-  #logo {
-    width: 80%;
-  }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-  #logo {
-    width: 70%;
-  }
-  
   .logo-div {
     top: 15%;
   }
@@ -218,27 +210,22 @@ h3 {
   }
 }
 
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
 
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-  
 }

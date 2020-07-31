@@ -1,14 +1,3 @@
-<!--
-Software Installation
-    Operational Systems
-    Servers
-    Application
-Hardware
-    Configuration
-Network
-    wired installation
-    wireless installation
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +17,7 @@ Network
     <div id="overlay"></div>
 
     <div class="home">
-        <div class="caption1">
+        <div class="caption">
             <div class="logo-div">
                 <img id="logo" src="logo.png" alt="Personal Solution">
                 <h1>personal solution</h1>
@@ -40,67 +29,48 @@ Network
 
     <div class="description">
         <h1>Our business focus in 3 main services</h1>
+        <h4>tettetetetete</h4>
     </div>
 
-    <button class="tablink" autofocus onclick="openPage('Home', this, 'red')">Home</button>
-    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+    <button class="tablink" onclick="openPage('Hardware', this, 'rgb(0,150,255)')" id="Open">Hardware</button>
+    <button class="tablink" onclick="openPage('Software', this, 'rgb(0,150,255)')">Software</button>
+    <button class="tablink" onclick="openPage('Network', this, 'rgb(0,150,255)')">Network</button>
 
-    <div id="Home" class="tabcontent">
-    <h3>Home</h3>
-    <p>Home is where the heart is..</p>
-    </div>
-
-    <div id="News" class="tabcontent">
-    <h3>News</h3>
-    <p>Some news this fine day!</p> 
-    </div>
-
-    <div id="Contact" class="tabcontent">
-    <h3>Contact</h3>
-    <p>Get in touch, or swing by for a cup of coffee.</p>
-    </div>
-
-    <div id="About" class="tabcontent">
-    <h3>About</h3>
-    <p>Who we are and what we do.</p>
-    </div>
-        
-    <!--
-    <div class="hardware">
-        <div class="caption2">
-            <h2>Hardware</h2>
-            <div class="grid-container">
-                <a href="pc.html"><h3>PC set up</h3></a>
-                <a href="testing.html"><h3>Testing</h3></a>
-                <a href=""><h3>Fix</h3></a>
-            </div>
-        </div>
-    </div>
-      
-    <div class="software">
-        <div class="caption2">
-            <h2>Software Installation</h2>
-            <div class="grid-container">
-                <a href=""><h3>Operational System</h3></a>
-                <a href=""><h3>Servers</h3></a>
-                <a href=""><h3>Application</h3></a>
+    <div id="Hardware" class="tabcontentback">
+        <div class="tabcontentcaption">
+            <div class="tabcontent">
+                <div class="grid-container">
+                    <a href="pc.html"><h3>PC set up</h3></a>
+                    <a href="testing.html"><h3>Testing</h3></a>
+                    <a href=""><h3>Fix</h3></a>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="network">
-        <div class="caption2">
-            <h2>Network</h2>
-            <div class="grid-container">
-                <a href=""><h3>Wired</h3></a>
-                <a href=""><h3>Wireless</h3></a>
-                <a href=""><h3>Home</h3></a>
+    <div id="Software" class="tabcontentback">
+        <div class="tabcontentcaption">
+            <div class="tabcontent">
+                <div class="grid-container">
+                    <a href=""><h3>Operational System</h3></a>
+                    <a href=""><h3>Servers</h3></a>
+                    <a href=""><h3>Application</h3></a>
+                </div>
             </div>
         </div>
     </div>
-    -->
+
+    <div id="Network" class="tabcontentback">
+        <div class="tabcontentcaption">
+            <div class="tabcontent">
+                <div class="grid-container">
+                    <a href=""><h3>Wired</h3></a>
+                    <a href=""><h3>Wireless</h3></a>
+                    <a href=""><h3>Home</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
       
 </body>
 </html>
