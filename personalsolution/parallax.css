@@ -8,51 +8,92 @@ body, html {
   padding: 0;
 }
 
-h2 {
-  padding-top: 50px;
-  text-transform: uppercase;
-  font-size: 35px;
-}
-
-h3 {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.home, .hardware, .software, .network {
+.home {
   position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100%;
+  min-height: 70%;
   color: #fff;
   text-align: center;
-}
-
-.home {
   background-image: url("backgroud.jpg");
 }
 
-/*
-.hardware {
-  background-image: url("hardware.jpg");
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
 }
 
-.software {
-  background-image: url("software.jpg");
+#section05 a span {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
 }
 
-.network {
-  background-image: url("");
+.demo a {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: opacity .3s;
 }
-*/
+.demo a:hover {
+  opacity: .5;
+}
 
 .description {
   text-align: center;
   padding: 5%;
   background-color: #000;
   color: white;
+}
+
+@keyframes desh2 {
+  0%   {color: rgb(0,0,0);}
+  100% {color: rgb(150, 150, 150);}
+}
+
+.description h2 {
+  animation-name: desh2;
+  animation-duration: 4s;
+  color: rgb(150, 150, 150);
+  letter-spacing: 2.2px;
 }
 
 .logo-div {
@@ -114,7 +155,7 @@ h3 {
 
 #Hardware {background-image: url("hardware.jpg"); }
 #Software {background-image: url("software.jpg");}
-#Network {background-image: url("software.jpg");}
+#Network {background-image: url("network.jpg");}
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontentback {
@@ -123,7 +164,7 @@ h3 {
 }
 
 .tabcontentcaption {
-  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0.7));
+  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9), rgba(0,0,0,0.7));
   height: 100%;
 }
 
@@ -137,7 +178,6 @@ h3 {
 }
 
 .grid-container a {
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 20px;
   margin: 4px;
@@ -149,8 +189,8 @@ h3 {
 }
 
 .grid-container a:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(250, 100, 200);
 }
 
 /*
@@ -189,24 +229,20 @@ h3 {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .home {
+    min-height: 100%;
+  }
 
+  #logo {
+    width: 16%;
+  }
+  
   .logo-div {
-    top: 15%;
+    top: 10%;
   }
 
   .logo-div h1 {
     font-size: 45px;
-  }
-
-  h2 {
-    padding-top: 30px;
-    text-transform: uppercase;
-    font-size: 25px;
-  }
-
-  h3 {
-    font-size: 15px;
-    text-transform: uppercase;
   }
 }
 

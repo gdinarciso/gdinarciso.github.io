@@ -6,14 +6,14 @@ function openPage(pageName,elmnt,color) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.color = "rgb(50,50,50)";
+    tablinks[i].style.color = "rgb(70,70,70)";
   }
   document.getElementById(pageName).style.display = "block";
   elmnt.style.color = color;
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("Open").click();
+document.getElementById("section06").click();
 
 //____________________________________________________________
 
