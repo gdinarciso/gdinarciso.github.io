@@ -143,36 +143,44 @@ body, html {
 
 .gridHardware, .gridNetwork {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  grid-gap: 20px;
+
 }
 .gridSoftware {
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  grid-gap: 20px;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-  max-width: 300px;
+  max-width: 200px;
   text-align: center;
   background-color: #333;
   color: #bbb;
-  border: rgb(0, 0, 0) solid 5px;
-  margin: auto;
 }
 
 .card img {
   width: 100%;
   height: auto;
+  min-width: 161px;
+}
+
+.card h2 {
+  padding: 5px;
 }
 
 .price {
   color: rgb(0,150,255);
-  font-size: 26px;
-  padding: 20px 0;
+  font-size: 150%;
+  padding: 10px;
 }
 
 .details {
-  padding-bottom: 10px;
+  padding: 10px;
   font-size: 18px;
 }
 
