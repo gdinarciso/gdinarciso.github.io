@@ -4,7 +4,7 @@ function openPage(pageName,elmnt,color) {
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tabLink");
+  tablinks = document.getElementsByClassName("tabButton");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.color = "rgb(70,70,70)";
   }
@@ -13,7 +13,7 @@ function openPage(pageName,elmnt,color) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("open").click();
+document.getElementById("#").click();
 
 //____________________________________________________________
 

@@ -7,6 +7,7 @@
 }
 
 body, html {
+  text-align: center;
   height: 100%;
 }
 
@@ -18,7 +19,6 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 70%;
-  text-align: center;
   background-image: url("backgroud.jpg");
 }
 
@@ -34,7 +34,6 @@ body, html {
   left: 0;
   top: 0;
   width: 100%;
-  text-align: center;
 }
 
 #logo {
@@ -43,7 +42,6 @@ body, html {
 
 .logoDiv h1 {
   font-family: 'El Messiri', sans-serif;
-  
   text-transform: capitalize;
   font-size: 60px;
   padding: 0 0 10px 0;
@@ -71,50 +69,39 @@ body, html {
   animation: arrowAni 2.5s infinite;
 }
 
-.description {
-  border-top: 2px solid rgb(15, 15, 15);
-  border-right: none;
-  border-left: none;
-  border-bottom: none;
+.question {
+  border-top: 5px solid rgb(20,20,20);
   text-align: center;
   color: #fff;
-  padding: 65px 0;
+  padding: 70px 0;
   background-color: #000;
 }
 
-.description h2 {
-  color: rgb(150, 150, 150);
-  letter-spacing: 2.2px;
+.tabButtonGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  background-color: #000;
 }
 
-.description a {
-  text-decoration: none;
-}
-
-.description a:hover {
-  text-decoration: underline;
-}
-
-.tabLink {
-  font-family: 'Play', sans-serif;
+.tabButton {
+  font-family: 'Julius Sans One', sans-serif;
   background-color: rgba(0,0,0,1);
   color: #fff;
   float: left;
   border: none;
+  border-bottom: rgba(250,100,200,0) 2px solid;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 20px;
-  width: 33.33%;
 }
 
-.tabLink:hover {
-  border-bottom-style: outset;
-  border-bottom-color: rgb(250, 100, 200);
-  border-bottom-width: 2px;
+.tabButton:hover {
+  border-bottom: rgb(250,100,200) 2px solid;
 }
 
-#Hardware, #Software, #Network {
+#Hardware, #Software, #Network, #a1 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,9 +109,27 @@ body, html {
   height: 100%;
 }
 
-#Hardware {background-image: url("hardware.jpg"); }
+.email {
+  text-decoration: none;
+}
+
+.email p {
+  color: #bbb;
+  background:#102;
+  margin-top: 100px;
+  padding: 20px 0;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.email p:hover {
+  color: rgb(250,100,200);
+}
+
+#Hardware {background-image: url("hardware.jpg");}
 #Software {background-image: url("software.jpg");}
-#Network {background-image: url("network.jpg");}
+#Network  {background-image: url("network.jpg");}
+
 
 /* Style the tab content (and add height:100% for full page content) */
 .tab {
@@ -135,10 +140,7 @@ body, html {
 .tabCaption {
   background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9), rgba(0,0,0,0.7));
   height: 100%;
-}
-
-.tabContent {
-  padding: 70px 40px;
+  padding: 30px 0;
 }
 
 .gridHardware, .gridNetwork {
@@ -158,50 +160,36 @@ body, html {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
   max-width: 200px;
-  text-align: center;
+  min-width: 161px;
   background-color: #333;
   color: #bbb;
+  animation-name: desh1;
+  animation-duration: 1.5s;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  min-width: 161px;
 }
 
 .card h2 {
-  padding: 5px;
-}
-
-.price {
-  color: rgb(0,150,255);
-  font-size: 150%;
-  padding: 10px;
+  padding: 30px 0;
 }
 
 .details {
-  padding: 10px;
-  font-size: 18px;
-}
-
-.details:hover {
-  color: rgb(250, 100, 200);
-  cursor: pointer;
-}
-
-.card button {
   border: none;
   outline: 0;
   padding: 12px;
   color: white;
   background-color: #111;
-  text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.card button:hover {
+.details:hover {
   color: rgb(250, 100, 200);
 }
 
@@ -214,22 +202,28 @@ body, html {
   left: 0;
   background-color: #111;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 50px;
   transition: 0.5s;
-  text-align: center;
+}
+
+.sideText {
+  letter-spacing: 1px;
+  background-image: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0,0,0,1));
+  color: #fff;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.sideText h1 {
+  padding-bottom: 30px;
+}
+
+.sideText h3 {
+  text-align: justify;
 }
 
 .side img { /* responsive image */
   width: 100%;
   height: auto;
-}
-
-.side h1 {
-  padding: 15px 0;
-}
-
-.side h4 {
-  padding: 5px;
 }
 
 .side a {
@@ -261,6 +255,16 @@ body, html {
 @-webkit-keyframes desh2 {
   0%   {color: rgb(0,0,0);}
   100% {color: rgb(255, 255, 180);}
+}
+
+@keyframes desh1 {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+@-webkit-keyframes desh1 {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
 }
 
 @-webkit-keyframes arrowAni {
@@ -302,17 +306,23 @@ body, html {
 @media screen and (max-height: 450px) {
   
   .side {padding-top: 15px;}
-  .side a {font-size: 18px;}
+  
 }
 
 @media only screen and (max-width: 600px) {
 
   #logo {width: 16%;}
   .logoDiv h1 {font-size: 50px;}
+  .sideText {
+    padding: 20px 60px;
+    margin-left: 0;
+    border-left: 0;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+
 
 }
 
