@@ -18,130 +18,46 @@
                 <img id="logoAround" src="logoaround.png">
             </div>
             <h1>AimTracer</h1>
-            <p>computer solution</p>
+            <p>computer solutions</p>
             <a id="arrow" onclick="scrowDown()"><span></span></a>
         </div>
     </div>
-    
-    <h1 class="question">find a solution down bellow</h1>
-    
-    
-    <div class="tabButtonGrid" id="tabs">
-        <button class="tabButton" onclick="openPage('Hardware', this, 'rgb(0,150,255)')" id="#">Hardware</button>
-        <button class="tabButton" onclick="openPage('Software', this, 'rgb(0,150,255)')">Software</button>
-        <button class="tabButton" onclick="openPage('Network', this, 'rgb(0,150,255)')">Network</button>
-    </div>
-    
-    <div id="Hardware" class="tab">
-        <div class="tabCaption">
-            <div class="gridHardware">
-                
-                <div class="card">
-                    <img src="cardPcbuild.jpg">
-                    <h2>PC Build</h2>
-                    <p class="details" onclick="a1()">details</p>
-                </div>
-                <div id="a1" class="side">
-                    <a href="javascript:void(0)" class="closebtn" onclick="c1()">&times;</a>
-                    <div class="sideText">
-                        <div include="a1.html"></div>
-                    </div>
-                </div>
-                <!------------------------------------------------------------------------------->
-                <div class="card">
-                    <img src="cardTroubleshooting.jpg">
-                    <h2>Troubleshooting</h2>
-                    <!--<p class="details" onclick="a2()">details</p>-->
-                    <p>Finding to solve the problem</p>
-                </div>
-                <div id="a2" class="side">
-                    <a href="javascript:void(0)" class="closebtn" onclick="c2()">&times;</a>
-                    <div class="sideText">
-                        <div include="a2.html"></div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <div include="email.html"></div>
+
+    <div class="tabButton">
+        <button class="button" onclick="openHardware()">Hardware</button>
+        <button class="button" onclick="openSoftware()">Software</button>
+        <button class="button" onclick="openNetwork()">Network</button>
     </div>
 
-    <div id="Software" class="tab">
-        <div class="tabCaption">
-            <div class="gridSoftware">
-
-                <div class="card">
-                    <img src="cardSoftware.jpg">
-                    <h2>Operational System</h2>
-                    <p class="details" onclick="a3()">details</p>
-                </div>
-                <div id="a3" class="side">
-                    <a href="javascript:void(0)" class="closebtn" onclick="c3()">&times;</a>
-                    <div class="sideText">
-                        <div include="a3.html"></div>
-                    </div>
-                </div>
-                <!------------------------------------------------------------------------------->
-                <div class="card">
-                    <img src="cardServers.jpg">
-                    <h2>Servers</h2>
-                    <p class="details" onclick="a4()">details</p>
-                </div>
-                <div id="a4" class="side">
-                    <a href="javascript:void(0)" class="closebtn" onclick="c4()">&times;</a>
-                    <div class="sideText">
-                        <div include="a4.html"></div>
-                    </div>
-                </div>
-                <!------------------------------------------------------------------------------->
-                <div class="card">
-                    <img src="cardApplication.jpg">
-                    <h2>Application</h2>
-                    <p class="details" onclick="a5()">details</p>
-                </div>
-                <div id="a5" class="side">
-                    <a href="javascript:void(0)" class="closebtn" onclick="c5()">&times;</a>
-                    <div class="sideText">
-                        <div include="a5.html"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div include="email.html"></div>
+    <div class="email">
+        <a href="mailto:aimtracer@gmail.com">ask for your quote now!</a>
     </div>
 
-    <div id="Network" class="tab">
-        <div class="tabCaption">
-            <div class="gridNetwork">
-                <div class="card">
-
-                    <img src="cardWired.jpg">
-                    <h2>Wired</h2>
-                    <p class="details" onclick="a6()">details</p>
-                </div>
-                <div id="a6" class="side">
-                    <a href="javascript:void(0)" class="closebtn" onclick="c6()">&times;</a>
-                    <div class="sideText">
-                        <div include="a6.html"></div>
-                    </div>
-                </div>
-                <!------------------------------------------------------------------------------->
-                <div class="card">
-                    <img src="cardWireless.jpg">
-                    <h2>Wireless</h2>
-                    <p class="details" onclick="a7()">details</p>
-                </div>
-                <div id="a7" class="side">
-                    <a href="javascript:void(0)" class="closebtn" onclick="c7()">&times;</a>
-                    <div class="sideText">
-                        <div include="a7.html"></div>
-                    </div>
-                </div>
-
+    <div id="hardware" class="side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeHardware()">&times;</a>
+        <div class="sideCaption">
+            <div class="sideText">
+                <div include="hardware.html"></div>
             </div>
         </div>
-        <div include="email.html"></div>
+    </div>
+
+    <div id="software" class="side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSoftware()">&times;</a>
+        <div class="sideCaption">
+            <div class="sideText">
+                <div include="software.html"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="network" class="side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNetwork()">&times;</a>
+        <div class="sideCaption">
+            <div class="sideText">
+                <div include="network.html"></div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js" type="text/javascript"></script>
