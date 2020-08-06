@@ -155,8 +155,6 @@ body, html {
 }
 
 .sideText {
-  color: #fff;
-  padding: 20px 100px;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: center;
@@ -180,7 +178,6 @@ body, html {
   color: rgb(234,67,53);
 }
 
-/*
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
   max-width: 200px;
@@ -212,9 +209,9 @@ body, html {
   letter-spacing: 1px;
 }
 
-.details:hover {
+.cardDetails:hover {
   color: rgb(66,133,244);
-}*/
+}
 
 .sideItem {
   height: 100%; /* 100% Full-height */
@@ -334,3 +331,4 @@ body, html {
 @media only screen and (min-width: 1200px) {
 
 }
+

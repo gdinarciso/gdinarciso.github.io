@@ -30,14 +30,34 @@
     </div>
 
     <div class="email">
-        <a href="mailto:aimtracer@gmail.com">ask for your quote now!</a>
+        <!--<marquee behavior="slide" loop="" direction="right" scrollamount="50">-->
+            <a href="mailto:aimtracer@gmail.com">ask for your quote now!</a>
+        <!--</marquee>-->
     </div>
 
     <div id="hardware" class="side">
         <a href="javascript:void(0)" class="closebtn" onclick="closeHardware()">&times;</a>
         <div class="sideCaption">
             <div class="sideText">
-                <div include="hardware.html"></div>
+                <div class="card">
+                    <img src="cardPcbuild.jpg">
+                    <h2>PC Build</h2>
+                    <p class="cardDetails" onclick="openHardware1()">details</p>
+                </div>
+                <div id="hardware1" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeHardware1()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div class="sideItemText">
+                            <div include="hardware1.html"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="cardTroubleshooting.jpg">
+                    <h2>Troubleshooting</h2>
+                    <p>Finding to solve the problem</p>
+                </div>
             </div>
         </div>
     </div>
@@ -46,7 +66,49 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeSoftware()">&times;</a>
         <div class="sideCaption">
             <div class="sideText">
-                <div include="software.html"></div>
+                
+                <div class="card">
+                    <img src="cardSoftware.jpg">
+                    <h2>Operational System</h2>
+                    <p class="cardDetails" onclick="openSoftware1()">details</p>
+                </div>
+                <div id="software1" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeSoftware1()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div class="sideItemText">
+                            <div include="software1.html"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="cardServers.jpg">
+                    <h2>Servers</h2>
+                    <p class="cardDetails" onclick="openSoftware2()">details</p>
+                </div>
+                <div id="software2" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeSoftware2()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div class="sideItemText">
+                            <div include="software2.html"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="cardApplication.jpg">
+                    <h2>Application</h2>
+                    <p class="cardDetails" onclick="openSoftware3()">details</p>
+                </div>
+                <div id="software3" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeSoftware3()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div class="sideItemText">
+                            <div include="software3.html"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -55,7 +117,36 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNetwork()">&times;</a>
         <div class="sideCaption">
             <div class="sideText">
-                <div include="network.html"></div>
+                
+                <div class="card">
+                    <img src="cardWired.jpg">
+                    <h2>Wired</h2>
+                    <p class="cardDetails" onclick="openNetwork1()">details</p>
+                </div>
+                <div id="network1" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNetwork1()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div class="sideItemText">
+                            <div include="network1.html"></div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="card">
+                    <img src="cardWireless.jpg">
+                    <h2>Wireless</h2>
+                    <p class="cardDetails" onclick="openNetwork2()">details</p>
+                </div>
+                <div id="network2" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNetwork2()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div class="sideItemText">
+                            <div include="network2.html"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
