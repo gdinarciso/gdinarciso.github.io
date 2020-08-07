@@ -1,6 +1,5 @@
-:root {
-  --colorHover: rgb(66,200,255);
-}
+$colorHover: rgb(66,200,255);
+
 
 * {
   margin: 0;
@@ -111,7 +110,7 @@ a {
 }
 
 .button:hover {
-  color: var(--colorHover);
+  color: $colorHover;
 }
 
 .email {
@@ -131,7 +130,7 @@ a .email {
 }
 
 a .email:hover {
-  color: var(--colorHover);
+  color: rgb(66,200,255);
 }
 
 #hardware, #software, #network {
@@ -220,7 +219,7 @@ a .email:hover {
 }
 
 .cardDetails:hover {
-  background-color: var(--colorHover);
+  background-color: rgb(66, 101, 255);
 }
 
 .sideItem {
