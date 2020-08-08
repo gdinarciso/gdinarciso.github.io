@@ -46,7 +46,7 @@ a {
 }
 
 #logoCenter, #logoAround {
-  margin-top: 390px;
+  margin-top: 450px;
   position: absolute;
 }
 
@@ -62,11 +62,18 @@ a {
   animation-timing-function: linear;
 }
 
-.logoDiv h1 {
-  font-family: 'El Messiri', sans-serif;
-  font-size: 60px;
-  margin-top: 250px;
+#logoText {
+  margin-top: 290px;
+  padding-bottom: 10px;
 }
+
+/*
+.logoDiv h1 {
+  margin-top: 250px;
+  font-size: 50px;
+  font-family: Courier;
+  letter-spacing: -5px;
+}*/
 
 .logoDiv p {
   letter-spacing: 2px;
@@ -125,9 +132,8 @@ a {
 }
 
 a .email {
-  font-size: 20px;
+  font-size: 22px;
   color: #bbb;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 a .email:hover {
@@ -148,8 +154,8 @@ a .email:hover {
 .side {
   top: 0;
   left: 0;
-  width: 0; /* change this with JavaScript */
-  height: 100%; /* 100% Full-height */
+  width: 100%;
+  height: 0;
   z-index: 1;
   position: fixed;
   overflow-x: hidden; /* Disable horizontal scroll */
@@ -159,6 +165,7 @@ a .email:hover {
 .sideCaption {
   background-image: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0,0,0,0.8));
   height: 100%;
+  color: #fff;
 }
 
 .sideText {  
@@ -221,6 +228,7 @@ a .email:hover {
 
 .cardDetails:hover {
   background-color: var(--colorHover);
+  color: #000;
 }
 
 .sideItem {
@@ -231,7 +239,7 @@ a .email:hover {
   top: 0;
   left: 0;
   overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .sideItemCaption {
@@ -325,6 +333,7 @@ a .email:hover {
   #logoCenter, #logoAround {margin-top: 100px;}
   #logoCenter {width: 5%;}
   #logoAround {width: 10%;}
+  #logoText {margin-top: 100px;}
   .logoDiv h1 {
     margin-top: 100px;
     font-size: 30px;
