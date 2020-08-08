@@ -51,12 +51,16 @@ a {
 }
 
 #logoCenter {
+  width: 45px;
+  height: 45px;
   -webkit-animation: spin 10s infinite;
   animation: spin 10s infinite;
   animation-timing-function: linear;
 }
 
 #logoAround {
+  width: 90px;
+  height: 90px;
   -webkit-animation: spin 60s infinite;
   animation: spin 60s infinite;
   animation-timing-function: linear;
@@ -331,8 +335,7 @@ a .email:hover {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-height: 700px) {
   #logoCenter, #logoAround {margin-top: 100px;}
-  #logoCenter {width: 5%;}
-  #logoAround {width: 10%;}
+  
   #logoText {margin-top: 100px;}
   .logoDiv h1 {
     margin-top: 100px;
