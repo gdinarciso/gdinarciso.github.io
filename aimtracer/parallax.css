@@ -333,7 +333,7 @@ a .email:hover {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 600px) {
   #logoCenter, #logoAround {margin-top: 100px;}
   
   #logoText {margin-top: 100px;}
@@ -342,4 +342,7 @@ a .email:hover {
     font-size: 30px;
   }
   .sideText {padding: 20px 0;}
+  .sideItemText {
+    padding: 20px 10px;
+  }
 }
