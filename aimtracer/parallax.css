@@ -46,7 +46,7 @@ a {
 }
 
 #logoCenter, #logoAround {
-  margin-top: 90%;
+  margin-top: 390px;
   position: absolute;
 }
 
@@ -67,7 +67,7 @@ a {
 }
 
 #logoText {
-  margin-top: 60%;
+  margin-top: 250px;
   padding-bottom: 10px;
 }
 
@@ -178,7 +178,7 @@ a .email:hover {
   align-content: center;
   grid-gap: 20px;
   grid-auto-flow: column;
-  padding: 80px 10px;
+  padding: 180px 0 30px 0;
 }
 
 .side .closebtn {
@@ -252,11 +252,10 @@ a .email:hover {
 }
 
 .sideItemText {
-  color: #bbb;
+  color: #ccc;
   padding: 20px 35%;
   letter-spacing: 1px;
   height: 100%;
-
 }
 
 .sideItemText h1 {
@@ -266,6 +265,18 @@ a .email:hover {
 
 .sideItemText h3 {
   text-align: justify;
+}
+
+.pickdrop h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(255,255,255);
+}
+
+.pickdrop h4 {
+  padding: 5px 0;
+  font-size: 20px;
 }
 
 @keyframes spin {
@@ -346,12 +357,14 @@ a .email:hover {
     margin-top: 100px;
     font-size: 30px;
   }
-  .sideText, .sideItemText {padding: 20px 10px;}
+  .sideText {padding: 10px;}
+  .sideItemText {padding: 20px 50px;}
 }
 
 @media only screen and (max-height: 500px) {
   #logoCenter, #logoAround, #logoText {margin-top: 100px;}
   .card {width: 145px;margin: 0;}
   .card h2 {font-size: 18px;}
-  .sideItem, .sideItemCaption {height: 140%;}
+  .sideCaption {height: 120%;}
+  .sideItem, .sideItemCaption {height: 160%;}
 }
