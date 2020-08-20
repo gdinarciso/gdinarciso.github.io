@@ -374,6 +374,7 @@ a .email:hover {
     margin-top: 100px;
     font-size: 30px;
   }
+  .sideCaption h1{padding-top: 0;}
   .sideText {padding: 10px;}
   .sideItemText {padding: 20px 50px;}
 }
