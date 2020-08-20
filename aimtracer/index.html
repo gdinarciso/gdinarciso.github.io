@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AimTracer</title>
+    <title>aimtracer</title>
     <link rel="stylesheet" href="parallax.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300');</style>
@@ -24,8 +24,10 @@
     </div>
 
     <div class="tabButton">
-        <button class="button" onclick="openHardware()">Hardware</button>
         <button class="button" onclick="openSoftware()">Software</button>
+        <button class="button" onclick="openGame()">Game</button>
+        <button class="button" onclick="openMobile()">Mobile</button>
+        <button class="button" onclick="openHardware()">Hardware</button>
         <button class="button" onclick="openNetwork()">Network</button>
     </div>
 
@@ -33,46 +35,13 @@
         <div class="email">ask for your quote now!</div>
     </a>
 
-    <div id="hardware" class="side">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeHardware()">&times;</a>
-        <div class="sideCaption">
-            <div class="sideText">
-
-                <div class="card">
-                    <img src="cardPcbuild.jpg">
-                    <h2>PC Build</h2>
-                    <p class="cardDetails" onclick="openHardware1()">details</p>
-                </div>
-                <div id="hardware1" class="sideItem">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeHardware1()">&times;</a>
-                    <div class="sideItemCaption">
-                        <div include="hardware1.html" class="sideItemText"></div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="cardTroubleshooting.jpg">
-                    <h2>Troubleshooting</h2>
-                    <p class="cardDetails" onclick="openHardware2()">details</p>
-                </div>
-                <div id="hardware2" class="sideItem">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeHardware2()">&times;</a>
-                    <div class="sideItemCaption">
-                        <div include="hardware2.html" class="sideItemText"></div>
-                    </div>
-                </div>
-
-            </div>
-            <div include="pickupdropoff.html" class="pickdrop"></div>
-        </div>
-    </div>
-
     <div id="software" class="side">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSoftware()">&times;</a>
         <div class="sideCaption">
+            <h1>Software</h1>
             <div class="sideText">
                 
-                <div class="card" id="">
+                <div class="card">
                     <img src="cardSoftware.jpg">
                     <h2>Operational System</h2>
                     <p class="cardDetails" onclick="openSoftware1()">details</p>
@@ -113,9 +82,91 @@
         </div>
     </div>
 
+    <div id="game" class="side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeGame()">&times;</a>
+        <div class="sideCaption">
+            <h1>Game</h1>
+            <div class="sideText">
+                
+                <div class="card">
+                    <img src="cardGame.jpg">
+                    <h2>Installation</h2>
+                    <p class="cardDetails" onclick="openGame1()">details</p>
+                </div>
+                <div id="game1" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeGame1()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div include="game1.html" class="sideItemText"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div include="pickupdropoff.html" class="pickdrop"></div>
+        </div>
+    </div>
+
+    <div id="mobile" class="side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMobile()">&times;</a>
+        <div class="sideCaption">
+            <h1>Mobile</h1>
+            <div class="sideText">
+                
+                <div class="card">
+                    <img src="cardMobile.jpg">
+                    <h2>Screen Fix</h2>
+                    <p class="cardDetails" onclick="openMobile1()">details</p>
+                </div>
+                <div id="mobile1" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeMobile1()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div include="mobile1.html" class="sideItemText"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div include="pickupdropoff.html" class="pickdrop"></div>
+        </div>
+    </div>
+
+    <div id="hardware" class="side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeHardware()">&times;</a>
+        <div class="sideCaption">
+            <h1>Hardware</h1>
+            <div class="sideText">
+
+                <div class="card">
+                    <img src="cardPcbuild.jpg">
+                    <h2>PC Build</h2>
+                    <p class="cardDetails" onclick="openHardware1()">details</p>
+                </div>
+                <div id="hardware1" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeHardware1()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div include="hardware1.html" class="sideItemText"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="cardTroubleshooting.jpg">
+                    <h2>Troubleshooting</h2>
+                    <p class="cardDetails" onclick="openHardware2()">details</p>
+                </div>
+                <div id="hardware2" class="sideItem">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeHardware2()">&times;</a>
+                    <div class="sideItemCaption">
+                        <div include="hardware2.html" class="sideItemText"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div include="pickupdropoff.html" class="pickdrop"></div>
+        </div>
+    </div>
+    
     <div id="network" class="side">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNetwork()">&times;</a>
         <div class="sideCaption">
+            <h1>Network</h1>
             <div class="sideText">
                 
                 <div class="card">
