@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+</head>
+<style>
+    .box-1 {
+        border: 1px solid black;
+        color: white;
+        background-color: #AABBCC;
+        height: 150px;
+        width: 300px;
+    }
+
+    .box-2 {
+        border: 1px solid black;
+        color: white;
+        background-color: #CCAABB;
+        height: 100px;
+        width: 300px;
+    }
+
+    .box-3 {
+        border: 1px solid black;
+        color: white;
+        background-color: #BBCCAA;
+        height: 200px;
+        width: 100px;
+    }
+
+    .flex-container {
+        display: flex;
+        width: 100%;
+        border: 2px solid black;
+        /*
+        flex-direction
+        justify-content
+        align-items
+        */
+    }
+    
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+    
+    .flex-end {
+        justify-content: flex-end; /* align to right*/
+    }
+    
+    .jc-sb {
+        justify-content: space-between;
+    }
+
+    .jc-sa {
+        justify-content: space-around;
+    }
+
+    .ai-fe {
+        align-items: flex-end;
+        height: 300px;
+    }
+
+    .ai-center {
+        align-items: center;
+        height: 300px;
+    }
+
+    .total-center {
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+    }
+
+    .ai-stretch {
+        align-items: stretch;
+        height: 300px;
+    }
+
+    /* remove the height from the three boxes */
+    .no-height {
+        height: inherit;
+    }
+    .links {
+        margin: 0 0 70px 0;
+        line-height: 0.2;
+    }
+
+</style>
+<body>
+    <section class="links">
+        <h1>Shooting out</h1>
+        <p><a href="https://btholt.github.io/intro-to-web-dev-v2/" target="_blank">https://btholt.github.io/intro-to-web-dev-v2/</a></p>
+        <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-properties" target="_blank">https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-properties</a></p>
+        <p><a href="https://mastery.games/flexboxzombies/" target="_blank">https://mastery.games/flexboxzombies/</a></p>
+        <p><a href="https://flexboxfroggy.com" target="_blank">https://flexboxfroggy.com</a></p>
+    </section>
+    <h1>flex-direction</h1>
+    <h2>reverse</h2>    
+    <div class="flex-container reverse">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <h2>column</h2>    
+    <div class="flex-container column">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <h1>justify-content</h1>
+    <h2>flex-end</h2>    
+    <div class="flex-container flex-end">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+    
+    <h2>space-between</h2>
+    <div class="flex-container jc-sb">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <h2>space-around</h2>
+    <div class="flex-container jc-sa">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <h1>align items</h1>
+    <h2>flex-end</h2>
+    <div class="flex-container ai-fe">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <h2>center</h2>
+    <div class="flex-container ai-center">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <h2>total center</h2>
+    <div class="flex-container total-center">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <div class="flex-container ai-stretch">
+        <div class="box-1 no-height">1</div>
+        <div class="box-2 no-height">2</div>
+        <div class="box-3 no-height">3</div>
+    </div>
+
+</body>
+</html>

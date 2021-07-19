@@ -1,0 +1,2141 @@
+
+BRIAN YU: OK, welcome back everyone to Web Programming
+with Python and JavaScript.
+So in the past couple of weeks, we've been looking at HTML and CSS,
+learning about how we can write code that decides how our website ultimately
+looks by describing the structure of the code
+and by using CSS to describe the style the code
+to determine how our web page is styled.
+Today what we're going to do is we're going to take the next step
+and start building some dynamic web applications using a programming
+language called Python in order to build web applications that are a little more
+powerful than what we can have just by describing the contents of a web
+page using HTML, for instance.
+But before we can get the Flask, we should talk a little bit
+about the language that we're going to be
+using in order to create those web applications,
+and that language is Python.
+And so Python has come in a number of different versions.
+We're going to be in this class using the latest version of Python,
+as of now, which is Python 3.6.
+And so Python is a programming language that
+is an interpreted programming language.
+Meaning what we'll do is we'll be writing code in the Python programming
+language.
+And then we'll run it through what's called
+a Python interpreter, a program that reads in Python code line by line,
+and interprets it, tries to parse the Python, understand what it means,
+and then execute that code.
+And so what we'll do first before we dive into the web programming
+part of this is take a look at Python, just the language itself,
+get a feel for how the language works and what the different components
+and features of the language are.
+And after that, we'll use those skills using the tools
+that we can use in Python in order to use that language to generate
+dynamic web applications of our own.
+So let's dive right in and take a look at our first example
+of a program written in Python.
+And this program is Hello.py.
+The dot p-y extension is just a common extension
+for names of files that are files that contain Python code.
+So this piece of code is called Hello.py.
+And it's just got one line.
+And that line is a print, and then in parentheses and then
+in quotation marks, the words hello world.
+And so this is a very simple Python program.
+And let's try running this Python program just to see what happens.
+And then we'll take a look at how this is actually working.
+So in order to run a Python program on the command line,
+I'll type the word Python to run the Python interpreter, followed
+by the name of the Python file that I want to run.
+So in this case, the name of the Python file is hello dot py.
+And so if I type hello dot py and press Return, just to say run hello
+dot py in Python, what I get is just the words Hello World printed out
+to the terminal screen.
+And so that's all it does.
+A fairly simple program that just prints out hello world.
+And if we take a look at hello dot py, we
+can start to break down what's happening here.
+This word print, this is a function, just a word in Python
+that represents doing Something, In this case printing something to the screen.
+And inside the parentheses is what's called the function's argument,
+information we give to the print function,
+in this case telling the print function what it is that we want to print out.
+And so in this case, we have in the parentheses in the "string", which
+is just a sequence of text "hello world" meaning print out the words
+hello world to the screen, and therefore when
+we ran hello dot py by running Python, the result
+was that we got the words the hello world printed to the screen.
+And so that was a fairly straightforward Python program,
+just one line long that prints something to the screen.
+Let's take a look at something a little more sophisticated.
+So inside of a name dot py, now here I have
+a Python program that's got two lines.
+And so let's break down these lines one by one
+and get a sense for what's happening.
+Here line one, we define a name, where name is just
+a variable, some name that we're going to give it to a place
+where we can store data or information inside of our Python program.
+And name is going to be set equal to the result of this input function.
+And so input is a function that in Python asks the user
+to type in input at the command line.
+And when they press Return, whatever it is that they typed in,
+gets returned from the function.
+It's information that's passed back from the function.
+And if you're familiar with other programming languages,
+it's much the same idea.
+And so we ask the user to type in their name presumably.
+That gets stored inside of this variable called name.
+And now let's take a look at line two.
+What's happening here?
+Again, we're calling that print function,
+the same function that we called in hello dot py.
+But in particular what's inside the parentheses
+is slightly different notation.
+So the first thing that's slightly different is that the string--
+the text enclosed in double quotation marks--
+begins with the letter F. This is a new feature of Python version 3.6--
+the latest version-- called the format strings, which let us take a string,
+take text and substitute information by filling in blanks in the string
+wherever we want to put a placeholder for some other value, for instance.
+And so what that's going to allow us to do
+is say something like print hello comma.
+And then these curly braces surrounding the word
+name mean take the variable name and plug it
+into this format string inserted here.
+So whatever name gets typed in, that gets
+saved into this variable called name.
+And then when I print something out, I'm printing out the word hello comma,
+and then here, we're going to insert whatever that name was
+that was passed in via the input.
+So if I try to run this program now by running Python name dot py--
+because that's the name of this Python file--
+and I press Return, nothing appears to happen.
+And the reason for that is that on line one
+it's waiting for me to provide some sort of input.
+Recall that line one, I have name equals input this function.
+And so if I type in my name, for example, Brian, then on the next line
+it says hello Brian.
+So name was my name.
+And then inside of the format string, inside the print statement on line two,
+it substituted my name in where these double curly braces were.
+And if I were to run this again, typing in someone else's name like David,
+then the next line says hello David, plugging in that new name
+into that format string as well.
+So that was an example of variables in Python
+as well as format strings, which are a special type of string in Python.
+Questions about that we've seen so far?
+Yeah?
+AUDIENCE: [INAUDIBLE]?
+BRIAN YU: Yes.
+So the question was can we also pass in a name via command line argument?
+And yes, Python does have ways of interpreting command line arguments.
+You'll have to use a separate package in Python that
+allows you to deal with that.
+It's called the sys package, s-y-s.
+And using that package, you can interpret command line arguments
+and do things with those command line arguments.
+We won't explore those too heavily in this course,
+because our focus is going to be to quickly move away from the command line
+and start moving towards building web applications in Python.
+But yes, you can in Python use command line arguments to get information
+from the user as well.
+Other questions before we keep going on?
+So this name on line one was the first example
+of what we're going to call a variable in Python.
+Just a place in our Python code where we can store data of different types.
+And so let's take a look at the different types of information
+that we can store inside of a Python variable,
+and just look at a couple of examples of that.
+So right here what we have is a Python program called variables dot py.
+And what this does is it defines four different Python variables.
+And these variables all have different types.
+And so on line one, I've defined the variable i to be equal to 28.
+And now i is going to be a variable that stores the number 28.
+But in particular, it's storing a particular type of information.
+The number 28 is an integer, where integers are 0, 1, 2, 3, 4,
+and the negative 1, negative 2, negative 3, et cetera.
+And so i in this case is just an integer value.
+And so we see here that Python can store integers as variables.
+And then we're going to print out that i is 28, for instance in this case.
+And then on line four, I'm defining a new variable
+called f, which is equal to 2.8.
+And so this shows you that Python can store not only integers,
+but floating point values as well, values that have a decimal in it.
+And so this is a different type of variable altogether.
+And so that will print out f is 2.8, for example.
+But it's not just numbers that Python can store as variables.
+We saw in name dot py-- the example from just a moment ago--
+that we can use variables to store strings as well,
+text that can be used in order to store a name, for example,
+inside of a variable.
+And we can store other types as well.
+Down here line seven, we see that b is set to true.
+So Python has a special type called bool,
+which stands for Boolean values, where a Boolean value is just
+a value that is either true or false.
+It represents where the something is positive or negative, for instance.
+And Python has a special keyword called True with a capital T that
+represents the Boolean value true.
+And likewise there's also a false value that represents a false Boolean
+value as well.
+And finally, Python also has a particular type
+called the None type, which only has one possible value, just called a None.
+And a none type is just a way in Python to represent the idea
+that a variable has no value.
+So if we want a variable that doesn't have value for some reason,
+and we might see examples later of when that
+could be useful or helpful or practical, you'll
+often see capital N None used to represent
+a kind of variable that just isn't storing any information whatsoever.
+So if I were to run variables dot py, what I get is that i is 28, f is 2.8,
+b is false, N is None.
+Note that I never told my program that i is going to be an integer,
+or f is going to be a floating point number,
+or b is going to be a Boolean value.
+Python figures this out for itself.
+When I say i equals 28, Python knows that if I'm assigning the number 28
+to i, then i must be in integer value.
+And so if you're familiar with other languages like C or Java,
+where you're used to having to explicitly write out
+the name of the type for any particular variable,
+know that Python doesn't require you to do that,
+and just lets you take a variable and assign it to any given value
+without needing to specify explicitly what the type of that value
+actually is.
+Questions about that so far?
+
+So let's take a look at some of the other constructs
+that we can begin to build up by using Python and its various language
+features.
+Let's take a look at conditions dot py.
+And so what we're going to do here is say
+that we have a variable called x that's set equal to some number, for example.
+Maybe the number 28, just to take an example.
+And what we have here on line three are conditional statements,
+if statements, which are effectively branches in the code
+where depending upon whether or not something is true or false,
+we can decide which code you want to execute.
+So let's take a look at what's happening here.
+We say on line three if x is greater than 0,
+then anything indented underneath this if statement, as we would call it,
+is code that will only run if x is greater than 0.
+So if x is greater than 0, then here's what's going to happen.
+All of these indented lines, in which case now there's only one,
+we're going to print out the string x is positive.
+Meanwhile, el if is short for else if.
+In other words, else otherwise if x wasn't greater than 0,
+if x is less than 0, then let's run this indented line here,
+print x is negative.
+Else otherwise, if it was neither greater than 0, nor less than 0,
+there's only one remaining possibility.
+We can print out the fact that x is 0.
+And this indentation in Python is something you'll see a lot.
+The indentation in Python is actually required.
+Unlike several other programming languages
+where indentation is a style thing, where
+it's nice and helpful from a readability perspective to include indentation,
+but it's not strictly necessary, in Python this indentation is necessary.
+This is how you tell the Python interpreter
+this is the code that is contained inside of this if statement.
+This is the code that should run if this if statement is true.
+So if I had multiple lines that I wanted to run, if x were greater than 0
+for instance, I would have multiple lines all indented inside of that if
+statement as well.
+So if I were to go over here and run this program now, rather than print out
+three things, because I have three different print
+statements, if I run in conditions dot py, I just see x is positive.
+Because it caught on that first if condition, if x is greater than 0.
+And it printed out that x is positive.
+If x were negative 28 instead, and I ran that same program, now x is negative.
+And likewise, if I had replaced x with just 0 for instance,
+and run that again, now I just see that x is 0, for instance.
+And so depending upon the value of x, I can conditionally
+determine which way to go in the code.
+Questions about that so far?
+
+Let's keep going then.
+So thus far we've seen examples of variables in Python
+that are able to store single values, effectively,
+a single number, whether it's integer or floating point
+number or a single Boolean value, like true or false.
+But Python is very good at also supporting
+storing sequences of data where we have multiple values that
+are combined together under one name.
+And there are a bunch of different ways to do that.
+So I'll show you sequences dot py now.
+And so in sequences dot py, I've given you
+three examples of variables of different types
+that are all sequences of data in some form.
+So on line one, I have a variable called name,
+which is just storing the string Alice.
+This is something we've seen before where
+we have a string, which is just text that's
+being stored inside of a variable.
+But one helpful way to think about a string like the word Alice
+is that it's really just a sequence of characters.
+It's the character capital A, followed by the character lowercase,
+l followed by lowercase i, c, e. et cetera.
+And this way of thinking about a variable
+makes it easy to say what if I wanted to just get
+the second character of the name, or the third character of the name,
+for instance?
+You can treat that long string as just a sequence
+of the individual constituent parts that make it up.
+On line two you're looking at an example of what's
+called a Python tuple, which is a way of grouping a couple of values
+together in a single name.
+So if I wanted to store in Python an xy coordinate, for example,
+like, on a graph if I wanted to store a particular point on that graph,
+I might store it as follows, where I say the coordinates are,
+and then in parentheses 10.0, 20.0.
+And so now both of those values are stored as a single name,
+coordinates, as opposed to needing to store
+two variables like a coordinates x variable and a coordinates y variable,
+I can group them together and just store them under a single name as well.
+And then finally on line three, we see an example
+of what's called a Python list.
+And this is a very powerful data type in Python.
+And a list is a data type that lets us store a bunch of different values
+all together in one.
+And so here I have a list of individual people's names.
+And so a list in Python is denoted by the square brackets.
+So I open the square bracket and then have the first thing
+in the list, which is the name Alice.
+And each of the elements in the list are separated by commas.
+So Alice is the first thing in this list,
+Bob is the second thing in the list, Charlie is the third thing in the list.
+And so this is an example of a list in Python
+that is all stored under the variable name names.
+So using those lists we can begin to perform operations on them.
+And one nice feature of Python is that I don't just have to write a Python file
+and then run that Python file.
+And that's the only way to run Python code.
+Python has a sort of a live interpreter that lets me type code
+and see the result of it happening in real time.
+So if I just type Python instead of Python space,
+the name of a Python file I want to run, what happens
+is that I've opened up the Python interpreter, which
+is a place where I can line at a time type of line of Python code
+and immediately see the result.
+And for our purposes this is going to be pretty helpful.
+So you can do the exact same things you could do in a Python file.
+I can say x equals 28, for example and press Return.
+And now that line of Python is executed.
+And now if I were to just type x, for example,
+it will show me that the value of x is 28.
+And I can add any other Python code that I want here.
+So if x is greater than 0, then print x is positive.
+And now that prints out the fact that x is positive.
+And so I'm able to run Python code just like this.
+And the reason I'm doing this is that we can
+begin to see some of the features of Python data types like sequences
+by using the Python interpreter.
+So if I had a name equals Alice, like I had before,
+the way that you access individual elements of a Python sequence
+whether it's a string representing a bunch of different characters
+or a tuple representing a couple of different values
+or a list of even more values, is that I can do name it,
+and then in square brackets, the index that I
+want to access, where the first thing in the sequence is index 0.
+So if I did name, square bracket 0, what is that going to be?
+
+Capital A. That's the first thing in the string Alice.
+The very first character is just that capital A.
+And likewise, name, square bracket 1, that's
+going to be the second character of Alice's name,
+where l is the second character.
+So it's sort of what we call a zero index system, whereby
+the first thing in the string Alice is number 0 and the second thing
+is number 1.
+And so that's a typical computer science convention.
+It's true in other programming languages as well.
+But know that square bracket 0 gets you at the first thing in the sequence.
+Square bracket 1 is the second thing, so on and so forth.
+And so if I had coordinates equals 10.0, 20.0 for instance,
+I could use the coordinates square brackets
+0 to get it just the first coordinate, and likewise, I
+could do coordinate square bracket 1 to get it just the second coordinate.
+And similarly, if I had a list of names that was Alice and Bob and Charlie,
+then I could do names, square brackets 0 to get at the first name,
+name square bracket 1 to get the second name, and name square bracket 2
+get at the third name.
+And what would happen if I tried name square bracket 3?
+AUDIENCE: [INAUDIBLE].
+BRIAN YU: So what I get is a Python exception, effectively
+an error of some sort that tells me that something went wrong.
+And in this case, the type of the exception is index error.
+And it says index lists index out of range.
+And so the interpretation of that is that this index that I provided,
+this number, name square bracket 3 is out of the range of the list.
+There is no item in the names list that has index number 3,
+and therefore Python can't access it for me.
+And so if I'm trying to ask Python or do something that it can't do,
+oftentimes I'll get an exception of this form.
+And learning to become familiar with these exceptions
+as you begin to see them as you work with Python programming
+will help you to figure out where the cause of the source of the area
+is, which can then help you to then go back and debug
+and figure out what went wrong.
+So those were variables and different types of data and conditions in Python.
+Let's take a look at some of the other constructs
+that we can have in the Python programming language, in particular,
+let's take a look at loops and how we might repeat code multiple times.
+And so here in loops 0 dot py i have just two lines.
+So on line one I say for i in range 5.
+And then on line two, I'm printing out i.
+And so what this program is effectively doing is on line one
+I'm saying let's take this variable i and run it through this loop.
+This what we call a for loop through a range of five numbers,
+ranging from 0 all the way up to but not including the number 5,
+such that if I run the loops 0 dot py what I get
+is that I get five numbers printed out, 0, and then 1, and then 2, and then 3,
+and then 4.
+Because this loop, this loop happened five times.
+And each time the value of i changed.
+The first time it was 0.
+That it incremented to 1, and then 2, and then 3, and then 4.
+And then it doesn't include the final number 5.
+It goes up to, but not including the 5.
+And as a result I get numbers printed out five times.
+If I wanted to print out 10 numbers, for instance,
+I could change range to range 10.
+And now running loop 0 dot py prints out 0 all the way up through 9,
+for example.
+So that's an example of a simple loop in Python.
+But Python supports other types of loops as well,
+in particular, for looping over a sequence.
+So we saw in the last example that we have a bunch of different data types
+for representing sequences of data.
+We have strings that are just individual characters.
+We have lists that are a bunch of different values
+that are grouped together.
+And so if I look at loops 1 dot py now, you'll
+see what we have here is on line one I had a final list, the same list
+as before.
+Names is equal to Alice, Bob, and Charlie, a list of three strings.
+And then on line two, I have a different style of for loop.
+I'm saying for name in names, where the intuition here
+is that I'm going to be looping over this names variable one at a time.
+And each time I'm going to call each item in that list name.
+And that's just going to be the name that I give to that variable.
+And then I'm going to print out that name inside of the for loop.
+And notice that everything inside the for loop, just like everything
+inside of my if condition needs to be indented so that Python knows
+what code is contained inside my for loop
+and what code is outside of the for loop.
+And so if I now run Python loops 1 dot py, what I get
+is Alice and then Bob and then Charlie, one name at a time, one line at a time.
+Question?
+AUDIENCE: Do sequences need to be all the same data type?
+BRIAN YU: Great question.
+So the question is, do sequences need to be all of the same data type?
+The short answer is no.
+So in a list for example, I could have a list, I'll just call it l for a list.
+That could be the number 28, and then the name Alice,
+and then the Boolean value true.
+That is technically a valid list.
+And I can say l square bracket 0 to get it the first thing in the list.
+And 1 to get it the second, and 2 to get to the third, for instance.
+But generally speaking, especially with lists,
+it's a good idea if different things in the list are of the same type.
+It's often good design to have elements of the list to be of the same type,
+because generally our lists are going to have some sort of semantic meaning.
+It's going to be a list of names, where all of the elements in the list
+should be strings.
+Or a list of numbers, where all of the elements in the list
+should be integers.
+And it's helpful to be able to treat each item in the list the same way.
+And we can only do that if items in the list are of the same type.
+So while not strictly necessary to have all
+the items in a list be of the same type, it's often a good design idea to do so.
+Good question.
+Other questions before we move on?
+AUDIENCE: Could you skip the print [INAUDIBLE] In the interpreted version,
+you don't have [INAUDIBLE].
+BRIAN YU: So the question is-- great question.
+The question is in the interpreted version
+when I'm trying to display a value, I didn't need the print.
+I just typed l0 instead of print l0 in order
+to get the first thing in the list.
+This is something unique to the Python interpreter
+that the interpreter if I just type in a value,
+Python will tell me what's currently stored in that value.
+But if I'm running a Python program, then I
+do explicitly need that print function in order
+to say this is a value that I want to print out to the screen.
+So it's a slight difference between the way the interpreter works live,
+versus when I'm running it just through a Python file.
+I could equivalently type print l0 in the interpreter.
+And that would produce the same results.
+But if I'm running it in a Python file, like, a file that ends with dot py,
+then I need to have the print line there.
+Good question.
+We'll take a quick look at some of the other more advanced data types
+that exist in Python, and then we'll move on
+to taking a look at a couple of other things.
+So in addition to supporting lists, which
+are an ordered sequence of data where we have
+a first item and a second item and a third item,
+Python also has support for other collections of data as well.
+And so one of those examples is a set where
+a set is just a collection of items where no item shows up twice.
+And in particular, a set doesn't have any particular order to it.
+So the only thing we care about is a particular value in the set,
+or is a particular value not in the set?
+And so line one here, I've said s is equal to set,
+where set is just a function that creates an empty set for me.
+On line two, I've added the number 1 to the set.
+On line three, I've added the number 3 to the set.
+On line four, I've added the number 5 to the set.
+And on line five, just for the fun of it, I've added the number 3 to the set
+again.
+But the rules for a set is that items in the set are unique.
+So if I try to add a number or a value that's already in the set to the set
+again, then the result of that is going to be no change to the set.
+And so if I print the set out on the last line,
+and I run sets dot py, what I get is just a set
+1, 3, and 5, because those are the only three numbers that
+are actually inside of that set.
+And so if ever you don't really care about the order of the information,
+because sets doesn't preserve which thing
+came first, second, third, fourth--
+and I just care about which things are inside of the set or not in the set--
+then I can use this notation in order to describe that as well.
+And one final data type we'll take a look at are Python dictionaries.
+So dictionaries are yet another data structure in Python
+which are used in order to map certain values on to other values.
+And they're often used when we want to try and indicate
+some sort of relationship between a former value and a latter value.
+And so what we see in dictionaries dot py here
+is an example where I in my Python program
+might want to store the ages of different people
+that I'm keeping track of.
+And so what I have here line one is I've created a Python dictionary
+that maps what are called keys to values.
+And in the case of my ages dictionary, the key
+are all going to be the names of people.
+So in this case, I have the key Alice, which is mapped to the value 22.
+And the semantic interpretation of this is that Alice is 22 years old
+and Bob is 27 years old.
+And so what you'll notice is that the syntax for that
+is that a dictionary is defined by curly braces on either end.
+And then the key, which is some value, followed by a colon,
+followed by what its value is.
+So Alice colon 22 means I'm going to put Alice in my ages dictionary,
+and then set its value to be 22.
+And likewise, I'm putting Bob into the dictionary
+and setting its value to be 27.
+And if I wanted to add something to the dictionary later,
+I could do it like this on line two.
+I'm adding Charlie to my ages dictionary.
+And Charlie is 30.
+That is the value that it is mapped to.
+And if I wanted to edit the value of one of the variables later on,
+a line like this, ages Alice plus equals 1
+is a shorthand way of saying take whatever Alice maps to in my age
+dictionary and increase its value by 1.
+It was formerly 22, now it should be 23.
+If I wanted to write this out in a longer form,
+I could say ages Alice equals ages Alice plus 1
+to say update the value of ages Alice, and set it equal to whatever
+ages Alice was a plus 1.
+But often a shorthand convention for that is plus equals 1,
+meaning increase its value by 1.
+Those two lines are identical.
+And then finally at the end I'm printing out this ages dictionary.
+And so if I run the dictionaries dot py, what I get
+is this dictionary where Alice's name is mapped to the number 23,
+Bob's name is mapped to the number 27, Charlie's name is not to the number 30.
+And so that's an example of a dictionary in Python
+that lets us map keys and values together.
+And so these are all just a whole bunch of different data types
+that exist in Python.
+Python is a large language with a bunch of different features and data types
+that are built into the language.
+But these are some of the most common data types,
+ones that will likely frequently come up as you
+begin to work on programming in Python.
+Totally OK if you haven't internalized all of what
+each one of those data structures is and what's different about all of them
+just yet.
+But as we begin to design web applications in Python,
+you'll hopefully start to get a sense for when might it
+be appropriate to use a dictionary in order to represent data,
+or use a list to represent data when we're designing our web applications.
+So we've looked at data types in Python.
+Now let's take a look at functions in Python.
+So here we'll open up functions dot py and see what's going on here.
+So line one, I've defined a new function in Python.
+We've seen built in functions like the print function that prints things
+to the screen, or the input function that gets input from the user.
+I'm now defining my own function called square.
+So on line one I say def, meaning I want to define a new function.
+This function is going to be called square.
+And it's going to take one argument that I'm arbitrarily just going to call x.
+Now just like in if statements, we indented everything
+inside the if statement, and in for loops
+we indented everything inside the loop.
+Inside of this definition of my square function,
+I'm likewise, going to indent everything and say that all the square function is
+going to do is that if you hand me a number x,
+I am going to return back to you x times x, the square of the number x,
+by taking the input value and just multiplying it by itself.
+So this function, given the number two will give me
+four, if I give it number three it will give me nine, so on and so forth.
+And now on line four, I'm running a for loop.
+I'm running a loop for i in range 10.
+And if we recall what numbers is that going to range from?
+How many times will that loop run from what number to what other number?
+0 to 9, exactly.
+I start at 0, and it's going to go up to, but not including 10.
+So it'll end up stopping at 9.
+And here's what we're going to print out.
+We're going to print out something squared is something else.
+And here, I'm using this special dot format syntax.
+This is just a different way of plugging in numbers into this string,
+in particular I'm saying this is going to be a placeholder for the value i,
+and this is going to be a placeholder for the square of i.
+So whatever i's value is I want to plug it
+in to this first thing in the string.
+And the square of i is going to be plugged in to this part of the string.
+And this is a slightly older way of plugging in values into Python strings.
+And I'm showing it you here in case you ever use a version of Python
+older than 3.6 where the formatted strings, where we started strings
+with the letter f isn't supported.
+You can use this notation as well and it will effectively do the same thing.
+So in this case we're looping over the numbers from 0 to 9
+and saying something squared is something else.
+And I'm calling my square function, the square
+function that I've defined up there.
+And so when I run this program by running Python functions do
+py, what I get is a loop that runs 10 times 0 squared is 0, 1 squared is 1,
+2 squared is 4, all the way down to 9 squared
+is 81, where each time I took this input value i and called
+my square function, which gave me back a number like 81, for example.
+And this was the code to do that.
+Questions about functions or anything we've seen so far
+in the Python programming language?
+Yeah?
+AUDIENCE: Do you have to define function before you use it?
+Does it always have to go first?
+BRIAN YU: Great question.
+So the question is, do I need to define the function before I use it?
+And in general, Python needs to know about the existence of some name
+before you use it.
+So in this case, if I were to take the square function
+and move it underneath the for loop, for example,
+watch what will happen when I try and run functions do py again.
+It gives me a name error.
+This is another exception.
+We saw the index error before where I was
+trying to access some particular part of the list that wasn't supported.
+And in this case, I'm getting a name error saying square is not defined,
+meaning Python doesn't know what square is.
+And the reason is that I've hit line two, where
+I'm trying to call this square function but Python's reading my file from top
+to bottom.
+And so square as a function doesn't get defined until later on.
+So we do need it earlier, but we'll see in just a moment how we can actually
+get around that issue and actually have the square function underneath if we
+wanted to.
+So those are functions in Python.
+And the nice thing about functions in Python
+is that once you write them once in one file, you can use them in other files
+as well.
+And so you can use Python functions that you've written yourself in other files,
+and you can also use functions that other people have written
+in their own files in your own files by referring to a function that
+exists in some other file.
+So I'll show you an example of how that works.
+And this is going to be in a file called modules do py.
+And so in modules dot py what I'm doing is on line one
+I'm saying from functions import square.
+In other words, from this functions do py file that I have,
+I want to import into the file the name square, which in this case
+is a function back to modules dot py.
+From functions import a square function and then print out the square of 10.
+So I didn't explicitly define the square function inside of modules dot py,
+but I'm using it because I was able to import it from functions.
+So any guesses as to what will happen if I now run Python modules dot py?
+
+Where modules the pie is importing square from functions
+and then printing out the square root of 10?
+We wanted to print out 100.
+That's what we would like to happen.
+What actually happens is that it prints out 0 squared is 0,
+1 squared is 1, so on and so forth.
+And only after all of that, then it prints out the number 100.
+So the number 100 is what we wanted, but why did the rest of the stuff
+get printed out?
+AUDIENCE: It executes still.
+BRIAN YU: Yeah, it executed this code that was originally inside of functions
+do py, this for loop that I defined alongside the square function.
+And the reason why is that when I tried to import from this function's file,
+it went through the function's file going through each line.
+And when it hit that for loop, it decided
+to just run that for loop for me.
+And so that's probably not quite what I want to happen.
+I would like for someone to be able to import the square function
+from my functions file without them needing
+to then run all of the code inside of the main part of my functions
+file automatically.
+And so one common solution to this in Python is to put all of the code
+that I want to run only when I actually run this functions file inside
+of its own function.
+And this is generally called a main function,
+which will be just the main function that runs
+when I try and run functions dot py.
+I've taken everything and I've indented it
+to say this is all code that's going to be inside of the main function.
+And then the last thing I need is a bit of special syntax
+that you don't need to worry about too much.
+But effectively what I'm saying here is if name equals main--
+in other words, if I am currently running this particular file,
+that's how you should interpret that line--
+then run the main function.
+And so it's a little bit of added complexity.
+But the reason for this added complexity is
+that now when I run the functions dot py,
+I still get 0 through 9 printed out just as normal like I want to.
+But if I run modules dot py, the one that was importing the square function
+and then just calling the square root of 10--
+oops.
+Python modules dot py--
+then what I get is just the number 100 because that
+is the result of calling square on the number 10.
+And it didn't call any of this code.
+It didn't run any of the code that was only inside of the main function.
+It only ran the code that was explicitly asked to be run, which in this case,
+was calling for the square of 10.
+So that was an example of how we can import functions from other places
+in order to use them.
+And we'll soon see when we start moving to web development
+and writing web applications in Python, that this
+will be really important for us, that there are functions that
+do things in web applications that other people have written that we would like
+to use, that we can import from other people
+that they have written without needing to write it ourselves.
+And we can take advantage of those functions
+and effectively stand on the shoulders of others in order
+to build web applications that take advantage of those existing features.
+Questions about anything else before we look at one last feature of Python,
+before diving back into web programming?
+Last thing we'll take a look at is Python classes.
+And so this is something that will become more relevant next week.
+But we're going to take a look at it now just to get a preview and a taste
+for what it's like.
+Python classes are a way of defining entirely new types in Python.
+So Python has a built in type for representing lists.
+It has a built in type for strings.
+It has a built in type for Boolean values,
+but it doesn't have a built in type for representing a point in space.
+We could use a tuple, of course, like we saw before,
+just some number comma some other value.
+But here is a way of me explicitly creating
+a new type in Python called a point.
+And here's the way it works.
+So on line one I'm saying I'm defining a new class of things called points.
+And on line two I have this special init function.
+And the init function in Python is a way of saying
+when I create a new point, what information do I need?
+And in particular, I need self, which is just
+going to be a variable that represents the point itself,
+the object that I'm creating, and then I need an x value and a y value.
+And so when I create a new point, what should I do?
+Self dot x equals x is my way of saying self
+is that name, referring to the point object that I've just created.
+And dot x is my way of saying, I want to access
+a particular attribute of the self, of the point that I've created.
+In particular, I want to set self x attribute to whatever
+this x value is that's being passed in.
+That way, when I create a new point, I'm storing that x value inside of self
+dot x.
+And likewise, I'm storing the y value of the point inside of self dot y.
+And so when I actually use this is on something like line six where I say p
+is equal to point 3,5.
+That is going to create a brand new point,
+calling this init function that gets called anytime it create a new point.
+And it's going to set p's x value to be whatever
+get passed in at x, which is 3, and set p's y value to be whatever was passed
+in as the y value, in this case 5.
+And now if I print out p.x and p.y, that's
+going to take this point to object and access whatever its x attribute is
+and whatever its y's attribute is and print out those values.
+And so we'll take a look at that.
+If I run the classes dot py and press Return, what I get
+is 3 on the first line and then 5 on the next line.
+Because I first decided to print out the x value of my point p.
+And after that, decided to print out the y value of my point p as well.
+And so that printed out 3 as the x value and 5 as the y value.
+And so that would be how we would create classes entirely new types in Python
+as well.
+And so that was a lot of overview of the Python programming language.
+It's a big language.
+There's a lot of stuff going on.
+We looked at different types of variables and data types
+and conditions and loops and functions and classes.
+Totally OK if this is all new to you, but hopefully some of the concepts
+seem familiar or reminiscent of programming languages
+that you may have used before.
+But we'll take a short break now.
+And after we come back from the break, we'll
+talk about how to begin to use some of these language features
+in order to actually build web applications that
+are living on the internet.
+So we'll take a short break and then we'll come back.
+Welcome back.
+So we just got a whirlwind tour of the Python programming language.
+And now what we're going to do is use Python to begin
+to build some dynamic web applications.
+And so before we get there, I just want to take a brief moment
+to talk about HTTP.
+HTTP, hypertext transfer protocol, which is the system
+that we're going to be using that the website and the internet
+uses in order to interact and communicate
+between computers and servers.
+And so the general idea or the model to get in your head
+is that when you type in a website and press Return, what that's doing
+is sending an HTTP request to some server.
+If I type google.com and press Return, I'm
+sending an HTTP request to Google's server.
+Google's server receives that request, needs to figure out
+some way to interpret that request.
+What am I asking for?
+What am I searching for?
+Am I searching for news or images or something else?
+It figures out what's going on in that request.
+Figures out what information to give back to me, and then
+sends me back and HTTP response that contains the information that my web
+browser then receives and then displays on a page in Chrome or Safari
+or whatever web browser that it happen to be using.
+And so what we're going to be doing now as we
+go about building web applications, is writing
+code that will take care of that server side processing.
+Receiving requests, figuring out what those requests they're dealing with
+and what they're asking for, and figuring out what response to then
+give back to the user.
+And in order to do that, we're going to be using flask.
+Flask as a micro framework written in Python.
+What that effectively means is that flask
+is some code already written for us in Python that makes it easy to get up
+and running with a simple web application that
+has a lot of features that can be useful as we go about developing web
+applications, as we'll soon see in a moment.
+And so flask makes the process of designing a web application relatively
+easy, and lets us focus really on what users
+are requesting and what sort of response that we
+want to provide back to the user after that request has been made.
+So let's take a brief look at a first web application in flask.
+And this is going to be inside of the first directory.
+And so flask code is generally stored inside of a file
+called application dot py is going to be the main file of a flask application.
+And here is the code that we need in order to run this flask application,
+in order to run a basic web application that we
+can serve as if it were a website.
+So on line one we have from flask import flask.
+Just like before, when we were importing that square function
+from the other file that I had created, here we're
+importing flask, which is just going to be
+a way of creating a flask web server from this flask module that
+exists somewhere else.
+Someone else wrote the flask module.
+You can install it for free.
+And what we're doing on line one is just saying that in this Python file,
+we want to use that flask module.
+Now what are we doing?
+On line three-- this extra line is just there for aesthetic purposes.
+It doesn't serve a real purpose--
+we're saying app is equal to flask underscore, underscore name
+underscore, underscore.
+And what that's doing is saying I want to create a new web application.
+And I want this web application to be a flask web application,
+where underscore, underscore a name is just representing this current file,
+that this file is going to represent my web application.
+Then on line five, this is where things get interesting.
+At app dot route and then slash.
+So flask is designed in terms of routes, where a route is just
+part of the URL you type in order to determine
+which page you want to request.
+And so this slash just represents the default page.
+If I go to a website slash and then nothing else after the flash,
+that is the default page of the website that I just
+want to access when I access the web page for the first time, for instance.
+And what line five is saying, app dot route slash,
+is that when the user goes to just slash on my website,
+goes to that default route, the function immediately below it
+is the function that I want to run.
+This is a special line called a decorator.
+No need to worry too much about exactly how that works.
+But the idea is that I am tying this function immediately
+underneath app dot route slash to this slash, so that when I go to slash
+is the function that's going to run.
+This is a Python function just called index.
+And all my index function is doing is returning the string
+hello world, just returning that text.
+So this is a very simple seven line web application written in Python.
+And let's try and run it now.
+So in order to run a flask application, I'm going to go into the directory
+where that application is located, in this case, it's called first.
+And I'm going to run flask run, where flask is a web server that I'm going
+to just run in this current directory.
+So I type flask run.
+And what I get is I'm now serving the flask app application.
+And I'm running it on this particular URL.
+And so if I take this URL and paste it into a web browser for instance, what
+I get is just the words hello world.
+I went to the default route on my website.
+I just pressed Return.
+And the result is that this text is what came back to me.
+This is the response that flask produced.
+And it was produced because of this line, this return hello world
+line, that happened whenever someone went to the slash route on my website.
+If this had instead been hello world with extra exclamation
+points for instance-- if I save that, and I refresh the page,
+now those extra exclamation points appear.
+So by editing my Python code, this flask code,
+that I'm able to change the way that my website looks.
+Questions about that very simple first web application
+that we've been able to create with just a couple
+of lines of code using Python and flask?
+Yeah?
+AUDIENCE: Does flask know to look for a file callled application dot py?
+BRIAN YU: Great question.
+Does flask know to look for an application called application dot py?
+Not out of the box necessarily.
+So what might happen is if you try and just run a flask run,
+you might get an error that says flask doesn't know where to look
+for your particular application.
+And the reason why is that flask relies on what's
+called an environment variable, a variable that's set inside
+of your terminal to know what file to be looking
+for as the source of the application.
+I've already sent my application to be application dot py.
+But if you're running for the first time,
+you might need a line like export flask underscore
+app equals application dot py.
+And all that line is doing is saying set the environment variable flask
+app to be application dot py.
+In other words, tell flask that the file that I
+want to run this application from is a file
+called application do py, which is just the general convention.
+But depending upon what system you're using,
+that may or may not be set automatically for you.
+So you may need to explicitly tell flask application
+do py is what you want to use.
+Good question.
+AUDIENCE: So was it the line that said [INAUDIBLE]
+or was it environment variable?
+BRIAN YU: Good question.
+So did I not have to do that?
+I have my terminal configured such that it will automatically run that line.
+It will automatically set the environment variable.
+And we can give you instructions for how to do that as well.
+But otherwise, you can just need to set the environment variable yourself.
+AUDIENCE: But there's also y in the--
+the application up higher that said app equals [INAUDIBLE]
+BRIAN YU: Good question.
+So what's this line doing?
+So all this line is doing is it doesn't have anything
+to do with telling flask which application to run.
+This is just us creating a new variable that
+is going to be the source of this web application called app such that later
+I can tie specific functions to it.
+So I created this flask variable called app.
+And using that app, I'm now able to say when
+someone goes to this route this is the function that I want to run.
+And it it's only used inside of this file
+to determine what routes get called and what functions get called as a result.
+Good questions though.
+So that was our first web application.
+It just returned some basic text when we go to the web application.
+But that's not all quite all that interesting just yet.
+So let's try and make things a little more interesting, in particular,
+let's try and add a couple routes.
+So let's go into routes 0 and take a look at this code.
+So inside of application dot py here, we see that up until line
+seven everything is identical.
+I had app route slash.
+And when that happens, I want to run this index function that
+just returns the text hello world.
+But here on line nine I've added a special additional route,
+app dot route slash David.
+And when I go to slash David on my web application,
+it's going to call this David function.
+And what that does is return the words hello David.
+So what's the result of that going to be when I run my flask application?
+Well, if I run flask run and then go back
+to this URL, this local URL just on my website,
+it just says hello world for now.
+It just shows me that default route.
+But if I go into my URL bar and change the URL from just the default
+route to this URL slash David, for example and press Return there,
+now it changes to hello David.
+So I have two separate routes now running on my web application.
+If I just go to the default route, it says hello world.
+If I go to slash David, then it says hello David.
+And that's all because using flask I was able to tie
+specific functions to particular routes of my web application.
+Questions about how that's been able to work so far?
+So if I wanted to add additional routes to do additional things,
+I could certainly do that.
+If I wanted to add a different route to say hello to Maria, for example,
+I could add another line that app dot route
+slash Maria, define a new function called Maria, in which case,
+I would return hello Maria.
+And now if I run--
+go to slash Maria on my website, it's going
+to say hello Maria, because I've added that additional one.
+But of course, this isn't going to work for anyone.
+If I try and type my own name, slash Brian,
+I get a not found error because I've typed in a route,
+but my flask application doesn't know how to deal with that route yet.
+It doesn't know how to deal with my name Brian, because I only
+have routes for the default route, the slash David route, and the slash Maria
+route.
+My name isn't one of them.
+So what if I want to make my flask application a little more powerful,
+and let it say hello to anyone, not just David and not just Maria?
+Let's take a look now at routes 1, which will be an example of just that.
+So inside of application dot py here's what we have going on inside of routes
+1.
+Up until line 7, everything is identical.
+We're just saying hello world if I go to the default slash route.
+But where things get interesting is down here line 9.
+I have app dot route slash, and then in angled brackets string colon name.
+This is not a particular route that someone is going to,
+but a template for a whole generalized set of routes
+that people could potentially go for it such that whenever anyone
+goes to slash and then any string--
+and we're going to call that string name--
+it's going to call this hello function.
+And this hello function takes as an argument
+this name, a name that gets passed in via the URL
+that the user typed into their web browser.
+And what happens here?
+Well, I'm going to return this formatted string hello comma,
+and then name in the curly braces, which is very reminiscent of one
+of those early Python files that we looked at way back
+at the beginning of lecture where I asked for a name
+to be typed in just at the command line and then printed out hello name.
+This is exactly the same line, but it's contained inside of one of these flask
+routes now such that this route is going to capture
+any string that I type in as a name instead of just David or just Maria.
+So if I now head over here and run this application by typing flask run,
+and now I go to just the default route, it says hello world.
+But if I instead go to slash David, it says hello David.
+I go to slash Maria, it says hello Maria.
+And I go to slash Brian, it says hello Brian.
+It's able to take any string that I type in,
+and just return hello to whoever that is.
+So I've already been able to create a dynamic web application.
+I didn't have to create a separate HTML web page for each different person
+that I would want to say hello to.
+Just depending upon what's passed into the URL,
+I'm now able to create a dynamic web application that can say hello
+to anyone, hypothetically.
+And the beauty of this is that this is all just Python code.
+So anything you can do in Python, you can edit application dot py
+to reflect the changes in order to update the website
+or update values of things to be whatever you want them to be.
+So for instance, Python strings have a method,
+a function that you can call upon them called capitalize that takes a name
+and capitalizes the first letter of it, for example.
+So if I, in my hello function, just said name equals name dot capitalize,
+what that's going to do is that if I type in a name that's the URL,
+it's going to first capitalize that name and then return hello that name.
+So before I type in slash Brian, it said hello brian with a lowercase b.
+I refresh the page now, now the B is capitalized
+because I've added this line 11 that just capitalizes that name for you
+before returning it back to the user.
+Questions about routes that we've seen so far in flask?
+Or how the applications work?
+
+Let's take a look at some of the other features that we can have in flask.
+And the first thing that we'll probably note
+is that these web pages are very, very simple so far.
+Right now all they do is display some basic text.
+And of course, we could add whatever HTML that we want to this.
+If I wanted hello Brian to be a heading for example, instead of just plain
+text, I could return instead of hello name, like, H1 and then slash H1.
+If we recall from the HTML lecture, H1 is
+a way of making a big bold heading at the top of the page.
+And so if I return those H1 tags surrounding hello name,
+now I when I refresh this page, hello Brian appears big and bold.
+I'm able to use whatever HTML content I want in order
+to return that information back to the user when they see it
+in their web browser.
+But of course, the HTML pages that you guys created in project 0 or HTML pages
+you might have created in other contexts are likely much more complicated
+than what could reasonably fit in just a single string.
+You can make it very, very long.
+But that's quickly going to start to get messy.
+So what we want to do is organize our flask application such that we can put
+HTML in HTML files, .html files just like you were using for project 0,
+but somehow tie those html files into flask.
+Tell flask to use those html files that we've already created in order
+to return something back to the user.
+So let's take a look now at another example.
+
+Here, inside of application .html, here is what we have going on.
+From flask we import flask.
+And we're also importing a second thing.
+In addition to just importing flask, we're
+importing a function in a flask called render template.
+And we'll see why that's going to become useful in just a moment.
+Line 3 is exactly the same so far.
+We just have app equals flask name.
+Then on line 5 we create our default route, app.route slash,
+then the index function.
+And instead of returning a string, just text
+that we want to display to the user, I'm returning
+render template and then index.html.
+And what that's telling flask to do is take an index.html file
+and render that and display it to the user
+instead of just displaying text, plain text.
+So if you look at the structure of where I
+have my files, in the same folder that I have my application.py file
+I also have this templates directory.
+And inside of this templates directory I have a document called index.html.
+And if I open up index.html, here's what it looks like.
+It looks like an HTML file that's got a title that says my web page.
+And inside the body it just says hello world.
+So what will now happen if I try and run this web application?
+I go to that URL, and now it displays hello world.
+And if I click and view the page source of this web page,
+I can see the html content to that web page is the same as index.html.
+So what I've effectively done here is, via a round about way
+using flask and Python, allowed us to just display
+an HTML page in the same way that you've been doing already,
+just by writing the contents into the html itself
+and then opening up that HTML document.
+Questions about how we were able to render that HTML file?
+AUDIENCE: Can you just give any function the index or whatever-- yeah, there.
+BRIAN YU: As index.html?
+AUDIENCE: No, no.
+[INAUDIBLE]
+BRIAN YU: Oh, good question.
+So what is the logic behind the name of this function?
+Does it have to be called index?
+The answer is no.
+Your functions can be called whatever you want.
+But often times later on we'll see how it
+can be helpful to refer to a particular route by the name of the function.
+And so making sure that the names of your functions
+are logical or meaningful in some way is usually a good idea.
+But this could be called anything theoretically.
+Yeah?
+AUDIENCE: Index.html was in a subdirectory.
+Was it searched exhaustively [INAUDIBLE]??
+BRIAN YU: Good question.
+So the question is how does it find index.html?
+Where does it know to look?
+Flask is only going to look immediately inside
+of a subdirectory called templates.
+So I have to have in the same folder as application.py a directory
+called templates, inside of which is index.html.
+And that is the only place that flask will
+know to look for those individual HTML files.
+Good question.
+So it doesn't seem like so far that we've gained a whole lot.
+We were able to do the differences in routes in order
+to say hello to different people.
+And that was something that we couldn't do with just HTML.
+But so far what we've done now is just created an HTML page
+that we're now displaying to the user.
+And we haven't added a whole lot.
+So let's try and use Python to begin to add some new features to this website
+that we didn't have before.
+So let's take a look at variable 0.
+So inside of variable 0, what I have here
+is something a little bit different.
+So first couple of lines of the same.
+On my default route, I'm defining a variable called headline,
+which is set equal to hello world.
+And now on my next line, return render template-- before, I just
+said return the index.html template.
+That is the html content that I want the user to see.
+But this kind of added an extra line.
+I've said return rendered template index.html.
+But I've also said over here, I've passed an additional argument
+to the rendered template function.
+I said in addition to returning index.html,
+you should also know that I want the variable headline
+to be defined and index.html to be whatever headline this variable is
+equal to.
+So effectively, I am giving this index.html knowledge of a new variable,
+a variable called headline, which, is in this case,
+happens to be equal to this Python variable called headline.
+So this is the variable that will exist inside the HTML file.
+This is the variable that exists inside the Python file.
+And very frequently, it's conventional to give him the same name,
+although they don't need to have the same name.
+So what is that going to do for me?
+What's inside of index.html?
+Let's take a look.
+So inside of index.html, inside of that templates directory,
+here's what I have.
+HTML head, a title that says my website.
+It's the same as what we've seen before.
+Inside the body though is where things get a little bit interesting.
+I have an H1 tag defining a heading that will just
+appear at the top of the page.
+But then in this double quotation marks I have this--
+or double curly braces, rather, I have double curly brace, headline,
+and then end double curly brace.
+And this you can think of as a placeholder.
+In this HTML template I've effectively said
+I have a headline that I want to plug in here.
+And whatever the value of the variable "headline" is,
+that is what I want to substitute into this HTML template.
+So my HTML template doesn't know in advance
+the headline is supposed to be hello world or just hello or welcome
+or some other heading altogether.
+But as soon as I have a variable called headline
+and I pass it into the index.html file, then index.html
+will be rendered in such a way that the headline will
+be filled in to that H1 tag.
+So if I run flask run right now and go to that web page,
+it says hello world, not because I had hello world inside of index.html.
+I don't.
+But because in my Python code, I've defined this headline hello world.
+And that is what is getting passed into my index.html template.
+So if I change this hello to just hello without the world
+and refresh the page, now that headline updates as well,
+because the timeout is being dynamically generated,
+rendered by flask, depending upon what I pass into it as variables.
+Headline is hello in that case.
+Questions about how that worked?
+Yeah?
+AUDIENCE: Can you go back to index.html file?
+So the double [INAUDIBLE]
+BRIAN YU: This part?
+AUDIENCE: Yeah.
+So is that a proper syntax of that [INAUDIBLE]
+BRIAN YU: Great question.
+So what is this double curly brace index?
+It doesn't really look like HTML and it doesn't really look like it's Python.
+In fact, it's entirely different, what's called a templating
+language, an entirely separate language called Jinja1,
+which is a standalone language.
+But it's a language that flask uses in its html templates
+in order to make it easy to dynamically generate web pages.
+And so we'll see a couple of examples of this Jinja2 syntax.
+It's relatively intuitive.
+And it follows a very similar style to Python.
+So it has a lot in common with Python as you'll soon see.
+But effectively, all we need to understand for now
+is that the double curly braces are Jinja2's way
+of saying substitute something here.
+Put some value of a variable into the template wherever that was.
+Great question though.
+So what's the advantage of allowing me to just substitute
+some variable into the template instead of just putting it
+into the template itself?
+Well, what I can do now is I can say app.route slash
+bye, if I want to add a goodbye route in addition to a hello route.
+And now I'll need to find a new function called by where the headline is instead
+going to be goodbye.
+And now I can take that same line, return render template
+index.html where headline is equal to the headline,
+but this time headline is goodbye instead.
+So now I refresh this page--
+unexpected EOF.
+Let's save the file and try again.
+So we have the default route that just says hello.
+But if I change the URL to be slash bye instead, then what happens
+is I get goodbye to be displayed.
+And that's going to be the new heading.
+So I've used the same index.html template.
+The only difference is I've changed what value I pass in as the headline.
+And as a result, what appears in the template and ultimately what appear
+appears in the html that the user sees is different,
+depending upon what that was.
+Questions about that so far?
+Yeah?
+AUDIENCE: This Python count as back end?
+BRIAN YU: Does this Python file come as back end?
+Yeah.
+What I've written here is Python code for a back end web
+server, that is listening for a request like, me typing in URL slash bye.
+It processes that request and returns some response, in this case the HTML.
+So yes, this back end Python code as you would term it.
+Yeah?
+AUDIENCE: And it updates dynamically?
+Like you don't have to start the application [INAUDIBLE]..
+BRIAN YU: Good question.
+Does it update dynamically?
+In this case, yes.
+I have flask set to what's called debug mode.
+And in debug mode flask will automatically update any time
+I've made a change.
+But if you're not in debug mode, then it typically
+won't unless you restart the flask server.
+So there are different configuration options for flask.
+But there is a way to let it auto reload every time you make a change.
+Good question.
+
+So that is an example of it variables that we've been able to see,
+where we're able to take values and plug them into templates.
+But what else can we do with templates?
+How can we make things a little bit more interesting?
+Well, to introduce this, I thought we'd start
+by looking at an example of an extremely simple website that
+does exist out there on the internet that really just serves one purpose.
+And that website is isitChristmas.com.
+If I go to isitChristmas.com on today, which happens to not be Christmas
+and I press Return, what I get is no.
+That's all the web site does.
+It just says no, it is not Christmas.
+And presumably, on Christmas it would say yes, it is Christmas.
+So what if we wanted to write a similar website for a different holiday,
+say New Year's for instance?
+And I want to write a isitnewyear's.com type website that says no if it's not
+New Year's and yes if it is New Year's.
+How might we go about doing that?
+Well, we're going to need some sort of condition.
+We want our template to display yes if it is in fact, New Year's.
+And we want our template to display no if it's not New Year's.
+So how might we go about doing that?
+Let's take a look now at conditions and look at the code here.
+So this is application.py for our is it New Year's website.
+So what I've done up here is first import
+a Python module called date time.
+So Python has a bunch of different modules that serve different purposes.
+And so depending on what you're trying to do,
+different modules may serve your needs differently.
+In this case, the date time module has a very easy way to get the current date.
+And that's going to be useful to me as I try
+and determine whether it's New Year's or not.
+Then I import flask and render template, just like I did before.
+I start my flask application.
+I add my default route, which is going to call this index function.
+And here's what's happening here.
+I'm defining a variable called now, which
+is set to datetime.datetime.now, which is Python's way of getting
+the current date and time.
+And so that's going to be stored inside of a variable called now.
+And now I'm defining a Boolean variable called new year,
+which is going to be true if it is New Year's and it's going to be false
+if it's not New Year's.
+And how do I know whether it's New Year's or not?
+Well, if now.month, the month of the current date and time,
+is equal to 1 and now.day is equal to 1, then it's New Year's.
+So if both of these things are true, the month is equal to
+and the day is equal to one, than it's January 1st, New Year's is true.
+Otherwise, New Year's is going to be false.
+And then finally, I'm returning this template.
+Return render template index.html, where the value new year
+is set equal to new year, which is just this Boolean variable that I just
+created a moment ago.
+So I'm defining this index.html template telling
+flask I want to render that template.
+And I'm giving it this Boolean information of whether
+or not it is a new year or not.
+And depending upon whether it's in New Year or not,
+that's going to determine what I want the template to display.
+And so let's look at index.html and figure out
+how it's going to deal with this new year variable that I've defined here,
+that I'm passing in to the template.
+Let's look at index.html.
+So it's a fairly simple html web page.
+Inside the head I've got a title that just says is it New Year?
+I've got some styling.
+And the only styling is that I want everything to be centered.
+And here's the body.
+And here's what's going on in also the Jinja2 templating syntax.
+I have this curly brace percent sign, which
+is Jinja2's way of introducing Python like syntax for conditions
+into the html file.
+I want my html file to have if's and else's is in the same way that Python
+has if's and else's.
+And Jinja2 alongside flask lets us do that by using this similar syntax.
+So inside a curly brace percentage sign I say if new year--
+in other words, if it is in fact, the new year,
+then here's the HTML that I want to display.
+Yes, happy new year.
+Else, if it's not New Year's then I have this H1 that just says no,
+it's not New Year's.
+And then end they have to signify the end of the if statement.
+So this looks slightly different from just regular Python,
+but the words are the same.
+If and else, for instance, those are the same keywords that you would use.
+And this is Jinja2's way of saying I want to conditionally
+use different html content depending upon the values of variables
+that I'm passing into the template.
+So if New Year's is true, this is the html
+that should be rendered to the user.
+Otherwise, this is the html that should be rendered instead.
+And so I'm able to dynamically generate different HD, depending
+upon the values of these variables.
+So if I run flask run now and go ahead and go to my website, it just says no.
+Today doesn't happen to be New Year's, so it's telling me no.
+If, on the other hand, I wanted to simulate it and pretend that it is New
+Year's, let me just-- after I set new year equal to the month is one
+and the day is one--
+let me just override it.
+New year is going to be true.
+Let's just tell our web application that it is New Year's today, even
+though it's not, and refresh the page.
+And what happens now?
+Then it says yes, happy new year.
+So the HTML content is able to change depending
+upon the values of the variables.
+And if I look at the page source of this web page,
+it just says body and then this H1 tag it says yes, happy new year.
+There's no trace of that no that was inside of my index.html template
+because the template gets processed and rendered first on the web server.
+The server looks through the templates, figures out
+the conditions, figures out what html code to include, what not to include,
+what to plug in to particular spots, and then takes that result
+and gives that result back to the user.
+So the user never sees the original contents
+of the template with all the different possible branches
+and different possible options that could theoretically exist.
+And so using that code, we were able to conditionally determine
+what to display on the HTML page.
+Questions about any of that we've seen so far
+in terms of Python or Jinja or flask?
+Yeah?
+AUDIENCE: What's the reason why you put the ir else on the index.html and not
+in the Python?
+BRIAN YU: Great question.
+So why did I put the if else inside the index.html instead
+of inside of the Python code?
+I certainly could have put it inside the Python code.
+So I could have said something like, I want my text to be yes,
+if it's New Year's, else if it's not New Year's, no for example.
+I could have done something like this and then just passed in the text.
+But as we start to deal with more complicated websites
+where I might want entire sections of HTML
+to appear depending upon the value of some variable,
+the conditioning inside of the template will become very, very helpful.
+You can imagine if this were a much longer thing
+that I wanted to display if it were New Years, like if it were New Years,
+I wanted balloons to appear on the screen.
+I might have a lot of code that's necessary
+in order to make those balloons appear.
+And it would be infeasible to put all of that inside of the Python file itself.
+And so the conditions just offer a way of changing the template such
+that all of the template code is really inside the file.
+And then just based on the settings of particular variables,
+I decide how I particularly want to configure
+that HTML file for my particular use case
+for this particular user on a particular day.
+Yeah?
+AUDIENCE: [INAUDIBLE]?
+BRIAN YU: Great question.
+Do you need to install Jinja2 in order to make any of this work?
+What you will need to do is you'll need to install
+flask, which is the micro framework that we've been using in order
+to generate these web applications.
+And when you install flask, Jinja2 come along with it.
+So as you install flask, Jinja2 will be first installed such
+that you can use flask and take advantage of all Jinja2 features that
+come along with it.
+Good question.
+Yeah?
+AUDIENCE: So with flask, we don't use Javascript anymore at all?
+BRIAN YU: Good question.
+Do we use JavaScript?
+We can still use JavaScript.
+We haven't quite gotten there.
+But it's totally fine to use JavaScript inside of the client side of the web
+application, inside of the HTML file that the user ultimately sees.
+And that works pretty well with flask too.
+You can combine the two together.
+Yeah?
+AUDIENCE: Is it conventional to call it-- give it
+the suffix html in this Jinja file?
+BRIAN YU: Yes.
+The question was, what is the convention for what to call the files?
+Generally speaking, our template files are HTML,
+even though they have Jinja added to them.
+And so by convention, we'll still call them
+HTML files, since their contents are predominately HTML.
+Good questions.
+So that was an example of conditions inside of Jinja.
+But like Python, Jinja has a bunch of additional features too.
+In addition to conditions, we also have loops, for example.
+So how might we go about having some loops inside of our flask applications?
+Let's take a look at an example of that.
+So inside of application.py, I've here, in the default route,
+just specified a bunch of names, Alice and Bob and Charlie.
+And on line eight I'm returning rendering the template index.html,
+passing in that whole list of names into my index.html template.
+And presumably in my index.html template,
+I want to display all of those names on the web page.
+So what do I do inside of index.html?
+Well, here's what's going on inside the body of this page.
+I have a URL, which is in just an unordered list.
+And now I have this curly brace percent sign syntax again.
+We used that same syntax when we introduce
+a if statement or a condition in Jinja.
+We'll do the same thing when we want to add a for loop into our template.
+And we have for name in names.
+Same exact syntax as we would have used in Python.
+And that means we're going to loop over that list of names.
+And for each name, here is the code you want to add.
+We want to add an li, a list item, where we
+plug in using that double curly brace syntax the individual name.
+And so I've effectively said create an unordered list.
+And inside of that unordered list, for each one
+of the names in my list of names, add a li tag, inside of which
+is the actual name that I wanted.
+So if I now run this application and press Return, what I get
+is names big headline and then one list item
+for each one of those individual names.
+I didn't need to, on three separate occasions, type li tag name slash li.
+I only needed to do that once.
+And because I have it inside of this loop that looping over
+this list of names, then it's going to dynamically generate
+the list items as I need them.
+And so if I were to add a fourth name, like, I
+were to add David to my list of names and refresh it,
+it adds another list item to that automatically,
+updating HTML such that if I actually look at the page source what's happened
+is it's created this unordered list and then it's
+created one list item for each one of those items that was originally
+inside of my original list.
+Questions about loops or how that was able to work?
+
+We'll take a look at a couple of other features of flask
+that are ultimately going to be helpful as you
+start to build a web applications using this type of technology.
+One thing that might immediately be helpful
+is figuring out how you link to different parts of your web
+application.
+You might have one route that links to another route and that route
+needs to link back to the original route, for example.
+How would you go about doing that?
+Let's take a look at some URLs.
+So inside of application.py I have two things going on.
+I have a default route that just renders an index.html page up and a slash more
+route that is going to render a more.html page presumably
+for more information, more text, an additional page worth of information.
+Nothing too crazy going on here, just two routes, each of which
+renders a different HTML template.
+Let's take a look at those HTML templates.
+Here is index.html.
+I have a heading that says first page.
+I have a paragraph of text.
+And then down here is where the interesting stuff happens.
+Here is where I will link to the other route.
+So I have here in a href tag which we've used before
+in order to link to a different page.
+But in this case, I'm using the special syntax curly
+brace curly brace and then a special function
+in Jinja URL for, and then the name of a Python function, in this case more.
+And so what I've done here is said I want
+to link to whatever the URLs for the more function,
+in particular, this is the more function,
+the one I've given the name more to, and I
+want to just link to whatever route will take me to that function such
+that later on down the road I might change that route.
+That route's name might change such that it appears as different to the user.
+But this code doesn't have to change, because all this code is
+saying is figure out what the URL is for the more function and link there.
+And I'm using the double curly braces to mean
+substitute that URL in place in between the quotation marks here.
+Likewise in more.html I have basically the exact same thing going on.
+I have a heading.
+This the second page, a paragraph worth of text, and then actual saying,
+here's where I want to link to.
+Go back to whatever route had the index name of the function for it.
+And so what happens if I now run this application?
+I have my first page that has a whole paragraph of text.
+And when I click See More, that takes me to the second page.
+And Go Back takes me back to the first page.
+And so this URL for syntax can be used in Jinja or in my Python code
+itself to just say get the URL that will take me to a particular function.
+And so that's a helpful way of often linking to different files.
+And one thing you may be noticing at this point in time,
+is that there is a lot of similarity between my index.html file,
+that first page that I showed you, and this more.html file,
+the second page that I showed you.
+In particular, they both have the same HTML head,
+title as my website on both of them.
+They both have this H1 at the beginning of the body that
+has some title for the page.
+They both have this paragraph.
+And so ultimately these pages are very, very similar.
+And what we might like to do is find a way
+to factor out those commonalities such that I
+don't need to copy paste my index.html page create a more.html page.
+I can just take whatever is common to both of those pages
+and use it as a layout, as a template to base these other pages on, and then
+modify those new pages slightly in order to make
+the necessary adjustments that I need.
+That way, instead of writing the same code twice,
+I can just write the basic template from my web site
+once and fill in the blanks with whatever additional details
+that I have.
+So let's take a look at that in flask.
+It's a feature called template inheritance.
+So we'll go ahead and look at inheritance.
+And application.py is identical.
+The slash route just takes me to index.html.
+The slash more route renders the more.html.
+But here's what's different.
+Inside of my templates directory I now have
+three files, an index.html file, a more.html file,
+but also a layout.html file.
+And let's look at that layout.html first.
+So what's going on inside of layout.html?
+Well, I've defined the basic layout for one of the web pages
+that I might want to have, either an index. html or in more.html.
+I have my HTML header.
+The title is my web site.
+That's the same for both.
+They both got a body.
+They both got an H1 that's going to be the heading.
+But here I've added some special syntax, block heading and then end block.
+What I've done here is defined a variable section of my HTML template
+saying that a block of HTML content could go here called heading.
+And this is where that heading block should go, in between the H1 tags.
+And then after the H1 tags I have another block called the body block.
+And the heading and body are just names that I picked.
+They could've been called anything.
+But I'm saying I have whatever I call the body
+block should be inserted right here into the body of my layout.html template.
+So now as you can begin to imagine, my index.html file and my more.html file
+don't need to redefine this entire structure of what the HTML web
+page looks like.
+All they would need to do is simply say here
+is what belongs inside of the heading and here's what
+belongs inside of the body.
+And aside from that, just use this basic layout as my template
+that going to inherit from when I define what index.html and more.html
+ultimately look like.
+So what does index.html look like?
+Well, here's that code.
+On line one up here, I've said extends layout.html.
+In other words, index.html is going to be based on layout.html.
+So let's just copy that HTML and use that as the template
+that I'm going to use.
+But I want to make a couple key changes or additions.
+Inside of block heading this is what I want to be contained inside of heading.
+I just want it to say first page.
+And then end block to say that's the end of that heading section.
+And then inside of the body block, here is
+what belongs in the body of the website, this paragraph worth of text and then
+this link to going onto the more page.
+And that's what's contained inside of the body.
+And so if you remember back in layout.html,
+we had that space for where the heading should go
+and that space for where the body should go.
+And all that's going to happen now is when
+I render index.html it's going to look to layout.html and try
+to plug in this heading content into where that heading block was and plug
+in this body content into where the body of that layout
+was, and render the resulting HTML page.
+And so likewise, inside of more.html I have the block
+heading that defines a slightly different heading block and a slightly
+different body block.
+But ultimately, they are both extending that layout.html default
+file that is where I am defining the general structure of my HTML page.
+So if I run this web server now and refresh that,
+it looks exactly the same.
+First page, see more takes me to the second page.
+But now notice that any change that I make in the layout
+is going to then influence both index.html and more.html.
+If I add an extra line like, welcome to my layout file, now suddenly
+both on the first page and on the second page
+they both have this additional welcome line.
+Because this is information that was drawn from my layout.html template
+from which both index.html and more.html are extended.
+They're getting their content from layout
+and basing themselves off of layout.html.
+And so as a result of all of that, we're able to get this template inheritance
+whereby I can make a change once and see the impact of that
+all across the rest of the files that are also
+inheriting from that same layout.
+So in project 0 as you went about designing
+a whole bunch of different HTML pages that were all about some central theme.
+And you may have noticed that there was a lot of repetition where
+you would need to copy different content from one page
+onto a second page and a third page and a fourth page.
+This offers a solution to that problem, whereby
+you can define a simple layout that is both shared in common amongst all
+of your pages, and then on each individual page,
+just define the sections that are different from one page to another.
+And this is often a better design for your websites.
+And you can see how flask gives us the ability
+to leverage this template inheritance in order
+to create these websites that just have certain parts of each HTML page
+that differ from one page to the next.
+Questions about template inheritance or how
+we were able to base HTML files off of other layouts?
+
+Let's take a look at a couple of other things.
+Let's take a look at forms now.
+So if you remember back to our HTML lecture,
+we talked about how you can go about creating
+HTML forms just by using form tags.
+But up until now, those forms didn't really do anything.
+You would submit the form and nothing would happen.
+Now that we have a back end server, a Python flask server that's
+running and listening to requests, we can
+begin to take the results of those forms and do something interesting with them.
+So let's look at forms and look at application.py.
+So first thing to notice is that our index function is just
+going to be returning index.html, very similar to all of the rest of the web
+pages we've done.
+Don't worry about this second function for now.
+But let's just look at index.html and see what it's doing.
+So index.html is extending layout.html just like it did before.
+Our heading is going to say first page.
+And here's what's in the body of this web page.
+It's going to be a form, and in particular, this form
+is going to have an action.
+The action is when I submit this form, who should be notified
+or where should I be submitting this form to?
+And in particular, it's going to be the URL for a function called hello
+which we saw back an application.py, but we'll
+take another look at that in a moment.
+And we're saying the method for this request is going to be post.
+So HTTP request, which we talked about before is
+the process by which your browser makes a request to a web server
+to get information, these requests can come in a number of different methods
+where by default, if I go to google.com and press Return,
+I am making a GET request.
+I'm asking to get information from a web page.
+And so the default request method is just yet.
+And so far in all the flask applications we've been building,
+we've been using that default GET request method for all of our routes.
+But this time for our form when we're submitting data
+to the server, oftentimes that will use a slightly different request method
+called post.
+And so here we're saying when I submit data to hello,
+use the request method post to mean I want to submit data
+as a form to the web server.
+What data am I submitting?
+Well, I have an input field whose type is text, whose name is name.
+That name will now become relevant.
+I've given a name to the input field, in this case it's just called name.
+And the placeholder just says enter your name.
+And then I've added a button that will submit this form.
+So this is a form much like the ones we've already
+seen before, the only difference is that now we've
+enclosed it inside of a Jinja template instead of just a normal HTML file.
+Now what's going on in application.py?
+What's happening?
+On line 9 here is my slash hello route.
+And in particular, I'm telling this route here is
+the request method you should accept.
+People are going to be submitting data to this route via the post method.
+They're going to be submitting data via post to this hello function.
+So what should this hello function do?
+Someone types in their name into the form, they press the Submission button.
+This function gets called.
+What happens?
+Well, up here on line 1, from flask I've imported flask and render template
+just as before, but I've also imported this thing called
+request that is going to represent whatever request the user has
+made to my web server.
+And so now here on line 11 I'm defining a new variable called name.
+And I'm saying name should be equal to what?
+I'm going to take that request that the user made.
+Access the form, request.form.
+And let's get whatever part of the form was called name.
+So if you remember back in the form itself, in the HTML code, on the input
+I gave it a name attribute which was equal to in quotation marks "name."
+That's what this is, the name of the input field that I'm trying to access.
+And I'm going to access that input field and just call it name.
+And what am I going to do with that variable name?
+Well, I'm going to render a template called
+hello.html, passing in that name as a variable into the template.
+Just like we were passing names into the template before in order
+to say hello to different people, this is going to do much the same thing.
+But instead of getting the name from the URL,
+we're going to get the name from the form that the user just filled out.
+So how is that going to work?
+Let's look at hello.html.
+Inside of hello.html the heading is just going to be the word hello.
+And the body of the website is hello, and then in those double curly
+braces to mean plug in a value here.
+I'm plugging in the value name, because I
+want to say hello to whoever the name is, but I don't yet know who it is.
+And again, both of these files are extending that basic layout.html file
+that defines the general structure for a web page.
+So what happens if I now run this web application?
+I go to the web page.
+This is the first page.
+Here is the form.
+I can enter my name here.
+So if I type my name and press Submit, I'm
+now submitting that form to the slash hello route via post.
+I'm sending the data within the form, in this case my name,
+to the slash hello route.
+And what that's going to do is run the code inside of my hello function.
+And the result of that is that it's going to say hello Brian.
+Again, why did that happen?
+It's because in index.html, the action, where the form should be submitted to,
+is the hello function.
+Then inside of application.py, here is the hello function.
+What happens inside of it?
+I first get the name from the form, request.form.getname.
+Save it in a variable called name.
+And then render the template hello.html, passing that name variable
+in as a value that I want to then display in the resulting template.
+And so now I've created a form just like I did before,
+but I'm doing something with the form.
+I'm taking the data that the user passed into the form,
+and using it to generate a dynamic HTML page just for them.
+Questions about forms or how we made that happen?
+Yeah?
+AUDIENCE: What happens if you just typed in the URL dash hello?
+BRIAN YU: Great question.
+Question is what happens if, instead of submitting the form,
+which goes to slash hello?
+I were to instead, just go to this URL slash hello, and just
+press Return there?
+So recall that when you type in a URL and just press Return,
+that is a get request.
+The default request method in HTTP is just
+trying to get the contents of a web page.
+And here, I'm just going to ask to get the contents of hello.
+I'm not submitting any form data to hello.
+What I get is method not allowed.
+This method is not allowed for the requested URL.
+And why is that the case?
+What is it about these four lines that caused
+me to get a method not allowed error?
+Any guesses?
+Yeah, it's this method equals post part of the route that
+says the only request methods I should accept is the request method post.
+If someone just tries to get the page normally,
+then there should be some sort of error, because that's not a supported request
+method.
+I could try to support both.
+I could say I want to support both, just someone typing flash
+hello, and someone going to the regular route and submitting the form via post.
+And to do that, I would just say method equals GET and POST.
+I can have a list of different requests methods that I allow.
+And here I'm saying the flash slow route will accept both GET requests and POST
+requests.
+How do I tell them apart?
+Well, I can use this request object again.
+I can say if request.method equals GET, for instance, let's just return
+please submit the form instead, else, if the request method isn't GET,
+which means the request method has to be POST, then do the same thing as before.
+Get the name, and then return the hello.html template
+with the name filled in.
+Now if I go to slash hello, what I get is please submit the form instead.
+Because I tried to access this page via GET.
+But instead, if I just go to the default page and type in my name,
+and submit that form, then I get the hello.
+So flask is able to detect what the request method is.
+And if the request method is GET, do one thing, if the request method is POST,
+do something else.
+And so flask can differentiate between just
+trying to access the page versus trying to actually submit data to that page.
+Other questions about that or other things?
+
+We'll take a look at one other example.
+So, so far, our web applications haven't been able to--
+question?
+Yeah?
+AUDIENCE: So if the form had a GET method specified with [INAUDIBLE],,
+would the request form get--
+BRIAN YU: So the question is if the form, instead of being method POST,
+were method GET, and I tried to submit by the GET method instead?
+Well, in this case, it's going to get caught in request.method equals GET.
+So what will happen is that if I go to the default route
+and try to type in my name and submit it, I'm going to get
+please submit the form instead, because it was a GET request.
+But hypothetically, you could also have data submitted via GET instead.
+When you submit data via GET, that data gets put into the URL.
+So notice that what changed here is that I requested slash hello
+and then question mark name equals Brian, where that basically
+means that I've submitted form data via GET,
+and that data is all put into the URL.
+And so the result of that is that you can
+change what's in the URL to change what the specific request is.
+This is also not a good idea if there's any sensitive information
+that you want to submit via a form.
+If someone's typing in their password for example, to log in to your website,
+you don't want that form to be submitted via GET, because now
+in the URL, that appears in their URL history for example.
+Their password's just going to be plainly visible in the text.
+And so oftentimes, for more secure form submissions
+you'll want to use POST requests instead of GET.
+But you could also submit data via GET too.
+
+I'm just going to change that back to POST.
+Good question, though.
+So thus far, our web applications haven't really
+been able to store information.
+We've been able to use web applications in order
+to take information and do something with it,
+whether it was the name that someone typed
+into the URL to say hello to them.
+Or whether it was a form that users are filling out
+that they fill out the form, press Submit, and then the website
+says hello to them.
+But now we'd like to create a website that
+is able to store information, retain information, and use
+that information later, for example.
+And that's where we can start to introduce the concept of sessions.
+And so sessions in flask or in web programming, more
+generally is the idea that when you log in to the web site,
+you have access to some session that is data specific to your user account.
+So I log into Google.com.
+And I see that I'm logged into my Google account
+and have access to my Google documents, for instance.
+Whereas you might log into Google and see an entirely different thing,
+depending upon how you are logged in as well.
+So how can we begin to make use of those sessions?
+Let's take a look at a example.
+
+So this doesn't yet actually use sessions.
+But it's an example of us being able to store data.
+So let's say I wanted to create a note taking application, for example.
+So how might I create a note taking application
+where I want to be able to store different types of notes
+that people are typing in order to record notes and save notes
+on this website?
+So what do I have going on?
+On line 10 I've defined this notes variable
+to so far, just be an empty list.
+It's just going to be an empty list of notes
+that is going to store the notes that I'm eventually going to be saving.
+Then I have a default index route, where inside of this index route,
+I have a couple of things going on.
+If the request method is POST, which we haven't yet seen.
+But if I were to submit data to the index form-- and I'm
+not sure how I would do that just yet.
+But we'll see in a moment.
+Then what do I want to do?
+I want to access whatever note I wanted to add presumably,
+because I just tried to add a note.
+And then notes.append note it's my way of saying take this list of notes
+and add a new thing to the list.
+In particular, add this new note to that list.
+So that's what happens if the request method is POST.
+If I submit data to this index function, then what I should do
+is add a new note to my list of notes.
+And then otherwise, if I didn't submit any data, or even if I did,
+just at the end, return this index.html passing in my list of notes.
+What's happening inside of index.html?
+Well, what I have here is a for note in note, print out each individual note.
+And all of that is stored inside of an unordered list
+where have an ordered list of notes.
+So what that's going to do, is much like we saw that list of names
+that we could then use to generate one name at a time
+in order to display a list of names, we can
+display a list of notes that will display one note at a time
+on each item inside an unordered list.
+Then lower down on the page, I have a form.
+And this form is presumably where I could add a new note
+into my notepad web application.
+This form is going to have an action of going to the index page, that's
+where I want it to go.
+The method is POST, just like before.
+And this is very similar to the form we just saw.
+It's got an input field whose name is note this time, and whose
+place holder is enter your note here, and then a button
+to add a note to my list of notes.
+So we'll take a look at all that in just a moment.
+But let's take a look at how the web application actually works.
+And then take a closer look at what's actually
+going on inside of flask and the application.py
+to make all of that possible.
+So I'll go ahead and flask run this.
+I'll go to the default route.
+And what I see here is just a heading that says notes and then this form.
+Enter note here, and then add note.
+So what happens if I type hello as a note and click Add Note?
+Well, that will add hello as just a note that I've now
+recorded inside of this list.
+And if I add hello again, as another note?
+It adds that too.
+So how is that working?
+Let's take another look back at index.html.
+When I add a note, what's happening?
+I'm submitting this form.
+And I'm submitting this form back to the index function
+or whatever URL maps to the index function, which in this case is just
+slash.
+And I'm submitting that data via POST.
+What's then happening inside of application.py?
+Well, I'm maintaining this list of notes right here,
+just an empty list to start out with, which
+is why I have no notes to begin with.
+But then in the index function, if the request method was POST,
+if I did try and add a note, then what's going to happen?
+I'm going to set note equal to whatever is
+the note parameter of that form, whatever thing in the form
+had a name called note.
+And then I'm going to append to my already existing list of notes,
+that new note.
+And then only at the end of all of that am
+I going to render the template index.html,
+passing in that whole list of notes.
+And what that's going to do is ultimately save
+all of those notes as a variable that is accessible to my entire web
+application.
+And so what's going to happen then is that if I type in a third note
+and add the note, that's going to appear.
+And if, for example, I were to close this web page, but open it up later
+and type in the URL again, those notes are still there.
+My web server is saving the value of all those notes
+as a variable inside of the web server.
+And as a result, I can see all those notes even if I close the web page
+and open it up again later.
+Those notes are still retained.
+If on the other hand, I were to ever for some reason shut down my web server.
+And you can quit flask by pressing Control-C, for example,
+and start up again by typing flask run, now
+I've restarted the whole web server.
+It's completely restarted application.py.
+And when I refresh this page, now my notes are gone again.
+And so I've lost access to all of them because the server was shut down.
+And when it restarted, everything was reset.
+And so next week we'll begin to look at database design,
+and how we can resolve this problem by trying to figure out
+how do we take data that the user submitted and store it somewhere longer
+term, somewhere that even if the server goes down
+and come back later or even if we're accessing it from somewhere else,
+we can still get back at that same data.
+And so that's where using and taking advantage of databases
+will become quite helpful.
+But one last thing to note about this particular website
+is that this notes variable is what we call
+a global variable, accessible across the entire application,
+which means that if I'm using this web application and taking notes with it,
+and potentially, someone else also wants to use my web
+application on the internet, presumably, we
+don't want to be working with the same note pad, so to speak.
+I want to be able to take my own notes without seeing someone else's notes.
+And I don't want someone else to be able to see my notes.
+But if I just have the single notes variable that's
+shared across the entire web server, then
+even if someone else tries to visit my website,
+they're going to see all of that entire same set of notes.
+And so that's where the concept of sessions
+begins to come in, that when I log into my web site,
+I want to see my list of notes.
+And when someone else logs into the same web site,
+they want to see their list of notes without those lists of notes
+ever overlapping, so to speak.
+And so how do we make that happen?
+What changes do we need to make in order to allow for that?
+Well, what we're going to do is from flask, import session.
+And that gives us access to a variable called session, which we can then
+use them in order to keep variables and values that are specific
+to a particular user, such that I have my own session that's
+all data specific to my interactions with the website,
+and someone else has their own session that has all of the data specific
+to their interactions with their website.
+And then on line two I'm importing a special additional extension
+to flask called flask session.
+This just give us a little bit more control over sessions, in particular,
+it lets us store session "server side" such that on our server
+we're storing all the data about the sessions which
+gives us just a little more control over how the sessions are managed.
+But not to worry too much about that.
+What's important is that I now have access to this variable called
+session which is unique to me, such that now if I, instead of saying that notes
+is going to be this global variable that everyone has access to,
+I can treat the session as a dictionary that is specific to me.
+So I can say session square bracket notes is equal to the empty list,
+to mean I want my particular session to have an empty list of notes,
+for example.
+And then, instead of notes.appendnote, I can say sessionnotes.append notes.
+Rather than append this new note to the entire global variable representing
+all of the notes, I only want to append the note
+to the notes specific to my particular session,
+to my interaction with this page.
+So what's going to happen here now if I try and run
+this web application is I can try and type my first note and nothing happens.
+AUDIENCE: You missed the last line, [INAUDIBLE]
+BRIAN YU: Oh, wonderful.
+Thank you.
+So notes should be session notes instead.
+And if I run this again, it say notes.
+I type in my first note.
+I add the note.
+Now the first note appears.
+What happens if I try adding a second note?
+What's going to happen?
+It overwrote the first note.
+First note went away.
+Why did that happen?
+Any ideas?
+AUDIENCE: You're resetting the session notes each time.
+BRIAN YU: Exactly.
+On line 14 here, I've reset session notes.
+So I needed to give session notes some initial value in order
+to say if session notes doesn't exist, it needs to have something.
+But if I have it here in the index function, then
+every single time I submit new data to index,
+it's going to clear out all of my own old notes.
+And that's clearly not what I want.
+So maybe I want something like this, if session.getnotesisnone.
+
+In other words, if I try and get the notes from the session
+and it doesn't exist, then I want session notes to be an empty list.
+In other words, if I didn't have any notes already,
+let's initialize notes to be an empty list.
+That way it exists, at least.
+But otherwise, let's just keep it as what it is.
+So now it's a second note.
+Now if I type third note and add a note, it adds the third note
+just like we would expect it to.
+And so the advantage here is that now I have multiple different sessions going
+on, such that this particular user is independent of other particular users.
+We don't have one shared notes variable across all of the different users.
+And if you were to eventually go to my website
+if I hosted somewhere on the internet, that will have its own set of notes,
+and so on and so forth, so that everyone's user accounts
+can be kept separate.
+And so questions about sessions, or how we might go about storing data inside
+of our flask applications?
+AUDIENCE: So if you close the browser now, you lose your notes?
+BRIAN YU: If I close the browser now and then go back to it,
+I get to keep my notes.
+Because it's still stored inside of the session.
+AUDIENCE: It knows your session?
+BRIAN YU: It knows my session, yeah.
+
+It is able to identify my particular web browser
+request by a cookie, just a value that's being stored inside the web browser.
+And so the next time that I make another request to that web page,
+it recognizes me and says oh, I know exactly who you are.
+Here are the notes that I have saved for you.
+And it can display my notes back to me that way as well.
+And so you can imagine this being useful for websites
+where you have to log in and see particular data that's
+very pertinent to you.
+Yeah?
+AUDIENCE: Just to be clear, so line 10 in your file is no longer needed.
+BRIAN YU: Line 10 in this file is no longer needed
+because I no longer have a global notes that is shared across everyone.
+I only have notes that are very specific to a particular user's session.
+Good question.
+
+Yes?
+AUDIENCE: Is there any website that describes all of this kind
+of [INAUDIBLE]?
+BRIAN YU: Is there a website that describes all this?
+Yeah.
+So flask has great documentation.
+If you just go to flask's web site, you'll
+see descriptions of basically all of these features
+plus more in great detail, giving you examples of different features of using
+the flask framework.
+So what we've seen so far is just a taste of what flask is able to do.
+We've seen it able to build routes for us, build templates for us.
+We've been able to add logic like loops and conditions into flask templates
+as well.
+But it's got a whole lot more features as well.
+And in particular, next week we'll be diving into building databases
+and connecting databases to flask, such that flask
+can better interact with data that's provided by users, such
+that we can better manage user accounts and manage relationships
+across different kinds of data.
+And all of that is coming next week.
+But for now, that's Python and flask.
+And we'll conclude here for today.
+Thank you all.

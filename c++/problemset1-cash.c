@@ -1,0 +1,35 @@
+//CS50 - MY SOLUTION
+
+#include <cs50.h>
+#include <stdio.h> /* printf */
+#include <math.h> /* round, remainder */
+
+int main (void)
+{
+    int change, c25, c10, c5, c1;
+    float dollars;
+    do
+    {
+        dollars = get_float ("change owned:");
+        change = round (dollars * 100);
+    }
+    while (dollars < 0);
+    for (c25 = 0; change >= 25; c25++)
+    {
+        change -= 25;
+    }
+    for (c10 = 0; change >= 10; c10++)
+    {
+        change -= 10;
+    }
+    for (c5 = 0; change >= 5; c5++)
+    {
+        change -= 5;
+    }
+    for (c1 = 0; change >= 1; c1++)
+    {
+        change -= 1;
+    }
+    printf ("%i\n", (c25 + c10 + c5 + c1));
+
+}
