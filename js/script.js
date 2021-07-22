@@ -16,7 +16,7 @@ if (darkMode === 'on') {
 }
 
 function darkModeOn() {
-  document.getElementById('darkMode').href = './css/dark.css';
+  document.getElementById('darkMode').href = '/css/dark.css';
   // document.getElementById('moonSunIcon').classList.replace('fas fa-moon', 'fas fa-sun');
   localStorage.setItem('darkMode', 'on');
   // localStorage.setItem('moonSunIcon', 'fas fa-sun');
