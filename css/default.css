@@ -152,10 +152,9 @@ article {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 0;
-  /* padding: 150px 0 0 0; */
-  /* margin-top: 10px; */
   font-family: 'Yantramanav', sans-serif;
   font-size: 3.3vw;
+  
   /* font-family: 'Trebuchet MS', sans-serif; */
 
   /*
@@ -174,9 +173,17 @@ article {
   */
 }
 
-section {
-  padding: 10px;
+section:first-child * {
+  margin: 0px;
 }
+
+section {
+  padding: 20px;
+}
+
+/* article section .first {
+  margin-top: 0;
+} */
 
 footer {
   align-self: stretch;
@@ -224,28 +231,13 @@ footer .rights {
 }
 
 /* HOME -------------------------------------------*/
-article.home .first {
+/* article.home .first {
   margin-top: 0;
-}
+} */
 
 /* RESUME -------------------------------------------*/
-article.resume .detail ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  justify-content: space-between;
-}
+article.resume {
 
-article.resume .detail a {
-  text-decoration: none;
-}
-
-article.resume .detail a:hover {
-  text-decoration: underline;
-}
-
-article.resume .detail li {
-  /* padding: 0 5px; */
 }
 
 @keyframes darkBtn {
@@ -319,7 +311,6 @@ article.resume .detail li {
 
   article {
     grid-template-columns: auto;
-    padding: 20px;
   }
   
   /* HOME -------------------------------------------*/
@@ -331,63 +322,23 @@ article.resume .detail li {
   } */
 
   /* IT -------------------------------------------*/
-  /* article.tech h1, h2, p {
+  /* article.it h1, h2, p {
     padding: 5px 15px;
     margin: 0;
   }
 
-  article.tech a {
+  article.it a {
     text-decoration: none;
   }
 
-  article.tech a:hover {
+  article.it a:hover {
     text-decoration: underline;
     text-decoration-style: dashed;
   }
 
-  article.tech ol, ul {
+  article.it ol, ul {
     margin: 0 0 20px 0;
   } */
-
-  /* Contact ----------------------------------------*/
-
-  article.contact {
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 100px;
-
-    background-color: #f2f2f2;
-  }
-
-  article.contact p {
-    padding: 10px 10px 10px 0;
-  }
-
-  article.contact input[type=text], input[type=email], textarea {
-    font-family: inherit;
-    width: 100%;
-    padding: 12px;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-
-    border: 1px solid #ccc;
-  }
-
-  article.contact input[type=submit] {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-
-    background-color: #4CAF50;
-    color: #fff;
-  }
-
-  article.contact input[type=submit]:hover {
-    background-color: #45a049;
-  }
 
 }
 
