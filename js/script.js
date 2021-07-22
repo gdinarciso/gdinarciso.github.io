@@ -6,32 +6,38 @@
 // }
 
 let darkMode = localStorage.getItem('darkMode');
-// let darkBtn = localStorage.getItem('darkBtn');
+// let test = document.querySelectorAll('moonSunIcon');
+// test.hasAttribute('class');
+// console.log(test.classList);
+// let moonSunIcon = localStorage.getItem('moonSunIcon');
 if (darkMode === 'on') {
   darkModeOn();
+  // document.getElementById('moonSunIcon').classList.replace('fas fa-moon', 'fas fa-sun');
 }
 
 function darkModeOn() {
   document.getElementById('darkMode').href = './css/dark.css';
-  // document.getElementById('darkBtn').innerText = 'light mode';
+  // document.getElementById('moonSunIcon').classList.replace('fas fa-moon', 'fas fa-sun');
   localStorage.setItem('darkMode', 'on');
-  // localStorage.setItem('darkBtn', 'light mode');
+  // localStorage.setItem('moonSunIcon', 'fas fa-sun');
 }
 
 function darkModeOff() {
   document.getElementById('darkMode').href = '';
-  // document.getElementById('darkBtn').innerText = 'dark mode';
+  // document.getElementById('moonSunIcon').classList.replace('fas fa-sun', 'fas fa-moon');
   localStorage.setItem('darkMode', null);
-  // localStorage.setItem('darkBtn', 'dark mode');
+  // localStorage.setItem('moonSunIcon', 'fas fa-moon');
 }
 
 function darkSwitch () {
   darkMode = localStorage.getItem('darkMode');
-  // darkBtn = localStorage.getItem('darkBtn');
+  // moonSunIcon = localStorage.getItem('moonSunIcon');
   if (darkMode !== 'on') {
     darkModeOn();
-    } else {
+    // document.getElementById('moonSunIcon').classList.replace('fas fa-moon', 'fas fa-sun');
+} else {
     darkModeOff();
+    // document.getElementById('moonSunIcon').classList.replace('fas fa-sun', 'fas fa-moon');
   }
 }
 
