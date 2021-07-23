@@ -24,7 +24,7 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: 150px auto 150px;
+  grid-template-columns: 13% auto 13%;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 
     'header header header'
@@ -51,23 +51,18 @@ footer { grid-area: footer; }
 header {
   position: fixed;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  left: 150px;
-  right: 150px;
-  height: auto;
+  flex-flow: column;
+  /* left: 0px;
+  right: 0px; */
+  width: 100%;
   overflow: hidden;
-  padding: 35px 35px 0px 35px;
+  padding: 25px 35px 0px 35px;
   z-index: 1;
 
-  background-color: #fff;
-  background-image: linear-gradient(#444, #fff);
+  background-color: #eee;
+  /* background-image: linear-gradient(#444, #fff); */
   box-shadow: 0px 0px 15px 1px #111;
   color: #000;
-}
-
-header .item {
-  border: 1px solid #ccc;
 }
 
 header .darkText {
@@ -106,14 +101,14 @@ header #darkBtn:hover {
 
 header .phrase {
   font-family: 'MrDeHaviland', monospace;
-  margin: 5px 0;
+  margin: 0 0 15px 0;
 
   color: rgb(0, 70, 128);
 }
 
 header nav {
+  align-self: center;
   display: flex;  
-  align-self: flex-end;
 }
 
 header nav a {
@@ -155,7 +150,7 @@ header nav .borderAni:hover:after {
 
 article {
   display: grid;
-  padding-top: 500px;
+  padding: 130px 20px 20px 20px;
   font-family: 'Yantramanav', sans-serif;
 }
 
@@ -169,12 +164,12 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 30px 0 3px 0;
-  border-top: solid 1px;
+  /* border-top: solid 1px; */
   font-family: Calibri;
 
-  color: rgb(0, 70, 128);
-  background-color: #ccc;
-  border-top-color: #aaa;
+  color: rgb(0, 140, 255);
+  background-color: #000;
+  /* border-top-color: #aaa; */
 }
 
 footer ul {
@@ -187,12 +182,15 @@ footer ul {
 footer .icon {
   font-size: 30px;
   margin: 0 10px;
-  color: #007bb5;
+  color: #fff;
 }
 
-footer .icon:hover {
-  color: #000;
-}
+footer .fa-github:hover {color: #aaa;}
+footer .fa-linkedin-in:hover {color: #0077B5;}
+footer .fa-instagram:hover {color: #f09433;}
+/* footer .fa-instagram:hover {color: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);} */
+footer .fa-facebook:hover {color: #3A5795;}
+footer .fa-email:hover {color: white;}
 
 footer .rights {
   margin: 0;
@@ -202,7 +200,6 @@ footer .rights {
 
 /* HOME -------------------------------------------*/
 article.home {
-  padding: 20px 30px;
   text-indent: 25px;
   text-align: justify;
   text-justify: auto;
@@ -210,12 +207,10 @@ article.home {
 
 /* IT -------------------------------------------*/
 article.it {
-  grid-template-columns: auto auto auto;
-  background-color: #eee;
+  grid-template-columns: 33% 34% 33%;
 }
 
 article.it section {
-  margin: 3px;
   padding: 10px 15px;
 }
 
@@ -238,23 +233,9 @@ article.it ol, article.it ul {
   text-indent: 0;
 }
 
-
-/* RESUME -------------------------------------------*/
-article.resume {
-
-}
-
-@keyframes darkBtn {
-  from {box-shadow: inherit;} 
-}
-
-@keyframes border {
-  from {border-color: inherit;}
-}
-
-@keyframes link {
-  from {color: inherit;}
-}
+@keyframes darkBtn {from {box-shadow: inherit;}}
+@keyframes border {from {border-color: inherit;}}
+@keyframes link {from {color: inherit;}}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (max-width: 1200px) {
@@ -271,31 +252,18 @@ article.resume {
       'footer';
   }
 
-  header {
-    left: 0px;
-    right: 0px;
+  header .phrase {
+    align-self: center;
   }
-
-  article {
-    /* grid-template-columns: auto auto; */
-  }
-
-}
-
-@media screen and (max-width: 800px) {
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {
-  
-  header {
-    flex-direction: column;
-    align-content: center;
-  }
 
-  section {
-    /* grid-template-columns: auto; */
+  /* IT ----------------------------------------------*/
+  article.it {
+    grid-template-columns: auto auto;
   }
 
 }
@@ -308,35 +276,22 @@ article.resume {
   }
 
   article {
-    /* grid-template-columns: auto; */
-  }
-  
-  /* HOME --------------------------------------------*/
-  article.home {
+    padding-top: 21px;
   }
 
   /* IT ----------------------------------------------*/
   article.it {
-  }
-
-  /* MUSIC -------------------------------------------*/
-  article.music {
-  }
-
-  /* RESUME ------------------------------------------*/
-  article.music {
+    grid-template-columns: auto;
   }
 
 }
 
 /* iPhone 6+'s breakpoint */
 @media screen and (max-width: 480px) {
-
 }
 
 /* iPhone 5S's breakpoint */
 @media screen and (max-width: 320px) {
-
 }
 
 /* If the orientation is in landscape mode */
