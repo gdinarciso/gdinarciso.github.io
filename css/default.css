@@ -100,6 +100,7 @@ header #darkBtn:hover {
 }
 
 header .phrase {
+  font-size: 35px;
   font-family: 'MrDeHaviland', monospace;
   margin: 0 0 15px 0;
 
@@ -150,7 +151,7 @@ header nav .borderAni:hover:after {
 
 article {
   display: grid;
-  padding: 130px 20px 20px 20px;
+  padding: 140px 20px 20px 20px;
   font-family: 'Yantramanav', sans-serif;
 }
 
@@ -164,12 +165,15 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 30px 0 3px 0;
-  /* border-top: solid 1px; */
-  font-family: Calibri;
+  border-top: ridge 8px;
+  font-family: 'Trebuchet MS', sans-serif;
 
-  color: rgb(0, 140, 255);
+  color: #ccc;
+  border-top-color: #777;
+  /* border-top-color: rgb(163, 65, 255); */
   background-color: #000;
-  /* border-top-color: #aaa; */
+  /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
+  /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
 }
 
 footer ul {
@@ -182,15 +186,18 @@ footer ul {
 footer .icon {
   font-size: 30px;
   margin: 0 10px;
-  color: #fff;
+  color: #ccc;
 }
 
-footer .fa-github:hover {color: #aaa;}
+footer .fa-github:hover {color: #fff;}
 footer .fa-linkedin-in:hover {color: #0077B5;}
-footer .fa-instagram:hover {color: #f09433;}
-/* footer .fa-instagram:hover {color: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);} */
+footer .fa-instagram:hover {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  background-clip: text;
+  color: transparent;
+}
 footer .fa-facebook:hover {color: #3A5795;}
-footer .fa-email:hover {color: white;}
+footer .fa-envelope:hover {color: blueviolet;}
 
 footer .rights {
   margin: 0;
