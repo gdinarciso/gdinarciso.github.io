@@ -49,20 +49,25 @@ article { grid-area: article; }
 footer { grid-area: footer; }
 
 header {
+  position: fixed;
   display: flex;
   flex-flow: row wrap;
-  position: fixed;
-  justify-items: end;
+  justify-content: space-between;
   left: 150px;
   right: 150px;
-  height: 100px;
+  height: auto;
   overflow: hidden;
+  padding: 35px 35px 0px 35px;
   z-index: 1;
 
   background-color: #fff;
-  /* background-image: linear-gradient(#eee, #fff); */
+  background-image: linear-gradient(#444, #fff);
   box-shadow: 0px 0px 15px 1px #111;
   color: #000;
+}
+
+header .item {
+  border: 1px solid #ccc;
 }
 
 header .darkText {
@@ -99,20 +104,16 @@ header #darkBtn:hover {
   animation: darkBtn .1s;
 }
 
-header .item{
-  justify-items: space-between;
-}
-
 header .phrase {
   font-family: 'MrDeHaviland', monospace;
+  margin: 5px 0;
 
   color: rgb(0, 70, 128);
 }
 
 header nav {
-  display: flex;
-  /* justify-content: end; */
-  /* justify-content: space-evenly; */
+  display: flex;  
+  align-self: flex-end;
 }
 
 header nav a {
@@ -154,24 +155,12 @@ header nav .borderAni:hover:after {
 
 article {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 0;
+  padding-top: 500px;
   font-family: 'Yantramanav', sans-serif;
+}
 
-  /*
-  display: flex;
-  
-  flex-flow: wrap;
-  align-content: space-around;
-  justify-content: center;
-  padding: 160px 10px 10px 10px;
-  
-  justify-content: space-between;
-  padding-top: 150px;
-
-  flex-direction: column;
-  padding: 150px 0 20px 0;
-  */
+article .first {
+  margin-top: 0;
 }
 
 footer {
@@ -213,7 +202,7 @@ footer .rights {
 
 /* HOME -------------------------------------------*/
 article.home {
-  padding: 0 25px;
+  padding: 20px 30px;
   text-indent: 25px;
   text-align: justify;
   text-justify: auto;
@@ -221,10 +210,8 @@ article.home {
 
 /* IT -------------------------------------------*/
 article.it {
-  display: grid;
-  /* grid-template-columns: auto auto auto auto; */
-  margin: 0 3px;
-  padding: 10px 0 3px 0;
+  grid-template-columns: auto auto auto;
+  background-color: #eee;
 }
 
 article.it section {
@@ -246,8 +233,8 @@ article.it a:hover {
   text-decoration-style: dashed;
 }
 
-article.it ol, ul {
-  /* margin: 0 0 20px 0; */
+article.it ol, article.it ul {
+  margin: 0 0 20px 0;
   text-indent: 0;
 }
 
@@ -269,42 +256,12 @@ article.resume {
   from {color: inherit;}
 }
 
-/* Media Queries ---------------------------------------------*/
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-  /* header {
-    padding-top: 50px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  article, article-contact {
-    grid-template-columns: auto auto;
-  } */
+@media screen and (max-width: 1200px) {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-  /* article, article-contact {
-    grid-template-columns: auto;
-  } */
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-width: 768px) {
-  /* header {
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  article, article-contact {
-    padding-top: 190px;
-  } */
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
 
   body {
     grid-template-columns: auto;
@@ -315,58 +272,78 @@ article.resume {
   }
 
   header {
-    position: static;
-    justify-content: center;
     left: 0px;
     right: 0px;
-    height: auto;
-  }
-
-  header .phrase {
-    margin: 40px 0px 20px 0px;
   }
 
   article {
-    grid-template-columns: auto;
+    /* grid-template-columns: auto auto; */
   }
+
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 768px) {
   
-  /* HOME -------------------------------------------*/
-  article.home {
+  header {
+    flex-direction: column;
+    align-content: center;
   }
 
-  /* IT -------------------------------------------*/
-  article.it {
-    grid-template-columns: auto auto;
+  section {
+    /* grid-template-columns: auto; */
   }
 
-  article.it section {
-    background-color: #eee;
-    /* border: 1px solid #000; */
-    border-radius: 10px;
-  }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
+
+  header {
+    position: static;
+  }
+
+  article {
+    /* grid-template-columns: auto; */
+  }
   
-  /* If the screen size is 600px wide or less, hide the element */
-  div.example {
-    /* display: none; */
+  /* HOME --------------------------------------------*/
+  article.home {
+  }
+
+  /* IT ----------------------------------------------*/
+  article.it {
+  }
+
+  /* MUSIC -------------------------------------------*/
+  article.music {
+  }
+
+  /* RESUME ------------------------------------------*/
+  article.music {
   }
 
 }
 
-@media screen and (min-width: 480px) {
+/* iPhone 6+'s breakpoint */
+@media screen and (max-width: 480px) {
 
 }
 
-@media screen and (min-width: 320px) {
+/* iPhone 5S's breakpoint */
+@media screen and (max-width: 320px) {
 
 }
 
 /* If the orientation is in landscape mode */
 @media only screen and (orientation: landscape) {
-  body {
+
+  /* body {
     
-  }
+  } */
+
 }
