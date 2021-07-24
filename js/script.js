@@ -6,7 +6,6 @@
 // }
 
 let darkMode = localStorage.getItem('darkMode');
-// let test = document.querySelectorAll('moonSunIcon');
 // test.hasAttribute('class');
 // console.log(test.classList);
 // let moonSunIcon = localStorage.getItem('moonSunIcon');

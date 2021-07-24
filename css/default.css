@@ -61,48 +61,34 @@ header {
 
   background-color: #eee;
   /* background-image: linear-gradient(#444, #fff); */
-  box-shadow: 0px 0px 15px 1px #111;
+  box-shadow: 0px 0px 15px 2px #111;
   color: #000;
 }
 
-header .darkText {
-  position: absolute;
-  top: -2.5px;
-  right: 47px;
-}
-
-header #moonSun {
+header .moonsunicon {
   position: absolute;
   top: 15px;
   right: 20px;
-}
-
-header #moonSun:hover {
-  opacity: .8;
-}
-
-header #darkBtn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  padding: 10px;
-  border: 2px solid #888;
-  border-radius: 100%;
-
-  background-color: #000;
-  box-shadow: 0px 0px 6px 3px transparent;
-}
-
-header #darkBtn:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 6px 3px #000;
-  animation: darkBtn .1s;
+}
+
+header .moonsunicon {
+  color: #000;
+}
+
+header .moonsunicon:hover {
+  opacity: .5;
+}
+
+header .fa-sun {
+  color: yellow;
+  display: none;
 }
 
 header .phrase {
   font-size: 35px;
   font-family: 'MrDeHaviland', monospace;
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
 
   color: rgb(0, 70, 128);
 }
@@ -113,7 +99,7 @@ header nav {
 }
 
 header nav a {
-  margin: 0 10px;
+  margin: 0 15px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   text-decoration: none;
@@ -122,8 +108,7 @@ header nav a {
 }
 
 header nav a:active {
-  background-color: dodgerblue;
-  color: #fff;
+  color: rgb(163, 65, 255);
 }
 
 header nav .fas {
@@ -146,7 +131,7 @@ header nav .borderAni:after {
 
 header nav .borderAni:hover:after {
   border-bottom-color: rgb(163, 65, 255);
-  width: 100%;
+  width: 75%;
 }
 
 article {
@@ -160,12 +145,11 @@ article .first {
 }
 
 footer {
-  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 0 3px 0;
-  border-top: ridge 8px;
+  /* padding: 30px 0 0 0; */
+  border-top: ridge 6px;
   font-family: 'Trebuchet MS', sans-serif;
 
   color: #ccc;
@@ -176,20 +160,34 @@ footer {
   /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
 }
 
-footer ul {
+footer .icons {
   display: flex;
   list-style-type: none;
-  margin: 0 0 20px 0;
-  padding: 0;
+  margin: 35px 0 20px 0;
 }
 
 footer .icon {
   font-size: 30px;
-  margin: 0 10px;
+  margin: 0 15px;
   color: #ccc;
 }
 
-footer .fa-github:hover {color: #fff;}
+footer .icon:hover {
+  filter: saturate(200%);
+}
+
+footer .fa-github {color: #fff;}
+footer .fa-linkedin-in {color: #0077B5;}
+footer .fa-instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  background-clip: text;
+  color: transparent;
+}
+footer .fa-facebook {color: #3A5795;}
+footer .fa-envelope {color: rgb(0, 162, 190);}
+
+
+/* footer .fa-github:hover {color: #444;}
 footer .fa-linkedin-in:hover {color: #0077B5;}
 footer .fa-instagram:hover {
   background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
@@ -197,11 +195,9 @@ footer .fa-instagram:hover {
   color: transparent;
 }
 footer .fa-facebook:hover {color: #3A5795;}
-footer .fa-envelope:hover {color: blueviolet;}
+footer .fa-envelope:hover {color: rgb(0, 162, 190);} */
 
 footer .rights {
-  margin: 0;
-  padding: 0;
   font-size: 14px;
 }
 
