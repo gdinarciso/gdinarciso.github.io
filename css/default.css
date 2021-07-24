@@ -204,6 +204,24 @@ article.home {
   text-justify: auto;
 }
 
+article.home .mirror {
+  float: right;
+  margin: 0 0 0 20px;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+article.home p {
+  font-family: Ubuntu;
+}
+
+article.home .greeting {
+  font-family: 'Dancing Script', cursive;
+}
+
 /* IT -------------------------------------------*/
 article.it {
   grid-template-columns: 33% 34% 33%;

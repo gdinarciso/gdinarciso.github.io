@@ -30,3 +30,14 @@ footer {
   background-color: #101010;
   border-top-color: rgb(0, 34, 61);
 }
+
+/* HOME -------------------------------------------*/
+article.home section {
+  border-color: #444;
+}
+
+article.home .mirror {
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}
