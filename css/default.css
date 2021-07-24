@@ -136,12 +136,19 @@ header nav .borderAni:hover:after {
 
 article {
   display: grid;
-  padding: 140px 20px 20px 20px;
+  padding-top: 130px;
   font-family: 'Yantramanav', sans-serif;
 }
 
 article .first {
   margin-top: 0;
+}
+
+article section {
+  margin: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 footer {
@@ -200,10 +207,6 @@ article.home {
 /* IT -------------------------------------------*/
 article.it {
   grid-template-columns: 33% 34% 33%;
-}
-
-article.it section {
-  padding: 10px 15px;
 }
 
 article.it h1,
@@ -268,7 +271,7 @@ article.it ol, article.it ul {
   }
 
   article {
-    padding-top: 21px;
+    padding-top: 11px;
   }
 
   /* IT ----------------------------------------------*/
