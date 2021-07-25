@@ -42,6 +42,16 @@ h1 {
   font-size: 28px;
 }
 
+a {
+  text-decoration: none;
+  /* transition: color .3s, background-color .5s; */
+  color: inherit;
+}
+
+a:hover {
+  filter: drop-shadow(0px 0px 2px #222);  
+}
+
 header { grid-area: header; }
 article { grid-area: article; }
 .left { grid-area: left; }
@@ -78,7 +88,7 @@ header .moonsunicon {
 }
 
 header .moonsunicon:hover {
-  opacity: .5;
+  filter: drop-shadow(0px 0px 2px #000);  
 }
 
 header .fa-sun {
@@ -103,7 +113,6 @@ header nav a {
   margin: 0 15px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  text-decoration: none;
 
   color: #000;
 }
@@ -206,16 +215,24 @@ article.home {
 
 article.home section {
   padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+
+article.home .phrase {
+  padding: 10px;
+  font-style: italic;
 }
 
 article.home .mirror {
   float: right;
-  margin: 0 0 0 20px;
+  margin: 0 0 1px 20px;
+  padding: 3px;
   width: 250px;
   height: auto;
   border-radius: 10px;
   border: 1px solid #ccc;
-  padding: 5px;
+  /* box-shadow: 0px 0px 5px 1px #555; */
 }
 
 article.home p {
@@ -232,7 +249,10 @@ article.it {
 }
 
 article.it section {
-  border: 0;
+  /* border: 0; */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 3px 1px #ccc;
 }
 
 article.it h2 {
@@ -243,18 +263,15 @@ article.it h2 {
 }
 
 article.it h3 {
-  margin: 0 5px;
+  margin: 0 15px;
 }
 
 article.it li {
+  margin: 0 10px;
   padding: 2px 0;
 }
 article.it a {
   padding: 2px 5px;
-  color: inherit;
-  text-decoration: none;
-  /* transition: <property> <duration> <timing-function> <delay>; */
-  transition: color .3s, background-color .5s;
 }
 
 article.it a:hover {
@@ -265,6 +282,26 @@ article.it a:hover {
 article.it ol, article.it ul {
   margin: 0 0 20px 0;
   text-indent: 0;
+}
+
+/* MUSIC -------------------------------------------*/
+
+
+/* RESUME -------------------------------------------*/
+article.resume section {
+  border: 0;
+}
+
+article.resume .detail {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+article.resume {
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

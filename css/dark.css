@@ -23,7 +23,7 @@ header .phrase {
 }
 
 header nav a {
-  color: #bbb;
+  filter: invert(100%);
 }
 
 article section {
