@@ -70,6 +70,7 @@ header .moonsunicon {
   top: 15px;
   right: 20px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 header .moonsunicon {
@@ -131,13 +132,13 @@ header nav .borderAni:after {
 
 header nav .borderAni:hover:after {
   border-bottom-color: rgb(163, 65, 255);
-  width: 75%;
+  width: 100%;
 }
 
 article {
   display: grid;
   padding-top: 130px;
-  font-family: 'Yantramanav', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 article .first {
@@ -146,7 +147,6 @@ article .first {
 
 article section {
   margin: 10px;
-  padding: 20px 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
@@ -204,6 +204,10 @@ article.home {
   text-justify: auto;
 }
 
+article.home section {
+  padding: 10px;
+}
+
 article.home .mirror {
   float: right;
   margin: 0 0 0 20px;
@@ -227,13 +231,26 @@ article.it {
   grid-template-columns: 33% 34% 33%;
 }
 
-article.it h1,
-article.it h2 {
-  margin-top: 0;
+article.it section {
+  border: 0;
 }
 
+article.it h2 {
+  margin-top: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #ddd;
+}
+
+article.it h3 {
+  margin: 0 5px;
+}
+
+article.it li {
+  padding: 2px 0;
+}
 article.it a {
-  padding: 0 5px;
+  padding: 2px 5px;
   color: inherit;
   text-decoration: none;
   /* transition: <property> <duration> <timing-function> <delay>; */
