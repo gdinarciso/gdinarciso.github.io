@@ -48,9 +48,7 @@ a {
 }
 
 a:hover {
-  transition: color 2s;
-  filter: drop-shadow(0px 0px 2px);  
-  border-radius: 5px;
+  color: blue;
 }
 
 header { grid-area: header; }
@@ -89,7 +87,8 @@ header .moonsunicon {
 }
 
 header .moonsunicon:hover {
-  filter: drop-shadow(0px 0px 2px #000);  
+  transition: filter 1s;
+  filter: drop-shadow(0px 0px 10px #111);  
 }
 
 header .fa-sun {
@@ -121,7 +120,7 @@ header nav .borderAni:after {
 }
 
 header nav .borderAni:hover:after {
-  border-bottom-color: rgb(163, 65, 255);
+  border-bottom-color: blue;
   width: 100%;
 }
 
@@ -131,6 +130,10 @@ header nav a {
   padding: 15px 15px;
 
   color: #000;
+}
+
+header nav a:hover {
+  /* color: blue; */
 }
 
 header nav a:active {
@@ -212,20 +215,25 @@ article.home {
   text-justify: auto;
 }
 
-article.home .phrase {
-  padding: 10px;
-  font-style: italic;
-}
-
 article.home .narciso {
   float: right;
-  margin: 0 0 1px 20px;
-  /* padding: 3px; */
-  width: auto;
-  height: 200px;
+}
+
+article.home .narciso .photo {
+  width: 200px;
+  height: auto;
   border-radius: 200px;
-  /* border: 1px solid #ccc; */
-  box-shadow: 0px 0px 5px 1px #000;
+}
+
+article.home .narciso .bigfive {
+  /* font-family: 'Dancing Script', cursive; */
+  text-align: center;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+article.home .narciso .bigfive a {
+  text-decoration: underline;
 }
 
 article.home p {
@@ -234,6 +242,12 @@ article.home p {
 
 article.home .greeting {
   font-family: 'Dancing Script', cursive;
+}
+
+article.home .phrase {
+  /* font-family: 'Flamenco', cursive; */
+  font-style: italic;
+  font-weight: bold;
 }
 
 /* IT -------------------------------------------*/
@@ -271,6 +285,8 @@ article.it a {
 }
 
 article.it a:hover {
+  transition: color .3s;
+  border-radius: 5px;
   color: yellow;
   background-color: #000000;
 }
