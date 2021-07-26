@@ -44,13 +44,12 @@ h1 {
 
 a {
   text-decoration: none;
-  transition: color .3s;
   color: inherit;
-  /* transition: color .3s, background-color .5s; */
 }
 
 a:hover {
-  filter: drop-shadow(0px 0px 2px #222);  
+  transition: color 2s;
+  filter: drop-shadow(0px 0px 2px);  
   border-radius: 5px;
 }
 
@@ -111,10 +110,25 @@ header nav {
   display: flex;  
 }
 
+header nav .borderAni:after {
+  content: "";
+  margin: 0px auto;
+  padding-bottom: 7px;
+  display: block;
+  width: 0%;
+  border-bottom: 3px solid transparent;
+  transition: .2s;
+}
+
+header nav .borderAni:hover:after {
+  border-bottom-color: rgb(163, 65, 255);
+  width: 100%;
+}
+
 header nav a {
-  margin: 0 15px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  padding: 15px 15px;
 
   color: #000;
 }
@@ -131,21 +145,6 @@ header nav .fas:hover {
   /* opacity: 0.7; */
 }
 
-header nav .borderAni:after {
-  content: "";
-  margin: 0 auto;
-  padding: 0 0 5px 0;
-  display: block;
-  width: 0%;
-  border-bottom: 3px solid transparent;
-  transition: .2s;
-}
-
-header nav .borderAni:hover:after {
-  border-bottom-color: rgb(163, 65, 255);
-  width: 100%;
-}
-
 article {
   display: grid;
   padding-top: 130px;
@@ -158,10 +157,6 @@ article .first {
 
 article section {
   margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0px 0px 3px 1px #ccc;
-  padding: 10px;
 }
 
 footer {
@@ -217,10 +212,6 @@ article.home {
   text-justify: auto;
 }
 
-article.home section {
-
-}
-
 article.home .phrase {
   padding: 10px;
   font-style: italic;
@@ -254,10 +245,16 @@ article.it section {
 
 }
 
+article.it .item {
+  margin: 0;
+  padding-top: 15px;
+  border: 1px solid #ddd;
+}
+
 article.it h2 {
-  margin-top: 0;
-  border-radius: 5px;
-  padding: 5px 10px;
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0;
   background-color: #ddd;
 }
 
