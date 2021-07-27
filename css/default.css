@@ -307,8 +307,8 @@ article.resume {
     /* 'left center right' */
     'left right';
   align-content: flex-start;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
 }
 
 article.resume ul,
@@ -323,11 +323,18 @@ article.resume .justified {
 
 article.resume .top { grid-area: top; }
 article.resume .left { grid-area: left; }
-/* article.resume .center { grid-area: center; } */
 article.resume .right { grid-area: right; }
 
+article.resume .top .firstLetter:first-letter {
+  font-size: 60px;
+  font-weight: bold;
+  border: 1px dashed #999;
+  margin-right: 5px;
+  padding: 10px;
+  float: left;
+}
 
-article.resume .detail {
+article.resume .top .detail {
   display: flex;
   justify-content: space-between;
   margin: 0px;
@@ -337,14 +344,13 @@ article.resume .detail {
 
 article.resume .left {
   display: grid;
-  grid-template-columns: 20% auto;
+  grid-template-columns: 13% auto;
   gap: 20px;
-  padding-right: 20px;
 }
 
 article.resume .left .title {
   grid-column: 1 / 3;
-  background-color: #ccc;
+  background-color: #eee;
   text-align: center;
   border-radius: 10px 10px 0 0 ;
 }
@@ -358,13 +364,12 @@ article.resume .left .dates p {
   margin: 0;
 }
 
-article.resume .firstLetter:first-letter {
-  font-size: 60px;
-  font-weight: bold;
-  border: 1px dashed #999;
-  margin-right: 5px;
-  padding: 10px;
-  float: left;
+article.resume .right {
+  /* padding-left: 20px; */
+}
+
+article.resume .right .sydney {
+  margin: 0;
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
