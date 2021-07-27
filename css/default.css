@@ -38,6 +38,12 @@ body {
   background-color: #fff;
 }
 
+header { grid-area: header; }
+article { grid-area: article; }
+.left { grid-area: left; }
+.right { grid-area: right;}
+footer { grid-area: footer; }
+
 h1 {
   font-size: 28px;
 }
@@ -50,12 +56,6 @@ a {
 a:hover {
   color: blue;
 }
-
-header { grid-area: header; }
-article { grid-area: article; }
-.left { grid-area: left; }
-.right { grid-area: right;}
-footer { grid-area: footer; }
 
 header {
   position: fixed;
@@ -300,9 +300,19 @@ article.it ol, article.it ul {
 
 
 /* RESUME -------------------------------------------*/
-article.resume section {
-  border: 0;
+article.resume {
+  grid-template-columns: auto 30%;
+  grid-template-areas: 
+    'top top'
+    'left right';
+  align-content: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
+article.resume .top { grid-area: top; }
+article.resume .left { grid-area: left; }
+article.resume .right { grid-area: right; }
 
 article.resume .detail {
   display: flex;
@@ -310,10 +320,6 @@ article.resume .detail {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
-}
-
-article.resume {
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -355,7 +361,7 @@ article.resume {
   }
 
   article {
-    padding-top: 11px;
+    padding-top: 10px;
   }
 
   /* IT ----------------------------------------------*/
