@@ -314,6 +314,26 @@ article.resume .top { grid-area: top; }
 article.resume .left { grid-area: left; }
 article.resume .right { grid-area: right; }
 
+article.resume .right ul,
+article.resume .right ol {
+  padding: 0 20px;
+  border: 1px solid #000;
+}
+
+article.resume .text {
+  text-align: justify;
+  /* text-indent: 20px; */
+}
+
+article.resume .text:first-letter {
+  font-size: 60px;
+  font-weight: bold;
+  border: 1px dashed #999;
+  margin-right: 5px;
+  padding: 5px;
+  float: left;
+}
+
 article.resume .detail {
   display: flex;
   justify-content: space-between;
