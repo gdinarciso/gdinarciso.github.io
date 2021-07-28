@@ -23,21 +23,9 @@ html {
   /* font-size: 62.5%; */
 }
 
-section (h1, h2, h3, p) {
-  margin: 0;
-}
-
-section h1 {
-  font-size: 2em;
-}
-
-section h2 {
-  font-size: 1.5em;
-}
-
 body {
   display: grid;
-  grid-template-columns: auto 75ch auto;
+  grid-template-columns: auto 85ch auto;
   /* grid-template-rows: auto 1fr auto; */
   grid-template-areas: 
     'header header header'
@@ -45,17 +33,11 @@ body {
     'footer footer footer';
   min-height: 100%;
   margin: 0;
-  line-height: 1.5em;
+  line-height: 1.8em;
   font-family: Ubuntu, 'Trebuchet MS', sans-serif; 
   
   background-color: #fff;
 }
-
-header { grid-area: header; }
-article { grid-area: article; }
-.left { grid-area: left; }
-.right { grid-area: right;}
-footer { grid-area: footer; }
 
 a {
   text-decoration: none;
@@ -65,6 +47,36 @@ a {
 a:hover {
   color: blue;
 }
+
+article h3,
+article p {
+  margin: 0;
+}
+
+article h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+article h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.fl-c:first-letter {
+  font-size: 4.7em;
+  font-weight: bold;
+  border: .1rem dashed #999;
+  margin-right: .1em;
+  padding: .41em .25em;
+  float: left;
+}
+
+header { grid-area: header; }
+article { grid-area: article; }
+.left { grid-area: left; }
+.right { grid-area: right;}
+footer { grid-area: footer; }
 
 header {
   position: fixed;
@@ -106,7 +118,7 @@ header .greeting {
   font-size: 3em;
   font-weight: normal;
   font-family: 'MrDeHaviland', monospace;
-  margin: 1rem auto;
+  align-self: center;
 
   color: rgb(0, 70, 128);
 }
@@ -114,7 +126,6 @@ header .greeting {
 header nav {
   display: flex;
   align-self: center;
-  /* justify-self: end; */
   gap: 2rem;
 }
 
@@ -152,13 +163,7 @@ header nav .borderAni:hover:after {
 }
 
 article {
-  display: grid;
-  padding-top: 9em;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-article .first {
-  margin-top: 0;
+  padding-top: 8.5em;
 }
 
 article section {
@@ -206,14 +211,16 @@ footer .fa-facebook {color: #3A5795;}
 footer .fa-envelope {color: rgb(0, 162, 190);}
 
 footer .rights {
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 /* HOME -------------------------------------------*/
 article.home {
-  text-indent: 2.5rem;
   text-align: justify;
-  text-justify: auto;
+}
+
+article.home p {
+  margin-bottom: 1em;
 }
 
 article.home .narciso {
@@ -221,8 +228,9 @@ article.home .narciso {
 }
 
 article.home .narciso .photo {
-  width: 13rem;
+  width: 13em;
   border-radius: 100%;
+  margin-left: 1em;
 }
 
 article.home .narciso .bigfive {
@@ -236,11 +244,8 @@ article.home .narciso .bigfive a {
   text-decoration: underline;
 }
 
-article.home p {
-  font-family: Ubuntu;
-}
-
 article.home .greeting {
+  margin-bottom: 1em;
   font-family: 'Dancing Script', cursive;
 }
 
@@ -252,23 +257,23 @@ article.home .phrase {
 
 /* IT -------------------------------------------*/
 article.it {
-  grid-template-columns: 33% 34% 33%;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 article.it .item {
-  padding: 1rem;
+  padding: 1em;
   border: .1rem solid #ddd;
 }
 
 article.it h2 {
-  margin: 0;
-  padding: 1rem 1.5rem;
+  padding: .5em 1em;
   border-radius: 1rem 1rem 0 0;
   background-color: #ddd;
 }
 
 article.it a {
-  padding: .2rem .5rem;
+  padding: .4em;
 }
 
 article.it a:hover {
@@ -277,6 +282,12 @@ article.it a:hover {
   color: yellow;
   background-color: #000000;
 }
+
+article.it ul,
+article.it ol {
+  padding-left: 1.5em;
+}
+
 
 /* MUSIC -------------------------------------------*/
 
@@ -287,12 +298,11 @@ article.resume {
   grid-template-areas: 
     'top top'
     'left right';
-  align-content: flex-start;
 }
 
 article.resume ul,
 article.resume ol {
-  padding: 0;
+  padding-left: 1.2em;
   list-style-position: inside;
 }
 
@@ -304,29 +314,26 @@ article.resume .top { grid-area: top; }
 article.resume .left { grid-area: left; }
 article.resume .right { grid-area: right; }
 
-article.resume .top .text:first-letter {
-  font-size: 4.7em;
-  font-weight: bold;
-  border: .1rem dashed #999;
-  margin-right: .1em;
-  padding: .12em;
-  float: left;
+article.resume .top .name {
+  margin-bottom: .8em;
 }
 
 article.resume .top .details {
   display: flex;
   gap: 1.5em;
+  margin-bottom: .8em;
 }
 
 article.resume .left {
   display: grid;
   grid-template-columns: 13% auto;
-  gap: 1rem;
+  gap: 1em;
 }
 
 article.resume .left .title {
   grid-column: 1 / 3;
   text-align: center;
+  padding: .8em;
   border-radius: 1rem 1rem 0 0 ;
 
   background-color: #eee;
