@@ -20,6 +20,7 @@ Brush Script MT (cursive) */
 
 html {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
   /* font-size: 62.5%; */
 }
 
@@ -101,12 +102,13 @@ header .moonsunicon {
 }
 
 header .moonsunicon {
+  transition: ease-in-out .25s;
   color: #000;
 }
 
 header .moonsunicon:hover {
-  transition: filter 1s;
-  filter: drop-shadow(0 0 1em #111);  
+  transition: ease-in .25s;
+  filter: drop-shadow(0 0 .5em #000);
 }
 
 header .fa-sun {
@@ -126,26 +128,7 @@ header .greeting {
 header nav {
   display: flex;
   align-self: center;
-  gap: 2rem;
-}
-
-header nav a {
-  font-family: 'Open Sans', sans-serif;
-  border: solid transparent;
-
-  color: #000;
-}
-
-header nav a:hover {
-  /* color: blue; */
-}
-
-header nav a:active {
-  color: rgb(163, 65, 255);
-}
-
-header nav .fas {
-  margin-right: .2rem;
+  margin: 0 2em;
 }
 
 header nav .borderAni:after {
@@ -160,6 +143,26 @@ header nav .borderAni:after {
 header nav .borderAni:hover:after {
   border-bottom-color: blue;
   width: 100%;
+}
+
+header nav a {
+  font-family: 'Open Sans', sans-serif;
+  border: solid transparent;
+  margin: 0 1em;
+
+  color: #000;
+}
+
+header nav a:hover {
+  /* color: blue; */
+}
+
+header nav a:active {
+  color: rgb(163, 65, 255);
+}
+
+header nav .fas {
+  margin-right: .2rem;
 }
 
 article {
@@ -191,7 +194,7 @@ footer .icons {
 }
 
 footer .icons a {
-  font-size: 2.7em;
+  font-size: 2.5em;
   margin: 0 2rem;
   color: #ccc;
 }
@@ -203,7 +206,16 @@ footer .icons a:hover {
 footer .fa-github {color: #fff;}
 footer .fa-linkedin-in {color: #0077B5;}
 footer .fa-instagram {
-  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  background:
+   radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+   radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+   radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+   radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+   radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+   radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+   radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+   linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
@@ -211,7 +223,7 @@ footer .fa-facebook {color: #3A5795;}
 footer .fa-envelope {color: rgb(0, 162, 190);}
 
 footer .rights {
-  font-size: 1.2em;
+  font-size: .9em;
 }
 
 /* HOME -------------------------------------------*/
@@ -234,31 +246,30 @@ article.home .narciso .photo {
 }
 
 article.home .narciso .bigfive {
-  /* font-family: 'Dancing Script', cursive; */
-  text-align: center;
   font-weight: bold;
-  /* font-size: 90%; */
+  font-style: italic;
+  text-align: center;
 }
 
 article.home .narciso .bigfive a {
   text-decoration: underline;
 }
 
-article.home .greeting {
-  margin-bottom: 1em;
-  font-family: 'Dancing Script', cursive;
-}
-
+article.home .greeting,
 article.home .phrase {
-  /* font-family: 'Flamenco', cursive; */
-  font-style: italic;
-  font-weight: bold;
+  font-weight: normal;
+  margin-bottom: .8em;
+  font-family: 'Dancing Script', cursive;
 }
 
 /* IT -------------------------------------------*/
 article.it {
   display: grid;
   grid-template-columns: auto auto auto;
+}
+
+article.it section {
+  justify-self: stretch;
 }
 
 article.it .item {
@@ -287,7 +298,6 @@ article.it ul,
 article.it ol {
   padding-left: 1.5em;
 }
-
 
 /* MUSIC -------------------------------------------*/
 
