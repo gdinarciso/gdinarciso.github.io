@@ -41,11 +41,13 @@ body {
 }
 
 a {
+  transition: ease-in-out .75s;
   text-decoration: none;
   color: inherit;
 }
 
 a:hover {
+  transition: ease-in .25s;
   color: blue;
 }
 
@@ -102,7 +104,7 @@ header .moonsunicon {
 }
 
 header .moonsunicon {
-  transition: ease-in-out .25s;
+  transition: ease-in-out .5s;
   color: #000;
 }
 
@@ -137,10 +139,11 @@ header nav .borderAni:after {
   margin: 0 auto;
   width: 0%;
   border-bottom: .2em solid transparent;
-  transition: .2s;
+  transition: ease-in-out .5s;
 }
 
 header nav .borderAni:hover:after {
+  transition: ease-in .25s;
   border-bottom-color: blue;
   width: 100%;
 }
@@ -153,12 +156,8 @@ header nav a {
   color: #000;
 }
 
-header nav a:hover {
-  /* color: blue; */
-}
-
 header nav a:active {
-  color: rgb(163, 65, 255);
+  color: yellow;
 }
 
 header nav .fas {
@@ -241,8 +240,10 @@ article.home .narciso {
 
 article.home .narciso .photo {
   width: 13em;
+  border: 1px solid #555;
   border-radius: 100%;
   margin-left: 1em;
+  filter: drop-shadow(0 0 .3em #000);
 }
 
 article.home .narciso .bigfive {
@@ -270,11 +271,13 @@ article.it {
 
 article.it section {
   justify-self: stretch;
+  margin-bottom: 4rem;
 }
 
 article.it .item {
   padding: 1em;
   border: .1rem solid #ddd;
+  height: 100%;
 }
 
 article.it h2 {
