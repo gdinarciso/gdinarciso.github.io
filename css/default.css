@@ -20,7 +20,20 @@ Brush Script MT (cursive) */
 
 html {
   height: 100%;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+section h1 {
+  font-size: 2em;
+}
+
+section h2 {
+  font-size: 1.5em;
 }
 
 body {
@@ -69,10 +82,10 @@ header {
 
 header .moonsunicon {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 1.5rem;
+  right: 1.5rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.2em;
 }
 
 header .moonsunicon {
@@ -81,7 +94,7 @@ header .moonsunicon {
 
 header .moonsunicon:hover {
   transition: filter 1s;
-  filter: drop-shadow(0 0 1rem #111);  
+  filter: drop-shadow(0 0 1em #111);  
 }
 
 header .fa-sun {
@@ -89,39 +102,22 @@ header .fa-sun {
   display: none;
 }
 
-header .phrase {
-  font-size: 4rem;
+header .greeting {
+  font-size: 3em;
   font-weight: normal;
   font-family: 'MrDeHaviland', monospace;
-  margin: 2rem 0 0 2rem;
+  margin: 1.5rem auto;
 
   color: rgb(0, 70, 128);
 }
 
 header nav {
   align-self: center;
-  display: flex;  
-}
-
-header nav .borderAni:after {
-  content: "";
-  margin: 0 auto;
-  padding-bottom: 7px;
-  display: block;
-  width: 0%;
-  border-bottom: 3px solid transparent;
-  transition: .2s;
-}
-
-header nav .borderAni:hover:after {
-  border-bottom-color: blue;
-  width: 100%;
+  display: flex;
 }
 
 header nav a {
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  padding: 15px 15px;
 
   color: #000;
 }
@@ -135,16 +131,31 @@ header nav a:active {
 }
 
 header nav .fas {
-  margin: 0 3px 0 0;
+  margin-right: .2rem;
 }
 
-header nav .fas:hover {
-  /* opacity: 0.7; */
+header nav .borderAni {
+  padding-right: 2rem;
+}
+
+header nav .borderAni:after {
+  display: block;
+  content: "";
+  margin: 0 auto;
+  /* padding-bottom: 2rem; */
+  width: 0%;
+  border-bottom: .2em solid transparent;
+  transition: .2s;
+}
+
+header nav .borderAni:hover:after {
+  border-bottom-color: blue;
+  width: 100%;
 }
 
 article {
   display: grid;
-  padding-top: 130px;
+  padding-top: 9em;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -153,20 +164,18 @@ article .first {
 }
 
 article section {
-  margin: 10px;
+  margin: 1rem;
 }
 
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 30px 0 0 0; */
-  border-top: ridge 6px;
+  border-top: ridge .6rem;
   font-family: 'Trebuchet MS', sans-serif;
 
   color: #ccc;
   border-top-color: #777;
-  /* border-top-color: rgb(163, 65, 255); */
   background-color: #000;
   /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
   /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
@@ -175,16 +184,16 @@ footer {
 footer .icons {
   display: flex;
   list-style-type: none;
-  margin: 35px 0 20px 0;
+  margin: 3rem 0 2rem 0;
 }
 
-footer .icon {
-  font-size: 30px;
-  margin: 0 15px;
+footer .icons a {
+  font-size: 2.7em;
+  margin: 0 2rem;
   color: #ccc;
 }
 
-footer .icon:hover {
+footer .icons a:hover {
   filter: saturate(200%);
 }
 
@@ -199,12 +208,12 @@ footer .fa-facebook {color: #3A5795;}
 footer .fa-envelope {color: rgb(0, 162, 190);}
 
 footer .rights {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 /* HOME -------------------------------------------*/
 article.home {
-  text-indent: 25px;
+  text-indent: 2.5rem;
   text-align: justify;
   text-justify: auto;
 }
@@ -214,16 +223,15 @@ article.home .narciso {
 }
 
 article.home .narciso .photo {
-  width: 200px;
-  height: auto;
-  border-radius: 200px;
+  width: 13rem;
+  border-radius: 100%;
 }
 
 article.home .narciso .bigfive {
   /* font-family: 'Dancing Script', cursive; */
   text-align: center;
   font-weight: bold;
-  font-size: 90%;
+  /* font-size: 90%; */
 }
 
 article.home .narciso .bigfive a {
@@ -249,45 +257,27 @@ article.it {
   grid-template-columns: 33% 34% 33%;
 }
 
-article.it section {
-
-}
-
 article.it .item {
-  margin: 0;
-  padding-top: 15px;
-  border: 1px solid #ddd;
+  padding: 1rem;
+  border: .1rem solid #ddd;
 }
 
 article.it h2 {
   margin: 0;
-  padding: 10px 15px;
-  border-radius: 10px 10px 0 0;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem 1rem 0 0;
   background-color: #ddd;
 }
 
-article.it h3 {
-  margin: 0 15px;
-}
-
-article.it li {
-  margin: 0 10px;
-  padding: 2px 0;
-}
 article.it a {
-  padding: 2px 5px;
+  padding: .2rem .5rem;
 }
 
 article.it a:hover {
   transition: color .3s;
-  border-radius: 5px;
+  border-radius: .5rem;
   color: yellow;
   background-color: #000000;
-}
-
-article.it ol, article.it ul {
-  margin: 0 0 20px 0;
-  text-indent: 0;
 }
 
 /* MUSIC -------------------------------------------*/
@@ -298,11 +288,8 @@ article.resume {
   grid-template-columns: auto 30%;
   grid-template-areas: 
     'top top'
-    /* 'left center right' */
     'left right';
   align-content: flex-start;
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
 }
 
 article.resume ul,
@@ -319,34 +306,32 @@ article.resume .top { grid-area: top; }
 article.resume .left { grid-area: left; }
 article.resume .right { grid-area: right; }
 
-article.resume .top .firstLetter:first-letter {
-  font-size: 60px;
+article.resume .top .text:first-letter {
+  font-size: 4.7em;
   font-weight: bold;
-  border: 1px dashed #999;
-  margin-right: 5px;
-  padding: 10px;
+  border: .1rem dashed #999;
+  margin-right: .1em;
+  padding: .12em;
   float: left;
 }
 
-article.resume .top .detail {
+article.resume .top .details {
   display: flex;
-  justify-content: space-between;
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
+  gap: 1.5em;
 }
 
 article.resume .left {
   display: grid;
   grid-template-columns: 13% auto;
-  gap: 20px;
+  gap: 1rem;
 }
 
 article.resume .left .title {
   grid-column: 1 / 3;
-  background-color: #eee;
   text-align: center;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 1rem 1rem 0 0 ;
+
+  background-color: #eee;
 }
 
 article.resume .left .company {
@@ -356,10 +341,6 @@ article.resume .left .company {
 article.resume .left .dates p {
   font-weight: bold;
   margin: 0;
-}
-
-article.resume .right {
-  /* padding-left: 20px; */
 }
 
 article.resume .right .sydney {
@@ -381,7 +362,7 @@ article.resume .right .sydney {
       'footer';
   }
 
-  header .phrase {
+  header .greeting {
     align-self: center;
   }
 
@@ -405,7 +386,7 @@ article.resume .right .sydney {
   }
 
   article {
-    padding-top: 10px;
+    padding-top: .5em;
   }
 
   /* IT ----------------------------------------------*/
