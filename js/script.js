@@ -5,8 +5,6 @@
 //   console.log(doc);
 // }
 
-// document.getElementById('test2').innerHTML = "Test";
-
 let darkMode = localStorage.getItem('darkMode');
 if (darkMode === 'on') {
   darkModeOn();
