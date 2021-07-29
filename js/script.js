@@ -6,48 +6,27 @@
 // }
 
 let darkMode = localStorage.getItem('darkMode');
-// test.hasAttribute('class');
-// console.log(test.classList);
-// let moonSunIcon = localStorage.getItem('moonSunIcon');
 if (darkMode === 'on') {
   darkModeOn();
-  // document.getElementById('moonSunIcon').classList.replace('fas fa-moon', 'fas fa-sun');
 }
 
 function darkModeOn() {
   document.getElementById('darkMode').href = '/css/dark.css';
-  // document.getElementById('moonSunIcon').classList.replace('fas fa-moon', 'fas fa-sun');
   localStorage.setItem('darkMode', 'on');
-  // localStorage.setItem('moonSunIcon', 'fas fa-sun');
 }
 
 function darkModeOff() {
   document.getElementById('darkMode').href = '';
-  // document.getElementById('moonSunIcon').classList.replace('fas fa-sun', 'fas fa-moon');
   localStorage.setItem('darkMode', null);
-  // localStorage.setItem('moonSunIcon', 'fas fa-moon');
 }
 
 function darkSwitch () {
   darkMode = localStorage.getItem('darkMode');
-  // moonSunIcon = localStorage.getItem('moonSunIcon');
   if (darkMode !== 'on') {
     darkModeOn();
-    // document.getElementById('moonSunIcon').classList.replace('fas fa-moon', 'fas fa-sun');
 } else {
     darkModeOff();
-    // document.getElementById('moonSunIcon').classList.replace('fas fa-sun', 'fas fa-moon');
   }
-}
-
-function on() {
-  document.getElementById('overlay').style.display =
-  'block';
-}
-
-function off() {
-  document.getElementById('overlay').style.display =
-  'none';
 }
 
 function includeHTML() {
@@ -83,4 +62,19 @@ function includeHTML() {
       return;
     }
   }
+}
+
+// Get the container element
+let btnContainer = document.getElementById("header-nav");
+
+// Get all buttons with class="btn" inside the container
+let btns = btnContainer.getElementsByClassName("borderAni");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
 }
