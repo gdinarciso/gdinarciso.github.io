@@ -5,6 +5,8 @@
 //   console.log(doc);
 // }
 
+// document.getElementById('test2').innerHTML = "Test";
+
 let darkMode = localStorage.getItem('darkMode');
 if (darkMode === 'on') {
   darkModeOn();
@@ -62,19 +64,4 @@ function includeHTML() {
       return;
     }
   }
-}
-
-// Get the container element
-let btnContainer = document.getElementById("header-nav");
-
-// Get all buttons with class="btn" inside the container
-let btns = btnContainer.getElementsByClassName("borderAni");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
 }
