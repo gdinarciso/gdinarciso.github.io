@@ -51,22 +51,6 @@ a:hover {
   color: blue;
 }
 
-article h3,
-article h4,
-article p {
-  margin: 0;
-}
-
-article h1 {
-  font-size: 2em;
-  margin: 0;
-}
-
-article h2 {
-  font-size: 1.5em;
-  margin: 0;
-}
-
 .fl-c:first-letter {
   font-size: 4.7em;
   font-weight: bold;
@@ -174,6 +158,34 @@ article section {
   margin: 1rem;
 }
 
+article h3,
+article h4,
+article p {
+  margin: 0;
+}
+
+article h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+article h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+article > h1 {
+  margin: 0 .3rem;
+  font-size: 1em;
+  /* font-weight: normal; */
+  color: #888;
+  text-transform: uppercase;
+}
+
+article > h1::before {
+  content: "> ";
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -258,8 +270,15 @@ article.home .narciso .bigfive a {
   text-decoration: underline;
 }
 
-article.home .greeting,
+article.home .greeting {
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: .8em;
+  font-family: 'Dancing Script', cursive;
+}
+
 article.home .phrase {
+  font-size: 1.5em;
   font-weight: normal;
   margin-bottom: .8em;
   font-family: 'Dancing Script', cursive;
