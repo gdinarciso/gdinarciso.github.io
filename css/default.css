@@ -27,7 +27,7 @@ html {
 body {
   display: grid;
   grid-template-columns: auto 85ch auto;
-  /* grid-template-rows: auto 1fr auto; */
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: 
     'header header header'
     'left article right'
@@ -82,8 +82,8 @@ header {
 
 header .moonsunicon {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: .7em;
+  right: .7em;
   cursor: pointer;
   font-size: 1.2em;
 }
@@ -115,7 +115,6 @@ header .greeting {
 header nav {
   display: flex;
   align-self: center;
-  margin: 0 2em;
 }
 
 header nav .borderAni:after {
@@ -190,6 +189,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   border-top: ridge .6rem;
   font-family: 'Trebuchet MS', sans-serif;
 
@@ -207,8 +207,8 @@ footer .icons {
 }
 
 footer .icons a {
-  font-size: 2.5em;
-  margin: 0 2rem;
+  font-size: 2.5rem;
+  padding: 0 1rem;
   color: #ccc;
 }
 
@@ -236,7 +236,7 @@ footer .fa-facebook {color: #3A5795;}
 footer .fa-envelope {color: rgb(0, 162, 190);}
 
 footer .rights {
-  font-size: .9em;
+  font-size: .8em;
 }
 
 /* HOME -------------------------------------------*/
@@ -326,8 +326,9 @@ article.it ol {
 /* MUSIC -------------------------------------------*/
 article.music {
   display: flex;
-  flex-flow: column wrap;
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* RESUME -------------------------------------------*/
@@ -446,12 +447,21 @@ article.resume .skills {
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
 
+  body {
+    font-size: 17px;
+  }
+  
   header {
     position: static;
+    padding-top: 20px;
   }
 
   article {
     padding-top: .5em;
+  }
+
+  footer .rights {
+    font-size: .65em;
   }
 
   /* IT ----------------------------------------------*/
