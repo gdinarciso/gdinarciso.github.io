@@ -176,7 +176,7 @@ article h2 {
 article > h1 {
   margin: 0 .3rem;
   font-size: 1em;
-  /* font-weight: normal; */
+  font-weight: normal;
   color: #888;
   text-transform: uppercase;
 }
