@@ -22,33 +22,22 @@ function darkSwitch () {
   }
 }
 
-// Get the container element
-var btnContainer = document.getElementById("myDIV");
-
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("btn");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-
-    // If there's no active class
-    if (current.length > 0) { 
-      current[0].className = current[0].className.replace(" active", "");
-    }
-
-    // Add the active class to the current/clicked button
-    this.className += " active";
-  });
-}
+// let btnContainer = document.getElementById("header-nav");
+// let btns = btnContainer.getElementsByClassName("btn");
+// for (let i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function() {
+//     var current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }
 
 function includeHTML() {
-  var z;
-  var i;
-  var elmnt;
-  var file;
-  var xhttp;
+  let z;
+  let i;
+  let elmnt;
+  let file;
+  let xhttp;
   /* Loop through a collection of all HTML elements: */
   z = document.getElementsByTagName('*');
   for (i = 0; i < z.length; i++) {

@@ -27,8 +27,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Flamenco&family=Open+Sans&family=Ubuntu&family=Yantramanav&display=swap" rel="stylesheet">
 
-  <script src="/js/script.js"></script>
-
 </head>
 
 <body>
@@ -40,19 +38,17 @@
         
         <h1 class="greeting">Hello and welcome aboard!</h1>
         
-        <nav>
-            <div class="borderAni"><a href="/index.html"><i class="fas fa-igloo"></i>HOME</a></div>
-            <div class="borderAni"><a href="/html/it.html"><i class="fas fa-microchip"></i>I.T.</a></div>
-            <div class="borderAni"><a href="/html/music.html"><i class="fas fa-drum"></i>MUSIC</a></div>
-            <div class="borderAni"><a href="/html/resume.html"><i class="fas fa-file"></i>RÉSUMÉ</a></div>
+        <nav id="header-nav">
+            <a class="btn" href="/index.html"><i class="fas fa-igloo"></i> HOME</a>
+            <a class="btn active" href="/html/it.html"><i class="fas fa-microchip"></i> I.T.</a>
+            <a class="btn" href="/html/music.html"><i class="fas fa-drum"></i> MUSIC</a>
+            <a class="btn" href="/html/resume.html"><i class="fas fa-file"></i> RÉSUMÉ</a>
         </nav>
         
     </header>
 
   <article class='it'>
 
-    <h1>i.t.</h1>
-    
     <section>
         <h2>CS50</h2>
         <div class="item">
@@ -169,6 +165,8 @@
         <p class="rights"><i class="far fa-copyright"></i> 2021. Made with <i class="fa fa-heart" title="LOVE"></i> and <i class="fa fa-brain" title="DEEP WORK"></i> in Sydney, Australia. Narciso Sbrissa Grimaldi.</p>
     
     </footer>
+
+    <script src="/js/script.js"></script>
 
 </body>
 
