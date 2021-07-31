@@ -43,8 +43,8 @@ a:hover {
   font-size: 4.7em;
   font-weight: bold;
   border: .1rem dashed #999;
-  margin-right: .1em;
-  padding: .41em .25em;
+  margin: .5rem .4rem 0 0;
+  padding: .2em .1em;
   float: left;
 }
 
@@ -93,6 +93,7 @@ header .fa-sun {
 header .greeting {
   font-size: 3em;
   font-weight: normal;
+  text-align: left;
   font-family: 'MrDeHaviland', monospace;
   align-self: center;
 
@@ -106,15 +107,19 @@ header nav {
 }
 
 header nav .btn {
-  padding: .5rem 1rem;
+  padding: .4rem 1rem;
   background-color: #f1f1f1;
 }
 
-header nav .active,
 header nav .btn:hover {
   background-color: #444;
   color: rgb(255, 255, 255);
 }
+
+header nav .active {
+  background-color: rgb(189, 213, 221);
+}
+
 
 /* header nav a {
   border: solid transparent;
@@ -272,33 +277,28 @@ article.it {
 }
 
 article.it section {
-  margin-bottom: 4rem;
-}
-
-article.it .item {
-  padding: 1em;
   border: .1rem solid #ddd;
+  border-radius: 1rem 1rem 0 0;
 }
 
-article.it h2 {
-  padding: .5em 1em;
-  border-radius: 1rem 1rem 0 0;
+article.it section > h2 {
+  border-radius: inherit;
   background-color: #ddd;
+  padding: .5em;
+}
+
+article section h3 {
+  margin: inherit;
 }
 
 article.it a {
-  padding: .3em;
+  padding: .3em 0;
 }
 
 article.it a:hover {
   border-radius: .5rem;
   color: yellow;
   background-color: #000000;
-}
-
-article.it ul,
-article.it ol {
-  padding-left: 1.5em;
 }
 
 /* MUSIC -------------------------------------------*/
