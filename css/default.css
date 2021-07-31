@@ -149,11 +149,7 @@ header nav .borderAni:hover:after {
 } */
 
 article {
-  padding-top: 8.5em;
-}
-
-article section {
-  margin: 1rem;
+  padding: 9.5rem 1rem 1rem 1rem;
 }
 
 article h3,
@@ -272,27 +268,33 @@ article.home .phrase {
 
 /* IT -------------------------------------------*/
 article.it {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;
+  gap: 1rem;
 }
 
 article.it section {
-  border: .1rem solid #ddd;
+  flex-grow: 1;
+  border: .2rem solid #ddd;
   border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 0 .3rem #444;
 }
 
-article.it section > h2 {
-  border-radius: inherit;
-  background-color: #ddd;
+article.it section h2:first-child {
   padding: .5em;
+  border-radius: .7rem .7rem 0 0;
+  background-color: #ddd;
 }
 
 article section h3 {
-  margin: inherit;
+  margin-left: .8rem;
 }
 
 article.it a {
-  padding: .3em 0;
+  padding: .3em;
+  margin-right: 1rem;
 }
 
 article.it a:hover {
