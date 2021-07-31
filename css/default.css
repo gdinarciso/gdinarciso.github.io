@@ -26,7 +26,7 @@ body {
   line-height: 1.8em;
   font-family: Ubuntu, 'Trebuchet MS', sans-serif; 
   
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 
 a {
@@ -36,6 +36,7 @@ a {
 
 a:hover {
   transition: color ease-in .2s, background-color ease-in-out .2s;
+  -moz-transition: color ease-in .2s, background-color ease-in-out .2s;
   color: blue;
 }
 
@@ -62,7 +63,7 @@ header {
   overflow: hidden;
   z-index: 1;
 
-  background-color: #eee;
+  background-color: #fff;
   box-shadow: 0 0 .5em #000;
   color: #000;
 }
@@ -77,11 +78,11 @@ header .moonsunicon {
 
 header .moonsunicon {
   transition: ease-in-out .5s;
+  -moz-transition: ease-in-out .5s;
   color: #000;
 }
 
 header .moonsunicon:hover {
-  transition: ease-in .25s;
   filter: drop-shadow(0 0 .5em #000);
 }
 
@@ -107,19 +108,18 @@ header nav {
 }
 
 header nav .btn {
-  padding: .4rem 1rem;
-  background-color: #f1f1f1;
+  padding: .4em 1em;
+  background-color: #fff;
 }
 
 header nav .btn:hover {
-  background-color: #444;
-  color: rgb(255, 255, 255);
+  background-color: #eee;
 }
 
 header nav .active {
   background-color: rgb(189, 213, 221);
+  font-weight: bold;
 }
-
 
 /* header nav a {
   border: solid transparent;
@@ -140,21 +140,21 @@ header nav .fas {
   width: 0%;
   border-bottom: .2em solid transparent;
   transition: ease-in-out .5s;
+  -moz-transition: ease-in-out .5s;
 }
 
 header nav .borderAni:hover:after {
   transition: ease-in .25s;
+  -moz-transition: ease-in .25s;
   border-bottom-color: blue;
   width: 100%;
 } */
 
 article {
-  padding: 9.5rem 1rem 1rem 1rem;
+  padding: 9.5em 1em 1em 1em;
 }
 
-article h3,
-article h4,
-article p {
+article :is(h3, h4, p) {
   margin: 0;
 }
 
@@ -173,13 +173,13 @@ footer {
   flex-flow: column wrap;
   align-items: center;
   justify-content: flex-end;
-  border-top: ridge .6rem;
-  padding: 3rem 0 .05rem 0;
+  border-top: solid .3rem;
+  padding: 3em 0 .05em 0;
   font-family: 'Trebuchet MS', sans-serif;
 
   color: #ccc;
   background-color: #000;
-  border-top-color: #444;
+  border-top-color: rgb(0, 99, 156);
   /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
   /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
 }
@@ -190,7 +190,7 @@ footer .icons {
 }
 
 footer .icons a {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   padding: 0 .3em;
 }
 
@@ -227,7 +227,7 @@ article.home {
 }
 
 article.home p {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 article.home .narciso {
@@ -236,9 +236,9 @@ article.home .narciso {
 
 article.home .narciso .photo {
   width: 13em;
-  border: 1px solid #555;
+  border: .1em solid #777;
   border-radius: 100%;
-  margin-left: 1em;
+  margin-left: 1rem;
   filter: drop-shadow(0 0 .3em #000);
 }
 
@@ -255,14 +255,14 @@ article.home .narciso .bigfive a {
 article.home .greeting {
   font-size: 2em;
   font-weight: normal;
-  margin-bottom: .8em;
+  margin-bottom: .8rem;
   font-family: 'Dancing Script', cursive;
 }
 
 article.home .phrase {
   font-size: 1.5em;
   font-weight: normal;
-  margin-bottom: .8em;
+  margin-bottom: .8rem;
   font-family: 'Dancing Script', cursive;
 }
 
@@ -324,8 +324,7 @@ article.resume {
     'left right'; */
 }
 
-article.resume ul,
-article.resume ol {
+article.resume :is(ul, ol) {
   padding-left: 1.2em;
   list-style-position: inside;
 }
@@ -342,20 +341,20 @@ article.resume .left { grid-area: left; }
 article.resume .right { grid-area: right; } */
 
 article.resume .top .name {
-  margin-bottom: .2em;
+  margin-bottom: .2rem;
 }
 
 article.resume .top .details {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 article.resume .top .academic {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 article.resume .top .academic .australia .aussie-flag {
@@ -364,7 +363,7 @@ article.resume .top .academic .australia .aussie-flag {
 }
 
 article.resume .top .cover-letter {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 article.resume .bottom {
@@ -433,7 +432,7 @@ article.resume .skills {
   
   header {
     position: static;
-    padding-top: 20px;
+    padding-top: 2em;
   }
 
   article {

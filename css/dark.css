@@ -8,10 +8,10 @@ a:hover {
 }
 
 header {
-  background-color: #111;
+  background-color: #333;
   /* background-image: linear-gradient(#000, #121212); */
-  box-shadow: 0 0 .75em #555;
-  color: #bbb;
+  box-shadow: 0 0 1em #ccc;
+  color: inherit;
 }
 
 header .moonsunicon:hover {
@@ -27,15 +27,23 @@ header .fa-sun {
 }
 
 header .greeting {
-  color: rgb(151, 203, 245);
+  color: rgb(255, 241, 110);
 }
 
-header nav .borderAni:hover:after {
+/* header nav .borderAni:hover:after {
   border-bottom-color: yellow;
+} */
+
+header nav .btn {
+  background-color: inherit;
 }
 
-header nav a {
-  color: #ccc;
+header nav .btn:hover {
+  background-color: #000;
+}
+
+header nav .active {
+  background-color: rgb(85, 84, 14);
 }
 
 article section {
@@ -44,7 +52,7 @@ article section {
 
 footer {
   background-color: #111;
-  border-top-color: #333;
+  border-top-color: rgb(61, 57, 0);
 }
 
 /* HOME -------------------------------------------*/
