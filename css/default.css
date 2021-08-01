@@ -13,6 +13,12 @@ html {
   /* font-size: 62.5%; */
 }
 
+header { grid-area: header; }
+article { grid-area: article; }
+.left { grid-area: left; }
+.right { grid-area: right;}
+footer { grid-area: footer; }
+
 body {
   display: grid;
   grid-template-columns: auto 85ch auto;
@@ -48,12 +54,6 @@ a:hover {
   padding: .5em .3em;
   float: left;
 }
-
-header { grid-area: header; }
-article { grid-area: article; }
-.left { grid-area: left; }
-.right { grid-area: right;}
-footer { grid-area: footer; }
 
 header {
   position: fixed;
@@ -375,7 +375,7 @@ article.resume .cover-letter {
 article.resume .bottom {
 /* article.resume .left { */
   display: grid;
-  grid-template-columns: 13% auto;
+  grid-template-columns: 20% auto;
   gap: 1em;
 }
 
@@ -394,12 +394,21 @@ article.resume .job-date {
   font-weight: bold;
 }
 
+article.resume .skills .left { grid-area: left;}
+article.resume .skills .right { grid-area: right;}
+
 article.resume .skills {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  /* line-height: 1.2em; */
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: 
+    'left right';
+  line-height: 1.2em;
 }
+
+article.resume .skills h3 {
+  margin-bottom: .3rem;
+}
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (max-width: 1200px) {
