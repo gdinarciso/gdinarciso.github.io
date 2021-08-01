@@ -318,6 +318,11 @@ article.resume .bottom {
 article.resume .top { grid-area: top; }
 article.resume .bottom { grid-area: bottom; }
 
+article.resume .fa-print {
+  float: right;
+  font-size: 1.7rem;
+}
+
 article.resume :is(ul, ol) {
   padding-left: 1.2em;
   list-style-position: inside;
