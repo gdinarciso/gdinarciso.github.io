@@ -346,29 +346,29 @@ article.resume .bottom { grid-area: bottom; }
 article.resume .left { grid-area: left; }
 article.resume .right { grid-area: right; } */
 
-article.resume .top .name {
+article.resume .name {
   margin-bottom: .8rem;
 }
 
-article.resume .top .details {
+article.resume .details {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
-article.resume .top .academic {
+article.resume .academic {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
-article.resume .top .academic .australia .aussie-flag {
+article.resume .aussie-flag {
   display: flex;
   justify-content: space-evenly;
 }
 
-article.resume .top .cover-letter {
+article.resume .cover-letter {
   margin-bottom: 2rem;
 }
 
@@ -383,19 +383,22 @@ article.resume .bottom .title {
 /* article.resume .left .title { */
   grid-column: 1 / 3;
   text-align: center;
-  padding: .8em;
+  padding: .7em;
   border-radius: 1rem 1rem 0 0 ;
 
   background-color: #eee;
 }
 
-article.resume .bottom .dates p {
+article.resume .job-date {
 /* article.resume .left .dates p { */
   font-weight: bold;
 }
 
 article.resume .skills {
-  line-height: 1.2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* line-height: 1.2em; */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -433,16 +436,16 @@ article.resume .skills {
 @media screen and (max-width: 600px) {
 
   body {
-    font-size: 17px;
+    font-size: 15px;
   }
   
   header {
     position: static;
-    padding-top: 2em;
+    padding-top: 1.5em;
   }
 
   article {
-    padding-top: .5em;
+    padding-top: 1.3em;
   }
 
   footer .rights {
@@ -452,6 +455,16 @@ article.resume .skills {
   /* IT ----------------------------------------------*/
   article.it {
     grid-template-columns: auto;
+  }
+
+  /* RESUME ------------------------------------------*/
+  article.resume .details{
+    flex-direction: column;
+  }
+
+  article.resume .bottom {
+    display: flex;
+    flex-direction: column;
   }
 
 }
