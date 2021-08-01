@@ -179,7 +179,7 @@ footer {
 
   color: #ccc;
   background-color: #000;
-  border-top-color: rgb(0, 99, 156);
+  border-top-color: rgb(0, 70, 128);
   /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
   /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
 }
@@ -238,21 +238,11 @@ article.home .narciso {
   margin-left: 3rem;
 }
 
-article.home .narciso .photo {
+article.home .photo {
   width: 13em;
-  margin-bottom: 1rem;
-  border: .1em solid #777;
+  border: 2px solid #777;
   border-radius: 100%;
-  filter: drop-shadow(0 0 .3em #000);
-}
-
-article.home .narciso .bigfive {
-  font-weight: bold;
-  font-style: italic;
-}
-
-article.home .narciso .bigfive a {
-  text-decoration: underline;
+  filter: drop-shadow(0 .3em .2em #444);
 }
 
 article.home .greeting {
@@ -370,21 +360,17 @@ article.resume .bottom {
 
 article.resume .bottom .title {
   text-align: center;
-  padding: .7em;
-  border: 1px solid #ccc;
-  border-radius: 1rem 1rem 0 0 ;
+  padding: 1em;
   border-bottom: none;
+  margin-bottom: 1rem;
 
-  background-color: #eee;
-}
-
-article.resume .jobs .job:first-child {
-  border-top: none;
+  background-color: #ddd;
 }
 
 article.resume .job {
   display: flex;
   border: 1px solid #ccc;
+  border-radius: 0 2em 0 2em;
   padding: .5rem 1rem;
   margin-bottom: 1rem;
 }
