@@ -318,9 +318,9 @@ article.resume .bottom {
 article.resume .top { grid-area: top; }
 article.resume .bottom { grid-area: bottom; }
 
-article.resume .fa-print {
+article.resume .print-btn {
   float: right;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 article.resume :is(ul, ol) {
