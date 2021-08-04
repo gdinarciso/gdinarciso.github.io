@@ -25,7 +25,7 @@
     />
     <!-- Popper JS -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"
       integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
@@ -99,6 +99,42 @@
         <h3>Problem Set 1</h3>
         <ol>
           <li><a href="/c++/problemset1-cash.c">cash.c</a></li>
+          <pre>
+            //CS50 - MY SOLUTION
+
+            #include <cs50.h>
+            #include <stdio.h> /* printf */
+            #include <math.h> /* round, remainder */
+            
+            int main (void)
+            {
+                int change, c25, c10, c5, c1;
+                float dollars;
+                do
+                {
+                    dollars = get_float ("change owned:");
+                    change = round (dollars * 100);
+                }
+                while (dollars < 0);
+                for (c25 = 0; change >= 25; c25++)
+                {
+                    change -= 25;
+                }
+                for (c10 = 0; change >= 10; c10++)
+                {
+                    change -= 10;
+                }
+                for (c5 = 0; change >= 5; c5++)
+                {
+                    change -= 5;
+                }
+                for (c1 = 0; change >= 1; c1++)
+                {
+                    change -= 1;
+                }
+                printf ("%i\n", (c25 + c10 + c5 + c1));
+            
+            }</pre>
           <li><a href="/c++/problemset1-credit.c">credit.c</a></li>
           <li><a href="/c++/problemset1-mario-less.c">mario-less.c</a></li>
           <li><a href="/c++/problemset1-mario-more.c">mario-more.c</a></li>
