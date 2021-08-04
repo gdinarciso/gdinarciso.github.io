@@ -9,7 +9,8 @@
     <script>
 
         document.addEventListener('DOMContentLoaded', () => { // or: function () {
-            const hello = document.querySelector('#hello');
+            // const hello = document.querySelector('#hello');
+            const hello = document.getElementById('hello');
 
             document.querySelector('select').onchange = function () {
                 hello.style.color = this.value;
