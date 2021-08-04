@@ -1,166 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Narciso's Portifolio, web development, music, freelance"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Narciso's Portifolio, web development, music, freelance">
+    <title>Narciso Sbrissa Grimaldi - IT</title>
 
-  <title>Narciso Sbrissa Grimaldi</title>
-  
-  <link rel="shortcut icon" type="image/png" href="/image/favicon.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link id="darkMode" rel="stylesheet" href="/">
-  
-  <!-- Font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Flamenco&family=Open+Sans&family=Ubuntu&family=Yantramanav&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link id="darkMode" rel="stylesheet" href="/" />
 
-</head>
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Popper JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"
+      integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-<body>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Flamenco&family=Open+Sans&family=Ubuntu&family=Yantramanav&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
+  <body>
     <header>
+      <i
+        class="moonsunicon fas fa-moon"
+        onclick="darkSwitch()"
+        title="Swicth to dark mode"
+      ></i>
+      <i
+        class="moonsunicon fas fa-sun"
+        onclick="darkSwitch()"
+        title="Swicth to light mode"
+      ></i>
 
-        <i class="moonsunicon fas fa-moon" onclick="darkSwitch()" title='Swicth to dark mode'></i>
-        <i class="moonsunicon fas fa-sun" onclick="darkSwitch()" title='Swicth to light mode'></i>
-        
-        <h1 class="greeting">Hello and welcome aboard!</h1>
-        
-        <nav id="header-nav">
-            <a class="btn" href="/index.html"><i class="fas fa-igloo"></i> HOME</a>
-            <a class="btn active" href="/html/it.html"><i class="fas fa-microchip"></i> I.T.</a>
-            <a class="btn" href="/html/music.html"><i class="fas fa-drum"></i> MUSIC</a>
-            <a class="btn" href="/html/resume.html"><i class="fas fa-file"></i> RÉSUMÉ</a>
-        </nav>
-        
+      <h1 class="greeting">Hello and welcome aboard!</h1>
+
+      <nav id="header-nav">
+        <a class="btn" href="/index.html"><i class="fas fa-igloo"></i> HOME</a>
+        <a class="btn active" href="/html/it.html"
+          ><i class="fas fa-microchip"></i> I.T.</a
+        >
+        <a class="btn" href="/html/music.html"
+          ><i class="fas fa-drum"></i> MUSIC</a
+        >
+        <a class="btn" href="/html/resume.html"
+          ><i class="fas fa-file"></i> RÉSUMÉ</a
+        >
+      </nav>
     </header>
 
-  <article class='it'>
-
-    <section>
+    <article class="it">
+      <section>
         <h2><a href="/CS50/source/">CS50 Source</a></h2>
-            <ul>
-                <li><a href="/CS50/source/src1">Source 1</a></li>
-                <li><a href="/CS50/source/src2">Source 2</a></li>
-                <li><a href="/CS50/source/src5">Source 5</a></li>
-                <li><a href="/CS50/source/src6">Source 6</a></li>
-            </ul>
-    </section>
-    
-    <section>
+        <ul>
+          <li><a href="/CS50/source/src1">Source 1</a></li>
+          <li><a href="/CS50/source/src2">Source 2</a></li>
+          <li><a href="/CS50/source/src5">Source 5</a></li>
+          <li><a href="/CS50/source/src6">Source 6</a></li>
+        </ul>
+      </section>
+
+      <section>
         <h2>C++</h2>
-            <h3>Problem Set 1</h3>
-            <ol>
-                <li><a href="/c++/problemset1-cash.c">cash.c</a></li>
-                <li><a href="/c++/problemset1-credit.c">credit.c</a></li>
-                <li><a href="/c++/problemset1-mario-less.c">mario-less.c</a></li>
-                <li><a href="/c++/problemset1-mario-more.c">mario-more.c</a></li>
-            </ol>
-            <h3>Problem Set 2</h3>
-            <ol>
-                <li><a href="/c++/problemset2-caesar.c">caesar.c</a></li>
-                <li><a href="/c++/problemset2-readability.c">readability.c</a></li>
-                <li><a href="/c++/problemset2-substitution.c">substitution.c</a></li>
-            </ol>
-            <h3>Extra made</h3>
-            <ul>
-                <li><a href="/c++/problemset2-substitution-keygen.c">substitution-keygen.c</a></li>
-                <li><a href="/c++/problemset2-substitution-keygen-try.c">substitution-keygen-try.c (attempt to use while
-                    loop)</a></li>
-                <li><a href="/c++/problemset2-substitution-reverse.c">substitution-reverse.c</a></li>
-                <li><a href="/c++/remainder.c">remainder.c</a></li>
-            </ul>
-            <h3>Problem Set 3</h3>
-            <ol>
-                <li><a href="/c++/problemset3-plurality.c">plurality.c</a></li>
-                <li><a href="/c++/problemset3-runoff.c">runoff.c</a></li>
-            </ol>
-            <h3>Problem Set 4</h3>
-            <ol>
-                <li><a href="/c++/problemset4-helpers.c">helpers.c (filter)</a></li>
-            </ol>
-    </section>
-    
-    <section>
+        <h3>Problem Set 1</h3>
+        <ol>
+          <li><a href="/c++/problemset1-cash.c">cash.c</a></li>
+          <li><a href="/c++/problemset1-credit.c">credit.c</a></li>
+          <li><a href="/c++/problemset1-mario-less.c">mario-less.c</a></li>
+          <li><a href="/c++/problemset1-mario-more.c">mario-more.c</a></li>
+        </ol>
+        <h3>Problem Set 2</h3>
+        <ol>
+          <li><a href="/c++/problemset2-caesar.c">caesar.c</a></li>
+          <li><a href="/c++/problemset2-readability.c">readability.c</a></li>
+          <li><a href="/c++/problemset2-substitution.c">substitution.c</a></li>
+        </ol>
+        <h3>Extra made</h3>
+        <ul>
+          <li>
+            <a href="/c++/problemset2-substitution-keygen.c"
+              >substitution-keygen.c</a
+            >
+          </li>
+          <li>
+            <a href="/c++/problemset2-substitution-keygen-try.c"
+              >substitution-keygen-try.c (attempt to use while loop)</a
+            >
+          </li>
+          <li>
+            <a href="/c++/problemset2-substitution-reverse.c"
+              >substitution-reverse.c</a
+            >
+          </li>
+          <li><a href="/c++/remainder.c">remainder.c</a></li>
+        </ul>
+        <h3>Problem Set 3</h3>
+        <ol>
+          <li><a href="/c++/problemset3-plurality.c">plurality.c</a></li>
+          <li><a href="/c++/problemset3-runoff.c">runoff.c</a></li>
+        </ol>
+        <h3>Problem Set 4</h3>
+        <ol>
+          <li><a href="/c++/problemset4-helpers.c">helpers.c (filter)</a></li>
+        </ol>
+      </section>
+
+      <section>
         <h2>JavaScript</h2>
-            <ul>
-                <li><a href="/html/cs50-currency.html">cs50-currency</a></li>
-                <li><a href="/html/cs50-hello.html">cs50-hello</a></li>
-                <li><a href="/html/cs50-tasks.html">cs50-tasks</a></li>
-                <li><a href="/html/cs50-count.html">cs50-count</a></li>
-                <li><a href="/html/cs50-color.html">cs50-color</a></li>
-                <li><a href="/html/guessgame.html">Guess Game</a></li>
-                <li><a href="/js/phone.js">Phone</a></li>
-                <li><a href="/html/petstore.html">Petstore</a></li>
-                <li><a href="/html/calculator.html">Calculator</a></li>
-                <li><a href="/js/experiment.js">JavaScript Experiments (FrontEnd Masters)</a></li>
-                <li><a href="https://btholt.github.io" target="_blank">btholt.github.io</a></li>
-                <li><a href="https://codepen.io" target="_blank">codeopen.io</a></li>
-            </ul>
-    </section>
-    
-    <section>
+        <ul>
+          <li><a href="/html/cs50-currency.html">cs50-currency</a></li>
+          <li><a href="/html/cs50-hello.html">cs50-hello</a></li>
+          <li><a href="/html/cs50-tasks.html">cs50-tasks</a></li>
+          <li><a href="/html/cs50-count.html">cs50-count</a></li>
+          <li><a href="/html/cs50-color.html">cs50-color</a></li>
+          <li><a href="/html/guessgame.html">Guess Game</a></li>
+          <li><a href="/js/phone.js">Phone</a></li>
+          <li><a href="/html/petstore.html">Petstore</a></li>
+          <li><a href="/html/calculator.html">Calculator</a></li>
+          <li>
+            <a href="/js/experiment.js"
+              >JavaScript Experiments (FrontEnd Masters)</a
+            >
+          </li>
+          <li>
+            <a href="https://btholt.github.io" target="_blank"
+              >btholt.github.io</a
+            >
+          </li>
+          <li><a href="https://codepen.io" target="_blank">codeopen.io</a></li>
+        </ul>
+      </section>
+
+      <section>
         <h2>Python</h2>
-            <h3>Problem Set 6</h3>
-            <ol>
-                <li><a href="/python/problemset6-mario-less.py">mario-less.py</a></li>
-                <li><a href="/python/problemset6-mario-more.py">mario-more.py</a></li>
-                <li><a href="/python/problemset6-cash.py">cash.py</a></li>
-            </ol>
-    </section>
-    
-    <section>
+        <h3>Problem Set 6</h3>
+        <ol>
+          <li><a href="/python/problemset6-mario-less.py">mario-less.py</a></li>
+          <li><a href="/python/problemset6-mario-more.py">mario-more.py</a></li>
+          <li><a href="/python/problemset6-cash.py">cash.py</a></li>
+        </ol>
+      </section>
+
+      <section>
         <h2>Studies</h2>
-            <ul>
-                <li><a href="/html/concerns.html">Concerns</a></li>
-                <li><a href="https://github.com/gdinarciso/gdinarciso.github.io" target="
-                    ">GitHub</a></li>
-                <li><a href="/html/sass-command.html">Sass</a></li>
-                <li><a href="/html/tips.html">Tips</a></li>
-                <li><a href="https://getbootstrap.com" target="_blank">Bootstrap</a></li>
-                <li><a href="https://courses.edx.org/dashboard" target="_blank">edx dashboard</a></li>
-                <li><a href="https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/" target="_blank">edx Web
-                    Programming</a></li>
-                <li><a href="https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/" target="_blank">edx Computer
-                    Science</a></li>
-                <li><a href="https://drive.google.com/file/d/1Kb-AYi4U_nZBwwY64hDnGvLWeS92TrlG/view?usp=sharing"
-                    target="_blank">YDKJS</a></li>
-                <li><a href="https://snipcart.com/blog/javascript-beginner-intro-exercises" target="
-                    ">Snipcart</a></li>
-                <li><a href="/html/git-command.html">Git</a></li>
-            </ul>
-    </section>
+        <ul>
+          <li><a href="/html/concerns.html">Concerns</a></li>
+          <li>
+            <a
+              href="https://github.com/gdinarciso/gdinarciso.github.io"
+              target="
+                    "
+              >GitHub</a
+            >
+          </li>
+          <li><a href="/html/sass-command.html">Sass</a></li>
+          <li><a href="/html/tips.html">Tips</a></li>
+          <li>
+            <a href="https://getbootstrap.com" target="_blank">Bootstrap</a>
+          </li>
+          <li>
+            <a href="https://courses.edx.org/dashboard" target="_blank"
+              >edx dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/"
+              target="_blank"
+              >edx Web Programming</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/"
+              target="_blank"
+              >edx Computer Science</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1Kb-AYi4U_nZBwwY64hDnGvLWeS92TrlG/view?usp=sharing"
+              target="_blank"
+              >YDKJS</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://snipcart.com/blog/javascript-beginner-intro-exercises"
+              target="
+                    "
+              >Snipcart</a
+            >
+          </li>
+          <li><a href="/html/git-command.html">Git</a></li>
+        </ul>
+      </section>
+    </article>
 
-  </article>
-  
     <footer>
-
-        <section class="icons">
-        <a href="https://github.com/gdinarciso"><i class="fab fa-github"></i></a>
-        <a href="https://au.linkedin.com/in/narciso-sbrissa-grimaldi-4984251a2"><i class="fab fa-linkedin-in"></i></a>
+      <section class="icons">
+        <a href="https://github.com/gdinarciso"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://au.linkedin.com/in/narciso-sbrissa-grimaldi-4984251a2"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
         <a href=""><i class="fab fa-instagram"></i></a>
         <a href=""><i class="fab fa-facebook"></i></a>
-        <a href="mailto:narciso.sbgr@gmail.com"><i class="fas fa-envelope"></i></a>
-        </section>
-    
-        <p class="rights"><i class="far fa-copyright"></i> 2021. Made with <i class="fa fa-heart" title="LOVE"></i> and <i class="fa fa-brain" title="DEEP WORK"></i> in Sydney, Australia. Narciso Sbrissa Grimaldi.</p>
-    
+        <a href="mailto:narciso.sbgr@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </section>
+
+      <p class="rights">
+        <i class="far fa-copyright"></i> 2021. Made with
+        <i class="fa fa-heart" title="LOVE"></i> and
+        <i class="fa fa-brain" title="DEEP WORK"></i> in Sydney, Australia.
+        Narciso Sbrissa Grimaldi.
+      </p>
     </footer>
 
     <script src="/js/script.js"></script>
-
-</body>
-
+  </body>
 </html>

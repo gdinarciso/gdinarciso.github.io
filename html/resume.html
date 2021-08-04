@@ -1,409 +1,636 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Narciso's Portifolio, web development, music, freelance"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Narciso's Portifolio, web development, music, freelance">
+    <title>Narciso Sbrissa Grimaldi - Resume</title>
 
-  <title>Narciso Sbrissa Grimaldi</title>
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link id="darkMode" rel="stylesheet" href="/" />
 
-  <link rel="shortcut icon" type="image/png" href="/image/favicon.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link id="darkMode" rel="stylesheet" href="/">
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Popper JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"
+      integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- Font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Flamenco&family=Open+Sans&family=Ubuntu&family=Yantramanav&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Flamenco&family=Open+Sans&family=Ubuntu&family=Yantramanav&display=swap" rel="stylesheet">
-  
-</head>
+  <body>
+    <header>
+      <i
+        class="moonsunicon fas fa-moon"
+        onclick="darkSwitch()"
+        title="Swicth to dark mode"
+      ></i>
+      <i
+        class="moonsunicon fas fa-sun"
+        onclick="darkSwitch()"
+        title="Swicth to light mode"
+      ></i>
 
-<body>
+      <h1 class="greeting">Hello and welcome aboard!</h1>
 
-  <header>
-    
-    <i class="moonsunicon fas fa-moon" onclick="darkSwitch()" title='Swicth to dark mode'></i>
-    <i class="moonsunicon fas fa-sun" onclick="darkSwitch()" title='Swicth to light mode'></i>
-    
-    <h1 class="greeting">Hello and welcome aboard!</h1>
-    
-    <nav id="header-nav">
-      <a class="btn" href="/index.html"><i class="fas fa-igloo"></i> HOME</a>
-      <a class="btn" href="/html/it.html"><i class="fas fa-microchip"></i> I.T.</a>
-      <a class="btn" href="/html/music.html"><i class="fas fa-drum"></i> MUSIC</a>
-      <a class="btn active" href="/html/resume.html"><i class="fas fa-file"></i> RÉSUMÉ</a>
-    </nav>
-  
-  </header>
-    
-  <article class='resume'>
-    
-    <section class="top">
+      <nav id="header-nav">
+        <a class="btn" href="/index.html"><i class="fas fa-igloo"></i> HOME</a>
+        <a class="btn" href="/html/it.html"
+          ><i class="fas fa-microchip"></i> I.T.</a
+        >
+        <a class="btn" href="/html/music.html"
+          ><i class="fas fa-drum"></i> MUSIC</a
+        >
+        <a class="btn active" href="/html/resume.html"
+          ><i class="fas fa-file"></i> RÉSUMÉ</a
+        >
+      </nav>
+    </header>
 
-      <button class='print-btn' onclick="window.print();return false;"><i class="fas fa-print"></i></button>
-      <h1 class="name">Narciso Sbrissa Grimaldi</h1>
-      
-      <div class="details">
-        <a href="tel:+61 434 913 691"><i class="fas fa-phone"></i> +61 434 913 691</a>
-        <a href='mailto:narciso.sbgr@gmail.com'><i class="fas fa-envelope"></i> narciso.sbgr@gmail.com</a>
-        <a href="https://github.com/gdinarciso" target="blank"><i class="fab fa-github"></i> github.com/gdinarciso</a>
-        <a href="https://bigfive-test.com/result/60921b62087f980009cee13b"><i class="fas fa-user-edit"></i> My Big Five</a>
-      </div>
+    <article class="resume">
+      <section class="top">
+        <button
+          class="print-btn"
+          value="Print my Resume"
+          onclick="window.print();return false;"
+        >
+          <i class="fas fa-print"></i>
+        </button>
+        <h1 class="name">Narciso Sbrissa Grimaldi</h1>
 
-      <div class='academic'>
-
-        <div class="graduation">
-          <p><strong>Occupation</strong>: Freelance | Musician</p>
-          <p><strong>Graduation</strong>: Data Processing | Mechanical Engineer</p>
-          <p><strong>Pos Graduation</strong>: Environmental Technologies</p>
+        <div class="details">
+          <a href="tel:+61 434 913 691"
+            ><i class="fas fa-phone"></i> +61 434 913 691</a
+          >
+          <a href="mailto:narciso.sbgr@gmail.com"
+            ><i class="fas fa-envelope"></i> narciso.sbgr@gmail.com</a
+          >
+          <a href="https://github.com/gdinarciso" target="blank"
+            ><i class="fab fa-github"></i> github.com/gdinarciso</a
+          >
+          <a href="https://bigfive-test.com/result/60921b62087f980009cee13b"
+            ><i class="fas fa-user-edit"></i> My Big Five</a
+          >
         </div>
 
-        <div class="australia">
-          <h3>Current living in Sydney</h3>
-          <div class='aussie-flag'>
-            <img src="/image/australiaflag.png" alt="Australia Flag" width="auto" height="40px">
-            <img src="/image/australia.png" alt="Australia" width="auto" height="40px">
+        <div class="academic">
+          <div class="graduation">
+            <p><strong>Occupation</strong>: Freelance | Musician</p>
+            <p>
+              <strong>Graduation</strong>: Data Processing | Mechanical Engineer
+            </p>
+            <p><strong>Pos Graduation</strong>: Environmental Technologies</p>
           </div>
-        </div>
 
-      </div>
-
-      <p class="cover-letter fl-c justified">Altogether I have more than 25 years of career in multiple areas.
-        I'm confident and talented professional who works well in a team and has the skills of electrician and structured
-        cabling supplied by a solid knowledge and practices of computing and computing
-        network providing great innovative potential in all areas.
-        Among other roles, I have the ability to work as SKILLED LABOURER. Throughout
-        my career I have been in contact with various types of power tools, doing
-        general, electrical and plumbing maintenance, demolition jobs as well.
-        Another important activity is the installation and maintenance of AIR
-        CONDITIONERS.
-        I have physical White Card, Driver license, own tools and all PPEs.
-      </p>
-
-    </section>
-
-    <section class="bottom">
-    <!-- <section class="left"> -->
-
-      <div class="title-career">
-        <h2>Career History</h2>
-      </div>
-      
-      <div class="jobs">
-
-        <div class="job">
-          <div class="job-date">
-            <p>Dec-2017 to present (1 year + 3 months)</p>
-          </div>
-          <div class='company justified'>
-            <h4 class='company-name'>Electrician at IMPACT COMMUNICATIONS&ELECTRICAL PTY LTD</h4>
-            <p>We install electrical, data, lighting and fire projects
-            for large desks throughout Sydney. My duties are:</p>
-            <ul>
-              <li>
-                Diagnose electrical problems by studying diagrams,
-                manuals, and specifications, troubleshooting systems and
-                conducting tests
-              </li>
-              <li>
-                Repair electrical problems by replacing faulty parts and
-                component
-              </li>
-              <li>
-              Plan layout and installation of electrical wiring,
-              equipment and fixtures, based on job specifications
-              </li>
-              <li>
-                 Install feeder and branch conduit and wiring
-              </li>
-              <li>
-                Discuss solutions with homeowner Comply with all
-                safety standards and regulations
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">
-            <p>Nov-2017 to Nov-2017 (1 month or less)</p>
-          </div>
-          <div class='company justified'>
-            <h4 class='company-name'>Cleaner at BRASCLEANING PTY LTD</h4>
-            <ul>
-              <li>Clean, stock and supply designated facility areas (dusting, sweeping, vacuuming, mopping, cleaning ceiling vents, restroom cleaning etc)</li>
-              <li>Perform and document routine inspection and maintenance activities</li>
-              <li>Carry out heavy cleansing tasks and special projects</li>
-              <li>Notify management of occurring deficiencies or needs for repairs</li>
-              <li>Make adjustments and minor repairs</li>
-              <li>Stock and maintain supply rooms</li>
-              <li>Cooperate with the rest of the staff</li>
-              <li>Follow all health and safety regulations</li>
-            </ul>
+          <div class="australia">
+            <h3>Current living in Sydney</h3>
+            <div class="aussie-flag">
+              <img
+                src="/image/australiaflag.png"
+                alt="Australia Flag"
+                width="auto"
+                height="40px"
+              />
+              <img
+                src="/image/australia.png"
+                alt="Australia"
+                width="auto"
+                height="40px"
+              />
+            </div>
           </div>
         </div>
 
-        <div class="job">
-          <div class="job-date">
-            <p>Nov-2017 (1 month or less)</p>
-          </div>
-          <div class='company justified'>
-            <h4 class='company-name'>Demolition Labourer at Bare Demolition PTY LTD</h4>
-            <ul>
-              <li>Tear down and use tools and manual labor to remove unsound structures and building elements</li>
-              <li>Clean up jobsite debris, and make jobsites safe and ready for new construction work.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-2016 to Oct-2017 (1 year + 9 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Finance Director at Grimaldi&Gomes LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Drive the financial planning of the college by analyzing its performance and risks</li>
-              <li>Retain constant awareness of the college financial position and act to prevent problems</li>
-              <li>Set up and oversee the college’s finance IT system</li>
-              <li>Set targets for and supervise all accounting and finance personnel</li>
-              <li>Oversee all audit and internal control operations</li>
-              <li>Prepare timely and detailed reports on financial performance on a quarterly and annual basis</li>
-              <li>Conduct analysis to make forecasts and report to upper executives</li>
-              <li>Ensure adherence to financial laws and guidelines</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-2009 to Oct-2017 (8 years + 9 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Electrical Maintenance Technician at Grimaldi&Gomes LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Maintain the electrical power working properly and install any necessary components</li>
-              <li>Focus on save energy</li>
-              <li>Build independent circuits and offering schedules and assigning responsibilities to each school supervisor/teacher.</li>
-              <li>At the same time I did maintenance in several areas such as plumbing, furniture, lighting, infiltration, etc.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-2009 to Oct-2017 (8 years + 9 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Webmaster at Grimaldi&Gomes LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Build functional and easy-to-use website</li>
-              <li>Test website across browsers, operating systems and devices</li>
-              <li>Maintain, configure and troubleshoot servers</li>
-              <li>Ensure site security by setting up firewalls and login pages</li>
-              <li>Optimize loading speeds and capacity</li>
-              <li>Debug pages and fix broken links or images</li>
-              <li>Update website content and review SEO</li>
-              <li>Monitor and analyze site performance (e.g traffic, conversions)</li>
-              <li>Address user complaints</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Aug-2015 to Aug-2017 (2 years)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Skilled Labourer at Freelancer</h4>
-            <ul>
-              <li>Perform tasks involving physical labor at construction sites</li>
-              <li>Operate hand and power tools of all types: air hammers, earth tampers, cement mixers, small mechanical hoists, surveying and measuring equipment, and a variety of other equipment and instruments</li>
-              <li>Clean and prepare sites, dig trenches, set braces to support the sides of excavations, erect scaffolding, and clean up rubble, debris and other waste materials</li>
-              <li>Assist other craft workers.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-2016 to Nov-2016 (10 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Electrician at Freelancer</h4>
-            <ul>
-              <li>Installation of all electrical, data and camera wiring in a three-story commercial building from scratch</li>
-              <li>Among other services, I did installation and maintenance of residential electrical.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-2008 to Sep-2008 (8 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Integrated Management System Technician at NM Engineering</h4>
-            <ul>
-              <li>Creation and combination of processes, procedures and practices adopted by the company in a single platform</li>
-              <li>Organize, program and implement company policies in order to achieve their goals efficiently</li>
-              <li>Assist the company's environmental engineer</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-2004 to Dec-2007 (3 year + 11 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Data Cabling Technician at LANTEK</h4>
-            <ul>
-              <li>Install, maintain, and repair cable systems, most often involved with internet services</li>
-              <li>Test and troubleshoot issues with network communication</li>
-              <li>Conduct thorough inspections of cable lines to ensure the system is working correctly</li>
-              <li>Repair related poles and towers to resolve cable issues</li>
-              <li>Pull, route, or label CAT5 or CAT6 cable</li>
-              <li>Install various support structures, including cable racks, j-hooks, innerduct, and other related structures</li>
-              <li>Communicate and collaborate with other members of the field service team to resolve complex issues</li>
-              <li>Provide high-quality service to all customers</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-2001 to Dec-2003 (2 years + 11 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Network Technician Level 2 & 3 at Grimaldi&Gomes LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Maximize the availability of all network components</li>
-              <li>Provide first and second level troubleshooting on all systems managed by the Network Operations Center (NOC)</li>
-              <li>Detailed knowledge of different types of network and telephone equipment</li>
-              <li>Monitor network status by using management tools</li>
-              <li>Track problems and resolutions using a Network Management System (NMS) program that tracks incident response</li>
-              <li>Operation of long-distance communication systems</li>
-              <li>Coordinate repairs of network and assists vendors or analysts with repairs testing</li>
-              <li>Assist in evaluating growth requirements of networks and upgrading of local area network (LAN) systems</li>
-              <li>Aid in installing, maintaining, and fixing issues with LANs</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-1995 to Dec-2003 (8 years + 11 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Computer Technician at Grimaldi&Gomes LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Set up hardware and install and configure software and drivers</li>
-              <li>Maintain and repair technological equipment (e.g. routers) or peripheral devices</li>
-              <li>Install well-functioning LAN/WAN and other networks and manage components (servers, IPs etc.)</li>
-              <li>Manage security options and software in computers and networks to maintain privacy and protection from attacks</li>
-              <li>Perform regular upgrades to ensure systems remain updated</li>
-              <li>Troubleshoot system failures or bugs and provide solutions to restore functionality</li>
-              <li>Arrange maintenance sessions to discover and mend inefficiencies</li>
-              <li>Keep records of repairs and fixes for future reference</li>
-              <li>Offer timely technical support and teach users how to utilize computers correctly</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-1997 to Dec-2000 (3 years +11 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Network Technician at Grimaldi&Gomes LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Design and install well-functioning computer networks, connections and cabling</li>
-              <li>Perform troubleshooting to system failures and identify bottlenecks to ensure long term efficiency of network</li>
-              <li>Inspect LAN infrastructure and fix minor or major problems/bugs</li>
-              <li>Test and configure software and maintain and repair hardware and peripheral devices</li>
-              <li>Evaluate network performance and find ways of improvement</li>
-              <li>Organize and schedule upgrades and maintenance without deterring others from completing their own work</li>
-              <li>Do regular data backups to protect the organization’s information</li>
-              <li>Provide technical direction to co-workers on computer and network usage and offer comprehensive advice and instructions</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-1995 to Dec-1996 (1 year + 11 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Documentalist at Grimaldi&Gomes LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Creation of documents, graphics and digital images</li>
-              <li>Documentation service</li>
-              <li>Physical document scanning</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="job">
-          <div class="job-date">
-            <p>Jan-1994 to Dec-1994 (11 months)</p>
-          </div>
-          <div class="company justified">
-            <h4 class="company-name">Secretary at GRIMALDI&GOMES LTD (OBJETIVO College)</h4>
-            <ul>
-              <li>Ensuring meetings are effectively organised and minuted</li>
-              <li>Maintaining effective records and administration</li>
-              <li>Communication and correspondence</li>
-              <li>Acting as a point of information and reference for the Direction and Teachers</li>
-            </ul>
-          </div>
-        </div>
-      
-      </div>
+        <p class="cover-letter fl-c justified">
+          Altogether I have more than 25 years of career in multiple areas. I'm
+          confident and talented professional who works well in a team and has
+          the skills of electrician and structured cabling supplied by a solid
+          knowledge and practices of computing and computing network providing
+          great innovative potential in all areas. Among other roles, I have the
+          ability to work as SKILLED LABOURER. Throughout my career I have been
+          in contact with various types of power tools, doing general,
+          electrical and plumbing maintenance, demolition jobs as well. Another
+          important activity is the installation and maintenance of AIR
+          CONDITIONERS. I have physical White Card, Driver license, own tools
+          and all PPEs.
+        </p>
+      </section>
 
-    </section>
+      <section class="bottom">
+        <!-- <section class="left"> -->
 
-    <!-- <h3>Skills</h3> -->
-    <ul class="skills">
-      <div class="item skills-left">
-        <h3>Personal</h3>
-        <li>Adaptability</li>
-        <li>Analytical thinking</li>
-        <li>Empathy</li>
-        <li>Fast learner</li>
-        <li>Hardworking Organized</li>
-        <li>Presentable</li>        
-        <li>Proactive approach</li>
-        <li>Problem solving</li>
-        <li>Reliable</li>
-        <li>Resilience</li>
-        <li>Self-taught</li>
-      </div>  
-      <div class='item skills-right'>
-        <h3>Tech</h3>
-        <li>AutoCAD</li>
-        <li>Catia</li>
-        <li>CorelDraw</li>
-        <li>Linux</li>
-        <li>Mac OSX</li>
-        <li>SolidWorks</li>
-        <li>Hardware and Software</li>
-        <li>Microsoft Windows and Office</li>
-      </div>
-    </ul>
+        <div class="title-career">
+          <h2>Career History</h2>
+        </div>
 
-    <!-- <section class="right">
+        <div class="jobs">
+          <div class="job">
+            <div class="job-date">
+              <p>Dec-2017 to present (1 year + 3 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Electrician at IMPACT COMMUNICATIONS&ELECTRICAL PTY LTD
+              </h4>
+              <p>
+                We install electrical, data, lighting and fire projects for
+                large desks throughout Sydney. My duties are:
+              </p>
+              <ul>
+                <li>
+                  Diagnose electrical problems by studying diagrams, manuals,
+                  and specifications, troubleshooting systems and conducting
+                  tests
+                </li>
+                <li>
+                  Repair electrical problems by replacing faulty parts and
+                  component
+                </li>
+                <li>
+                  Plan layout and installation of electrical wiring, equipment
+                  and fixtures, based on job specifications
+                </li>
+                <li>Install feeder and branch conduit and wiring</li>
+                <li>
+                  Discuss solutions with homeowner Comply with all safety
+                  standards and regulations
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Nov-2017 to Nov-2017 (1 month or less)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">Cleaner at BRASCLEANING PTY LTD</h4>
+              <ul>
+                <li>
+                  Clean, stock and supply designated facility areas (dusting,
+                  sweeping, vacuuming, mopping, cleaning ceiling vents, restroom
+                  cleaning etc)
+                </li>
+                <li>
+                  Perform and document routine inspection and maintenance
+                  activities
+                </li>
+                <li>Carry out heavy cleansing tasks and special projects</li>
+                <li>
+                  Notify management of occurring deficiencies or needs for
+                  repairs
+                </li>
+                <li>Make adjustments and minor repairs</li>
+                <li>Stock and maintain supply rooms</li>
+                <li>Cooperate with the rest of the staff</li>
+                <li>Follow all health and safety regulations</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Nov-2017 (1 month or less)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Demolition Labourer at Bare Demolition PTY LTD
+              </h4>
+              <ul>
+                <li>
+                  Tear down and use tools and manual labor to remove unsound
+                  structures and building elements
+                </li>
+                <li>
+                  Clean up jobsite debris, and make jobsites safe and ready for
+                  new construction work.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-2016 to Oct-2017 (1 year + 9 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Finance Director at Grimaldi&Gomes LTD (OBJETIVO College)
+              </h4>
+              <ul>
+                <li>
+                  Drive the financial planning of the college by analyzing its
+                  performance and risks
+                </li>
+                <li>
+                  Retain constant awareness of the college financial position
+                  and act to prevent problems
+                </li>
+                <li>Set up and oversee the college’s finance IT system</li>
+                <li>
+                  Set targets for and supervise all accounting and finance
+                  personnel
+                </li>
+                <li>Oversee all audit and internal control operations</li>
+                <li>
+                  Prepare timely and detailed reports on financial performance
+                  on a quarterly and annual basis
+                </li>
+                <li>
+                  Conduct analysis to make forecasts and report to upper
+                  executives
+                </li>
+                <li>Ensure adherence to financial laws and guidelines</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-2009 to Oct-2017 (8 years + 9 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Electrical Maintenance Technician at Grimaldi&Gomes LTD
+                (OBJETIVO College)
+              </h4>
+              <ul>
+                <li>
+                  Maintain the electrical power working properly and install any
+                  necessary components
+                </li>
+                <li>Focus on save energy</li>
+                <li>
+                  Build independent circuits and offering schedules and
+                  assigning responsibilities to each school supervisor/teacher.
+                </li>
+                <li>
+                  At the same time I did maintenance in several areas such as
+                  plumbing, furniture, lighting, infiltration, etc.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-2009 to Oct-2017 (8 years + 9 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Webmaster at Grimaldi&Gomes LTD (OBJETIVO College)
+              </h4>
+              <ul>
+                <li>Build functional and easy-to-use website</li>
+                <li>
+                  Test website across browsers, operating systems and devices
+                </li>
+                <li>Maintain, configure and troubleshoot servers</li>
+                <li>
+                  Ensure site security by setting up firewalls and login pages
+                </li>
+                <li>Optimize loading speeds and capacity</li>
+                <li>Debug pages and fix broken links or images</li>
+                <li>Update website content and review SEO</li>
+                <li>
+                  Monitor and analyze site performance (e.g traffic,
+                  conversions)
+                </li>
+                <li>Address user complaints</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Aug-2015 to Aug-2017 (2 years)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">Skilled Labourer at Freelancer</h4>
+              <ul>
+                <li>
+                  Perform tasks involving physical labor at construction sites
+                </li>
+                <li>
+                  Operate hand and power tools of all types: air hammers, earth
+                  tampers, cement mixers, small mechanical hoists, surveying and
+                  measuring equipment, and a variety of other equipment and
+                  instruments
+                </li>
+                <li>
+                  Clean and prepare sites, dig trenches, set braces to support
+                  the sides of excavations, erect scaffolding, and clean up
+                  rubble, debris and other waste materials
+                </li>
+                <li>Assist other craft workers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-2016 to Nov-2016 (10 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">Electrician at Freelancer</h4>
+              <ul>
+                <li>
+                  Installation of all electrical, data and camera wiring in a
+                  three-story commercial building from scratch
+                </li>
+                <li>
+                  Among other services, I did installation and maintenance of
+                  residential electrical.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-2008 to Sep-2008 (8 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Integrated Management System Technician at NM Engineering
+              </h4>
+              <ul>
+                <li>
+                  Creation and combination of processes, procedures and
+                  practices adopted by the company in a single platform
+                </li>
+                <li>
+                  Organize, program and implement company policies in order to
+                  achieve their goals efficiently
+                </li>
+                <li>Assist the company's environmental engineer</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-2004 to Dec-2007 (3 year + 11 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">Data Cabling Technician at LANTEK</h4>
+              <ul>
+                <li>
+                  Install, maintain, and repair cable systems, most often
+                  involved with internet services
+                </li>
+                <li>Test and troubleshoot issues with network communication</li>
+                <li>
+                  Conduct thorough inspections of cable lines to ensure the
+                  system is working correctly
+                </li>
+                <li>Repair related poles and towers to resolve cable issues</li>
+                <li>Pull, route, or label CAT5 or CAT6 cable</li>
+                <li>
+                  Install various support structures, including cable racks,
+                  j-hooks, innerduct, and other related structures
+                </li>
+                <li>
+                  Communicate and collaborate with other members of the field
+                  service team to resolve complex issues
+                </li>
+                <li>Provide high-quality service to all customers</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-2001 to Dec-2003 (2 years + 11 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Network Technician Level 2 & 3 at Grimaldi&Gomes LTD (OBJETIVO
+                College)
+              </h4>
+              <ul>
+                <li>Maximize the availability of all network components</li>
+                <li>
+                  Provide first and second level troubleshooting on all systems
+                  managed by the Network Operations Center (NOC)
+                </li>
+                <li>
+                  Detailed knowledge of different types of network and telephone
+                  equipment
+                </li>
+                <li>Monitor network status by using management tools</li>
+                <li>
+                  Track problems and resolutions using a Network Management
+                  System (NMS) program that tracks incident response
+                </li>
+                <li>Operation of long-distance communication systems</li>
+                <li>
+                  Coordinate repairs of network and assists vendors or analysts
+                  with repairs testing
+                </li>
+                <li>
+                  Assist in evaluating growth requirements of networks and
+                  upgrading of local area network (LAN) systems
+                </li>
+                <li>
+                  Aid in installing, maintaining, and fixing issues with LANs
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-1995 to Dec-2003 (8 years + 11 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Computer Technician at Grimaldi&Gomes LTD (OBJETIVO College)
+              </h4>
+              <ul>
+                <li>
+                  Set up hardware and install and configure software and drivers
+                </li>
+                <li>
+                  Maintain and repair technological equipment (e.g. routers) or
+                  peripheral devices
+                </li>
+                <li>
+                  Install well-functioning LAN/WAN and other networks and manage
+                  components (servers, IPs etc.)
+                </li>
+                <li>
+                  Manage security options and software in computers and networks
+                  to maintain privacy and protection from attacks
+                </li>
+                <li>
+                  Perform regular upgrades to ensure systems remain updated
+                </li>
+                <li>
+                  Troubleshoot system failures or bugs and provide solutions to
+                  restore functionality
+                </li>
+                <li>
+                  Arrange maintenance sessions to discover and mend
+                  inefficiencies
+                </li>
+                <li>Keep records of repairs and fixes for future reference</li>
+                <li>
+                  Offer timely technical support and teach users how to utilize
+                  computers correctly
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-1997 to Dec-2000 (3 years +11 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Network Technician at Grimaldi&Gomes LTD (OBJETIVO College)
+              </h4>
+              <ul>
+                <li>
+                  Design and install well-functioning computer networks,
+                  connections and cabling
+                </li>
+                <li>
+                  Perform troubleshooting to system failures and identify
+                  bottlenecks to ensure long term efficiency of network
+                </li>
+                <li>
+                  Inspect LAN infrastructure and fix minor or major
+                  problems/bugs
+                </li>
+                <li>
+                  Test and configure software and maintain and repair hardware
+                  and peripheral devices
+                </li>
+                <li>
+                  Evaluate network performance and find ways of improvement
+                </li>
+                <li>
+                  Organize and schedule upgrades and maintenance without
+                  deterring others from completing their own work
+                </li>
+                <li>
+                  Do regular data backups to protect the organization’s
+                  information
+                </li>
+                <li>
+                  Provide technical direction to co-workers on computer and
+                  network usage and offer comprehensive advice and instructions
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-1995 to Dec-1996 (1 year + 11 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Documentalist at Grimaldi&Gomes LTD (OBJETIVO College)
+              </h4>
+              <ul>
+                <li>Creation of documents, graphics and digital images</li>
+                <li>Documentation service</li>
+                <li>Physical document scanning</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-date">
+              <p>Jan-1994 to Dec-1994 (11 months)</p>
+            </div>
+            <div class="company justified">
+              <h4 class="company-name">
+                Secretary at GRIMALDI&GOMES LTD (OBJETIVO College)
+              </h4>
+              <ul>
+                <li>Ensuring meetings are effectively organised and minuted</li>
+                <li>Maintaining effective records and administration</li>
+                <li>Communication and correspondence</li>
+                <li>
+                  Acting as a point of information and reference for the
+                  Direction and Teachers
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <h3>Skills</h3> -->
+      <ul class="skills">
+        <div class="item skills-left">
+          <h3>Personal</h3>
+          <li>Adaptability</li>
+          <li>Analytical thinking</li>
+          <li>Empathy</li>
+          <li>Fast learner</li>
+          <li>Hardworking Organized</li>
+          <li>Presentable</li>
+          <li>Proactive approach</li>
+          <li>Problem solving</li>
+          <li>Reliable</li>
+          <li>Resilience</li>
+          <li>Self-taught</li>
+        </div>
+        <div class="item skills-right">
+          <h3>Tech</h3>
+          <li>AutoCAD</li>
+          <li>Catia</li>
+          <li>CorelDraw</li>
+          <li>Linux</li>
+          <li>Mac OSX</li>
+          <li>SolidWorks</li>
+          <li>Hardware and Software</li>
+          <li>Microsoft Windows and Office</li>
+        </div>
+      </ul>
+
+      <!-- <section class="right">
 
       <div class="aussieflag">
         <h3 class="sydney">Current living in Sydney</h3>
@@ -451,27 +678,31 @@
       </ul>
 
     </section> -->
+    </article>
 
-  </article>
+    <footer>
+      <section class="icons">
+        <a href="https://github.com/gdinarciso"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://au.linkedin.com/in/narciso-sbrissa-grimaldi-4984251a2"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href="mailto:narciso.sbgr@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </section>
 
-  <footer>
+      <p class="rights">
+        <i class="far fa-copyright"></i> 2021. Made with
+        <i class="fa fa-heart" title="LOVE"></i> and
+        <i class="fa fa-brain" title="DEEP WORK"></i> in Sydney, Australia.
+        Narciso Sbrissa Grimaldi.
+      </p>
+    </footer>
 
-    <section class="icons">
-      <a href="https://github.com/gdinarciso"><i class="fab fa-github"></i></a>
-      <a href="https://au.linkedin.com/in/narciso-sbrissa-grimaldi-4984251a2"><i class="fab fa-linkedin-in"></i></a>
-      <a href=""><i class="fab fa-instagram"></i></a>
-      <a href=""><i class="fab fa-facebook"></i></a>
-      <a href="mailto:narciso.sbgr@gmail.com"><i class="fas fa-envelope"></i></a>
-    </section>
-  
-    <p class="rights"><i class="far fa-copyright"></i> 2021. Made with <i class="fa fa-heart" title="LOVE"></i> and <i class="fa fa-brain" title="DEEP WORK"></i> in Sydney, Australia. Narciso Sbrissa Grimaldi.</p>
-  
-  </footer>
-
-  <script src="/js/script.js"></script>
-
-</body>
-
+    <script src="/js/script.js"></script>
+  </body>
 </html>
-
-

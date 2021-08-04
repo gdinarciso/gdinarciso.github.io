@@ -10,12 +10,12 @@ a:hover {
 header {
   background-color: #222;
   /* background-image: linear-gradient(#000, #121212); */
-  box-shadow: 0 0 1em #ccc;
+  box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
   color: inherit;
 }
 
 header .moonsunicon:hover {
-  filter: drop-shadow(0 0 .1em yellow);  
+  filter: drop-shadow(0 0 10px rgba(255, 238, 0, 1));
 }
 
 header .fa-moon {
@@ -27,7 +27,7 @@ header .fa-sun {
 }
 
 header .greeting {
-  color: rgb(255, 241, 110);
+  color: rgba(255, 238, 0, 0.7);
 }
 
 /* header nav .borderAni:hover:after {
@@ -43,7 +43,7 @@ header nav .btn:hover {
 }
 
 header nav .active {
-  background-color: rgb(85, 84, 14);
+  background-color: rgba(255, 238, 0, 0.1);
 }
 
 article section {
@@ -52,7 +52,7 @@ article section {
 
 footer {
   background-color: #111;
-  border-top-color: rgb(61, 57, 0);
+  border-top-color: rgba(255, 238, 0, 0.07);
 }
 
 /* HOME -------------------------------------------*/
@@ -82,7 +82,6 @@ article.it a:hover {
 }
 
 /* MUSIC -------------------------------------------*/
-
 
 /* RESUME -------------------------------------------*/
 article.resume .bottom .title {
