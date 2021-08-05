@@ -12,7 +12,9 @@
     <title>Narciso Sbrissa Grimaldi - IT</title>
 
     <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="/css/style-desktop.css" /> -->
+    <link rel="stylesheet" href="/css/style-mobile.css" />
     <link id="darkMode" rel="stylesheet" href="/" />
 
     <!-- Font-awesome -->
@@ -85,8 +87,9 @@
 
     <article class="it">
       <section>
-        <h2><a href="/CS50/source/">CS50 Source</a></h2>
+        <h2>CS50 Source</h2>
         <ul>
+          <li><a href="/CS50/source/">Source</a></li>
           <li><a href="/CS50/source/src1">Source 1</a></li>
           <li><a href="/CS50/source/src2">Source 2</a></li>
           <li><a href="/CS50/source/src5">Source 5</a></li>
@@ -99,42 +102,6 @@
         <h3>Problem Set 1</h3>
         <ol>
           <li><a href="/c++/problemset1-cash.c">cash.c</a></li>
-          <pre>
-            //CS50 - MY SOLUTION
-
-            #include <cs50.h>
-            #include <stdio.h> /* printf */
-            #include <math.h> /* round, remainder */
-            
-            int main (void)
-            {
-                int change, c25, c10, c5, c1;
-                float dollars;
-                do
-                {
-                    dollars = get_float ("change owned:");
-                    change = round (dollars * 100);
-                }
-                while (dollars < 0);
-                for (c25 = 0; change >= 25; c25++)
-                {
-                    change -= 25;
-                }
-                for (c10 = 0; change >= 10; c10++)
-                {
-                    change -= 10;
-                }
-                for (c5 = 0; change >= 5; c5++)
-                {
-                    change -= 5;
-                }
-                for (c1 = 0; change >= 1; c1++)
-                {
-                    change -= 1;
-                }
-                printf ("%i\n", (c25 + c10 + c5 + c1));
-            
-            }</pre>
           <li><a href="/c++/problemset1-credit.c">credit.c</a></li>
           <li><a href="/c++/problemset1-mario-less.c">mario-less.c</a></li>
           <li><a href="/c++/problemset1-mario-more.c">mario-more.c</a></li>
