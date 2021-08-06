@@ -52,7 +52,11 @@ article section {
 
 footer {
   background-color: #111;
-  border-top-color: rgba(255, 238, 0, 0.07);
+  border-color: rgba(255, 238, 0, 0.07);
+}
+
+footer .rights {
+  border-color: rgba(255, 238, 0, 0.07);
 }
 
 /* HOME -------------------------------------------*/
