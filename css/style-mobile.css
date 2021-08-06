@@ -7,6 +7,9 @@
   box-sizing: border-box;
 }
 
+html {
+}
+
 body {
   display: grid;
   grid-template-columns: auto;
@@ -19,6 +22,7 @@ body {
   line-height: 1.5;
   font-family: Ubuntu, "Trebuchet MS", sans-serif;
   font-size: 15px;
+  min-height: 100vh;
 
   background-color: #f9f9f9;
 }
@@ -35,6 +39,7 @@ article {
 .right {
   grid-area: right;
 }
+
 footer {
   grid-area: footer;
 }
@@ -169,7 +174,7 @@ header nav a:hover::after {
 }
 
 article {
-  padding: 9em 1em 1em;
+  padding: 7.6em 1em 1em;
 }
 
 footer {
@@ -418,9 +423,10 @@ article.resume .skills h3 {
   margin: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   body {
     grid-template-columns: auto 75ch auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "header header header"
       "left article right"
