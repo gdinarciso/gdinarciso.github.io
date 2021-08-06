@@ -62,8 +62,8 @@ a {
 }
 
 a:hover {
-  transition: color ease-in-out 400ms, background-color ease-in-out 400ms;
-  -webkit-transition: color ease-in-out 400ms, background-color ease-in-out 400ms;
+  transition: color ease-in-out 400ms;
+  -webkit-transition: color ease-in-out 400ms;
 
   color: blue;
 }
@@ -140,13 +140,13 @@ header nav {
 header nav a {
   margin: 0;
   padding: 0.4em 0.5em 0;
-  transition: background-color ease-in-out 1000ms;
-  -webkit-transition: background-color ease-in-out 1000ms;
+  /* transition: background-color ease-in-out 1000ms; */
+  /* -webkit-transition: background-color ease-in-out 1000ms; */
 }
 
 header nav .active {
-  transition: background-color ease-in-out 1000ms;
-  -webkit-transition: background-color ease-in-out 1000ms;
+  /* transition: background-color ease-in-out 1000ms; */
+  /* -webkit-transition: background-color ease-in-out 1000ms; */
   background-color: rgb(189, 213, 221);
 }
 
@@ -174,7 +174,7 @@ header nav a:hover::after {
 }
 
 article {
-  padding: 7.6em 1em 1em;
+  padding: 7.8em 1em 1em;
 }
 
 footer {
@@ -182,7 +182,7 @@ footer {
   flex-flow: column wrap;
   align-items: center;
   border-top: solid 3px;
-  padding: 3em 0 0.05em;
+  padding: 2em 0 0.05em;
   font-family: "Trebuchet MS", sans-serif;
 
   color: rgba(255, 255, 255, 0.4);
@@ -193,11 +193,19 @@ footer {
 }
 
 footer .icons {
+  display: flex;
   font-size: 2.5em;
+  gap: 1em;
 }
 
-footer .icons a {
-  padding: 0 0.3em;
+footer a {
+  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 500ms;
+}
+
+footer a:hover {
+  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 500ms;
 }
 
 footer .icons a:hover {
@@ -233,7 +241,7 @@ footer .fa-envelope {
 footer .name {
   font-family: "MrDeHaviland";
   font-size: 2.3em;
-  margin: 0.5em 0 1em;
+  margin: 0.5em 0;
 }
 
 footer .rights {
@@ -310,11 +318,13 @@ article.it a {
   padding: 0.3em;
   margin-right: 1rem;
   border-radius: 0.5rem;
+  border: 1px solid transparent;
 }
 
 article.it a:hover {
-  color: yellow;
-  background-color: rgba(0, 0, 0, 1);
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* MUSIC -------------------------------------------*/
@@ -420,7 +430,7 @@ article.resume .skills ul {
 }
 
 article.resume .skills h3 {
-  margin: 0;
+  margin: 0.5em 0;
 }
 
 @media screen and (min-width: 768px) {
