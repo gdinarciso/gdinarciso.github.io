@@ -446,12 +446,6 @@ article.resume .skills h3 {
   margin: 0.5em 0;
 }
 
-@media (orientation: landscape) {
-  header .greeting {
-    margin: 0 0 2rem;
-
-}
-
 @media screen and (min-width: 768px) {
   body {
     grid-template-columns: auto 75ch auto;
