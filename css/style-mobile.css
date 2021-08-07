@@ -93,12 +93,16 @@ header {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
 }
 
+header .icon {
+  align-self: flex-end;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
 header .moonsunicon {
-  position: absolute;
-  top: 15px;
-  right: 25px;
   cursor: pointer;
   font-size: 1.2em;
+  z-index: 2;
 }
 
 header .moonsunicon {
@@ -121,7 +125,7 @@ header .fa-sun {
 
 header .greeting {
   font-size: 2em;
-  margin: 3rem 0 2rem;
+  margin: 1.2rem 0 2rem;
   align-self: center;
   line-height: 0;
   font-weight: normal;
@@ -174,7 +178,7 @@ header nav a:hover::after {
 }
 
 article {
-  padding: 7.8em 1em 1em;
+  padding: 8.8em 1em 1em;
 }
 
 footer {
@@ -255,9 +259,6 @@ footer .rights {
 }
 
 /* HOME -------------------------------------------*/
-article.home {
-}
-
 article.home p {
   margin-bottom: 1.5rem;
 }
@@ -356,6 +357,7 @@ article.resume .skills {
 
 article.resume .print-btn {
   float: right;
+  margin-top: 0.3rem;
   font-size: 1.8rem;
 }
 
@@ -369,21 +371,32 @@ article.resume .name {
 
 article.resume .details {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  font-size: 1em;
+  list-style: none;
+  padding: 0;
 }
 
 article.resume .academic {
   display: flex;
-  flex-flow: wrap;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
-article.resume .aussie-flag {
+article.resume .australia {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+article.resume .australia .title {
+  text-align: center;
+}
+
+article.resume .australia .map {
+  width: auto;
+  height: 3em;
 }
 
 article.resume .cover-letter {
@@ -446,12 +459,17 @@ article.resume .skills h3 {
 
   header .greeting {
     align-self: inherit;
-    margin: 3.5rem 0 2rem 2rem;
+    margin-left: 2.3rem;
   }
 
   /* RESUME -------------------------------------------*/
   article.resume .details {
-    flex-direction: inherit;
+    flex-direction: row;
+    font-size: 0.95em;
+  }
+
+  article.resume .australia .map {
+    justify-content: space-evenly;
   }
 
   article.resume .job {
