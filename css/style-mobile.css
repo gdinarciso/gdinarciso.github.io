@@ -189,7 +189,6 @@ footer {
   padding: 2em 0 0.05em;
   font-family: "Trebuchet MS", sans-serif;
 
-  color: rgba(255, 255, 255, 0.4);
   background-color: #000;
   border-color: rgba(0, 47, 255, 0.5);
   /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
@@ -225,14 +224,32 @@ footer .fa-linkedin-in {
 footer .fa-instagram {
   color: transparent;
   background-clip: text;
-  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
     radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
     radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
     radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
     radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
-    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
   -webkit-background-clip: text;
 }
 footer .fa-facebook {
@@ -246,6 +263,8 @@ footer .name {
   font-family: "MrDeHaviland";
   font-size: 2.3em;
   margin: 0.5em 0;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 footer .rights {
@@ -255,6 +274,7 @@ footer .rights {
   padding: 0.5em;
   border-bottom: groove 8px;
 
+  color: rgba(255, 255, 255, 0.4);
   border-color: rgba(85, 97, 151, 0.5);
 }
 
@@ -432,14 +452,27 @@ article.resume .company-name {
   margin-bottom: 1em;
 }
 
+article.resume .skills {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "top top"
+    "left right";
+}
+
+article.resume .skills .title {
+  grid-area: top;
+}
+article.resume .skills .personal {
+  grid-area: left;
+}
+article.resume .skills .tech {
+  grid-area: right;
+}
+
 article.resume .skills h2 {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 0.4em 0.3em;
-}
-
-article.resume .skills ul {
-  display: grid;
-  grid-template-columns: auto auto;
 }
 
 article.resume .skills h3 {
