@@ -454,10 +454,11 @@ article.resume .company-name {
 
 article.resume .skills {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   grid-template-areas:
     "top top"
     "left right";
+  gap: 0.5rem;
 }
 
 article.resume .skills .title {
