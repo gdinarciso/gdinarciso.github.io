@@ -1,5 +1,9 @@
 :root {
-  --verdeagua: rgb(0, 255, 242);
+  --verdeagua: rgba(0, 255, 242, 1);
+
+  --hover: rgba(0, 255, 242, 1);
+  --hover-bg: rgba(0, 255, 242, 0.1);
+  --header-bg: rgba(19, 19, 59, 1);
 }
 
 @font-face {
@@ -25,7 +29,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
 
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -62,11 +66,15 @@ a {
   color: inherit;
 }
 
-a:hover {
+a:hover,
+button:hover {
   transition: color ease-in-out 400ms;
   -webkit-transition: color ease-in-out 400ms;
+}
 
-  /* color: blue; */
+button {
+  cursor: pointer;
+  color: inherit;
 }
 
 .fl-c:first-letter {
@@ -78,7 +86,7 @@ a:hover {
   padding: 0.26em 0.2em;
   float: left;
 
-  border-color: #999;
+  border-color: rgba(0, 0, 0, 1);
 }
 
 header {
@@ -89,7 +97,7 @@ header {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); */
 
   color: rgba(255, 255, 255, 1);
-  background-color: #13133b;
+  background-color: var(--header-bg);
 }
 
 header .icon {
@@ -150,11 +158,15 @@ header nav a {
   /* -webkit-transition: background-color ease-in-out 1000ms; */
 }
 
+header nav a:hover {
+  color: var(--hover);
+}
+
 header nav .active {
   /* transition: background-color ease-in-out 1000ms; */
   /* -webkit-transition: background-color ease-in-out 1000ms; */
-  color: #000;
-  background-color: rgb(189, 213, 221);
+  color: var(--hover);
+  background-color: var(--hover-bg);
 }
 
 /* header nav a:active {
@@ -177,7 +189,7 @@ header nav a:hover::after {
   transition: width ease-in-out 250ms;
   -moz-transition: width ease-in-out 250ms;
 
-  border-bottom-color: #fff;
+  border-bottom-color: var(--hover);
 }
 
 article {
@@ -194,7 +206,7 @@ footer {
   font-family: "Trebuchet MS", sans-serif;
 
   background-color: #000;
-  border-color: rgba(0, 47, 255, 0.5);
+  border-color: var(--header-bg);
   /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
   /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
 }
@@ -206,13 +218,13 @@ footer .icons {
 }
 
 footer a {
-  transition: all ease-in-out 500ms;
-  -webkit-transition: all ease-in-out 500ms;
+  transition: filter ease-in-out 500ms;
+  -webkit-transition: filter ease-in-out 500ms;
 }
 
 footer a:hover {
-  transition: all ease-in-out 500ms;
-  -webkit-transition: all ease-in-out 500ms;
+  transition: filter ease-in-out 500ms;
+  -webkit-transition: filter ease-in-out 500ms;
 }
 
 footer .icons a:hover {
@@ -250,7 +262,7 @@ footer .name {
   font-size: 1.5em;
   margin: 0.5em 0;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 footer .rights {
@@ -276,9 +288,9 @@ article.home .narciso {
 
 article.home .photo {
   width: 10em;
-  border: 8px solid rgba(0, 0, 0, 0.2);
+  border: 6px solid var(--header-bg);
   border-radius: 100%;
-  box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.5);
   filter: brightness(110%) contrast(110%);
 }
 
@@ -287,6 +299,8 @@ article.home .greeting {
   line-height: 1;
   margin-bottom: 0.8rem;
   font-family: "MrDeHaviland", cursive;
+
+  color: var(--header-bg);
 }
 
 /* IT -------------------------------------------*/
@@ -317,34 +331,26 @@ article section h3 {
   margin: 0.8rem 0 0 0.8rem;
 }
 
-/* article.it a {
-  padding: 0.3em;
+article.it a {
+  padding: 0.15em 0.3em 0.3em;
   margin-right: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   border: 1px solid transparent;
 }
 
-article.it a:hover {
-  color: inherit;
-  border: 1px solid blue;
-  background-color: rgba(0, 0, 0, 0.1);
-} */
+article.it a:hover,
+article.it .accordion:hover {
+  color: var(--hover);
+  border: 1px solid yellowgreen;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
 article.it .accordion {
-  padding: 0.05em 0.1em;
-  border-radius: 0.5rem;
+  padding: 0.15em 0.3em;
+  border-radius: 10px;
   border: 1px solid transparent;
-  /* border: 1px solid black; */
   background-color: transparent;
-  cursor: pointer;
-  font-size: 1.13em;
-  /* outline: none; */
-}
-
-article.it .accordion:hover {
-  color: inherit;
-  border: 1px solid blue;
-  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 0.97em;
 }
 
 article.it .panel {
@@ -411,6 +417,10 @@ article.resume .details {
   list-style: none;
   padding: 0;
   line-height: 2em;
+}
+
+article.resume .details a:hover {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 article.resume .bigfive {
