@@ -1,3 +1,7 @@
+:root {
+  --verdeagua: rgb(0, 255, 242);
+}
+
 @font-face {
   font-family: "MrDeHaviland";
   src: url("/ttf/MrDeHaviland-Regular.ttf") format("truetype");
@@ -110,8 +114,8 @@ header .moonsunicon {
 }
 
 header .moonsunicon:hover {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
-  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1)) saturate(200%);
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1)) saturate(200%);
 }
 
 header .fa-sun {
@@ -189,7 +193,6 @@ footer {
   padding: 2em 0 0.05em;
   font-family: "Trebuchet MS", sans-serif;
 
-  color: rgba(255, 255, 255, 0.4);
   background-color: #000;
   border-color: rgba(0, 47, 255, 0.5);
   /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
@@ -246,6 +249,8 @@ footer .name {
   font-family: "MrDeHaviland";
   font-size: 2em;
   margin: 0.5em 0;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 footer .rights {
@@ -255,6 +260,7 @@ footer .rights {
   padding: 0.5em;
   border-bottom: groove 8px;
 
+  color: rgba(255, 255, 255, 0.4);
   border-color: rgba(85, 97, 151, 0.5);
 }
 
@@ -273,8 +279,7 @@ article.home .photo {
   border: 8px solid rgba(0, 0, 0, 0.2);
   border-radius: 100%;
   box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.7);
-  /* outline: 2px solid rgba(0, 0, 0, 0.3); */
-  /* outline-offset: 10px; */
+  filter: brightness(110%) contrast(110%);
 }
 
 article.home .greeting {
@@ -288,13 +293,13 @@ article.home .greeting {
 article.it {
   display: flex;
   justify-content: space-around;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: stretch;
   gap: 1rem;
 }
 
 article.it section {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   border: 1px solid;
   border-radius: 10px 10px 0 0;
 
@@ -312,7 +317,7 @@ article section h3 {
   margin: 0.8rem 0 0 0.8rem;
 }
 
-article.it a {
+/* article.it a {
   padding: 0.3em;
   margin-right: 1rem;
   border-radius: 0.5rem;
@@ -321,8 +326,34 @@ article.it a {
 
 article.it a:hover {
   color: inherit;
-  border: 1px solid rgba(0, 0, 0, 1);
+  border: 1px solid blue;
   background-color: rgba(0, 0, 0, 0.1);
+} */
+
+article.it .accordion {
+  padding: 0.05em 0.1em;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  /* border: 1px solid black; */
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.13em;
+  /* outline: none; */
+}
+
+article.it .accordion:hover {
+  color: inherit;
+  border: 1px solid blue;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+article.it .panel {
+  margin: 0 1rem 0rem 0;
+  padding: 1em;
+  display: none;
+  overflow: hidden;
+  background-color: rgba(0, 174, 255, 0.05);
+  border: 2px dotted rgba(0, 174, 255, 0.5);
 }
 
 /* MUSIC -------------------------------------------*/
@@ -362,6 +393,12 @@ article.resume :is(ul, ol) {
   padding-left: 1.2em;
 }
 
+article.resume .cover-letter {
+  /* column-count: 2; */
+  /* column-gap: 2.5rem; */
+  text-align: justify;
+}
+
 article.resume .name {
   margin-bottom: 0.8rem;
 }
@@ -373,6 +410,26 @@ article.resume .details {
   font-size: 1em;
   list-style: none;
   padding: 0;
+  line-height: 2em;
+}
+
+article.resume .bigfive {
+  /* background-color: rgba(0, 0, 0, 1); */
+}
+article.resume .bigfive .bi {
+  color: #259efa;
+}
+article.resume .bigfive .g {
+  color: #25e6a4;
+}
+article.resume .bigfive .F {
+  color: #fdba3a;
+}
+article.resume .bigfive .i {
+  color: #fe5f76;
+}
+article.resume .bigfive .ve {
+  color: #8a74d6;
 }
 
 article.resume .academic {
@@ -429,14 +486,28 @@ article.resume .company-name {
   margin-bottom: 1em;
 }
 
+article.resume .skills {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "top top"
+    "left right";
+  gap: 0.5rem;
+}
+
+article.resume .skills .title {
+  grid-area: top;
+}
+article.resume .skills .personal {
+  grid-area: left;
+}
+article.resume .skills .tech {
+  grid-area: right;
+}
+
 article.resume .skills h2 {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 0.4em 0.3em;
-}
-
-article.resume .skills ul {
-  display: grid;
-  grid-template-columns: auto auto;
 }
 
 article.resume .skills h3 {
@@ -494,10 +565,60 @@ article.resume .skills h3 {
   }
 }
 
+@media print {
+  @page {
+    size: A4;
+  }
+
+  body {
+    font: 13pt Times, serif;
+    line-height: 1.3;
+    background: #fff !important;
+    color: #000;
+  }
+
+  :is(header, footer, .fa-print, .australia) {
+    display: none;
+    /* visibility: hidden; */
+  }
+
+  article {
+    padding-top: 2ch;
+  }
+
+  img {
+    max-width: 500px;
+  }
+
+  .fl-c:first-letter {
+    font-size: 20pt;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  article.resume .title-career {
+    margin-bottom: 0;
+    padding: 0.3em;
+  }
+
+  article.resume .job {
+    break-before: avoid-page;
+  }
+}
+
 @media (hover: none), (hover: on-demand) {
   /* targeting touch devices */
 
   header nav a:hover::after {
     width: 0%;
+  }
+}
+
+@media (orientation: landscape) and (hover: none), (hover: on-demand) {
+  /* targeting touch devices */
+
+  header .greeting {
+    margin: 0rem 0rem 2rem 1.5rem;
   }
 }

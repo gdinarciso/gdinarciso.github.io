@@ -75,8 +75,8 @@ article.it a {
 }
 
 article.it a:hover {
-  color: inherit;
-  border: 1px solid yellowgreen;
+  border-color: yellowgreen;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* MUSIC -------------------------------------------*/
