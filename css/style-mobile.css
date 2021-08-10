@@ -66,7 +66,7 @@ a:hover {
   transition: color ease-in-out 400ms;
   -webkit-transition: color ease-in-out 400ms;
 
-  color: blue;
+  /* color: blue; */
 }
 
 .fl-c:first-letter {
@@ -82,20 +82,20 @@ a:hover {
 }
 
 header {
-  position: fixed;
-  display: flex;
-  flex-flow: column;
-  width: 100vw;
+  /* position: fixed;
   overflow: hidden;
+  width: 100vw;
   z-index: 1;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); */
 
-  color: #000;
-  background-color: #fff;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 1);
+  background-color: #13133b;
 }
 
 header .icon {
-  align-self: flex-end;
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  float: right;
   margin-right: 1.6rem;
   margin-top: 0.7rem;
 }
@@ -103,19 +103,15 @@ header .icon {
 header .moonsunicon {
   cursor: pointer;
   font-size: 1.1em;
-  /* z-index: 2; */
-}
-
-header .moonsunicon {
   transition: filter ease-in-out 500ms;
   -webkit-transition: filter ease-in-out 500ms;
 
-  color: #000;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 header .moonsunicon:hover {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1)) saturate(200%);
-  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1)) saturate(200%);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) saturate(200%);
+  -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) saturate(200%);
 }
 
 header .fa-sun {
@@ -124,24 +120,26 @@ header .fa-sun {
   color: yellow;
 }
 
+header .menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-left: 2.3rem;
+  padding: 0px;
+}
+
 header .greeting {
-  margin: 1.5rem 0 2rem;
-  align-self: center;
-  line-height: 0;
-  font-size: 1.8em;
+  margin: 1rem 0;
+  font-size: 1.6em;
   font-weight: normal;
   font-family: "Dancing Script", monospace;
-
-  color: rgb(0, 70, 128);
 }
 
 header nav {
   display: flex;
-  align-self: center;
+  align-items: flex-end;
+  /* align-self: center; */
   font-family: "Open Sans", sans-serif;
-
-  /* gap: 1em; */
-  /* (not working on Safari) */
 }
 
 header nav a {
@@ -155,6 +153,7 @@ header nav a {
 header nav .active {
   /* transition: background-color ease-in-out 1000ms; */
   /* -webkit-transition: background-color ease-in-out 1000ms; */
+  color: #000;
   background-color: rgb(189, 213, 221);
 }
 
@@ -178,11 +177,12 @@ header nav a:hover::after {
   transition: width ease-in-out 250ms;
   -moz-transition: width ease-in-out 250ms;
 
-  border-bottom-color: blue;
+  border-bottom-color: #fff;
 }
 
 article {
-  padding: 8.8em 1em 1em;
+  /* padding: 5.2em 1em 1em; */
+  padding: 1.2em;
 }
 
 footer {
@@ -247,7 +247,7 @@ footer .fa-envelope {
 
 footer .name {
   font-family: "MrDeHaviland";
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.5em 0;
 
   color: rgba(255, 255, 255, 0.6);
@@ -416,7 +416,7 @@ article.resume .details {
 article.resume .bigfive {
   /* background-color: rgba(0, 0, 0, 1); */
 }
-article.resume .bigfive .bi {
+article.resume .bigfive .Bi {
   color: #259efa;
 }
 article.resume .bigfive .g {
@@ -516,18 +516,13 @@ article.resume .skills h3 {
 
 @media screen and (min-width: 768px) {
   body {
-    grid-template-columns: auto 75ch auto;
+    grid-template-columns: auto 60ch auto;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "header header header"
       "left article right"
       "footer footer footer";
     font-size: 22px;
-  }
-
-  header .greeting {
-    align-self: inherit;
-    margin-left: 2.3rem;
   }
 
   /* HOME -------------------------------------------*/
@@ -556,12 +551,6 @@ article.resume .skills h3 {
 
   article.resume .company {
     width: 80%;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  article.home .photo {
-    width: ;
   }
 }
 
