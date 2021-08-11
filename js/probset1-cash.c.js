@@ -39,9 +39,7 @@ int main (void)
     printf ("%i\n", (c25 + c10 + c5 + c1));
 
 }
-</code></pre>
-        `;
+</code></pre>`;
   }
 }
-
-customElements.define("probset1-cash.c", Div);
+customElements.define("ps1-cash.c", Div);

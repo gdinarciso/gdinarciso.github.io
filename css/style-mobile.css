@@ -160,7 +160,7 @@ header nav {
 header nav a {
   margin: 0;
   padding: 0.4em 1em 0;
-  font-size: 0.8em;
+  font-size: 0.75em;
   /* transition: background-color ease-in-out 1000ms; */
   /* -webkit-transition: background-color ease-in-out 1000ms; */
 }
@@ -375,12 +375,16 @@ article.it .accordion {
 }
 
 article.it .panel {
-  margin: 0 1rem 0rem 0;
   padding: 1em;
   display: none;
   overflow: hidden;
   background-color: rgba(0, 174, 255, 0.05);
   border: 2px dotted rgba(43, 71, 83, 0.5);
+  line-height: 1.1;
+  font-size: 0.7em;
+  margin-right: 3rem;
+  /* font-weight: 600; */
+  font-weight: bold;
 }
 
 /* MUSIC -------------------------------------------*/
