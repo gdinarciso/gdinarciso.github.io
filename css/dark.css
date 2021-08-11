@@ -1,21 +1,35 @@
 :root {
-  --hover-dark: var(--hover);
-  --hover-dark-bg: var(--hover-bg);
+  --a-hover-dark: var(--greenblue);
+  --a-hover-bg-dark: var(--greenblue-bg);
+
+  --bt-hover-dark: var(--bt-hover);
+  --bt-hover-bg-dark: var(--bt-hover-bg);
+
+  --header-hover-dark: var(--header-hover);
+  --header-hover-bg-dark: var(--header-hover-bg);
+  --header-bg-dark: rgba(255, 255, 255, 0.1);
 }
 
 body {
-  color: #ddd;
-  background-color: #000;
+  color: rgb(221, 221, 221);
+  background-color: rgb(0, 0, 0);
 }
 
-a:hover,
+a:hover {
+  color: var(--a-hover-dark);
+}
+
+button {
+  color: inherit;
+}
+
 button:hover {
-  color: var(--hover-dark);
+  /* color: var(--a-hover-dark); */
 }
 
 header {
   color: inherit;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--header-bg-dark);
   /* background-image: linear-gradient(#000, #121212); */
   /* box-shadow: 0 0 1em rgba(255, 255, 255, 0.5); */
 }
@@ -50,11 +64,11 @@ header nav a:hover::after {
 }
 
 article section {
-  color: #bbb;
+  color: rgb(187, 187, 187);
 }
 
 footer {
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   border-color: var(--hover-dark-bg);
 }
 
@@ -68,7 +82,7 @@ article.home .photo {
 }
 
 article.home .greeting {
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 /* IT -------------------------------------------*/
@@ -85,13 +99,21 @@ article.it a:hover {
 }
 
 article.it .accordion:hover {
-  border-color: yellowgreen;
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--bt-hover-dark);
+  background-color: var(--header-bg-dark);
 }
 
 /* MUSIC -------------------------------------------*/
 
 /* RESUME -------------------------------------------*/
+article.resume .print-btn {
+  color: rgb(0, 0, 0);
+}
+
+article.resume .print-btn:hover {
+  color: var(--a-hover);
+}
+
 article.resume .title-career {
   background-color: rgba(255, 255, 255, 0.12);
 }

@@ -1,9 +1,16 @@
 :root {
-  --verdeagua: rgba(0, 255, 242, 1);
+  --greenblue: rgba(0, 255, 242, 1);
+  --greenblue-bg: rgba(0, 255, 242, 0.1);
 
-  --hover: rgba(0, 255, 242, 1);
-  --hover-bg: rgba(0, 255, 242, 0.1);
-  --header-bg: rgba(19, 19, 59, 1);
+  --a-hover: rgba(0, 35, 135, 0.7);
+  --a-hover-bg: var(--greenblue-bg);
+
+  --bt-hover: var(--greenblue);
+  --bt-hover-bg: var(--greenblue-bg);
+
+  --header-hover: var(--greenblue);
+  --header-hover-bg: var(--greenblue-bg);
+  --header-bg: rgba(20, 20, 60, 1);
 }
 
 @font-face {
@@ -61,20 +68,20 @@ body h2 {
   font-size: 1.5em;
 }
 
-a {
+a,
+button {
   text-decoration: none;
+  transition: color ease-in-out 300ms;
+  -webkit-transition: color ease-in-out 300ms;
+
   color: inherit;
 }
 
 a:hover,
 button:hover {
-  transition: color ease-in-out 400ms;
-  -webkit-transition: color ease-in-out 400ms;
-}
-
-button {
-  cursor: pointer;
-  color: inherit;
+  transition: color ease-in-out 150ms;
+  -webkit-transition: color ease-in-out 150ms;
+  color: var(--a-hover);
 }
 
 .fl-c:first-letter {
@@ -86,7 +93,7 @@ button {
   padding: 0.26em 0.2em;
   float: left;
 
-  border-color: rgba(0, 0, 0, 1);
+  border-color: inherit;
 }
 
 header {
@@ -153,25 +160,21 @@ header nav {
 header nav a {
   margin: 0;
   padding: 0.4em 1em 0;
-  font-size: 0.85em;
+  font-size: 0.8em;
   /* transition: background-color ease-in-out 1000ms; */
   /* -webkit-transition: background-color ease-in-out 1000ms; */
 }
 
 header nav a:hover {
-  color: var(--hover);
+  color: var(--header-hover);
 }
 
 header nav .active {
   /* transition: background-color ease-in-out 1000ms; */
   /* -webkit-transition: background-color ease-in-out 1000ms; */
-  color: var(--hover);
-  background-color: var(--hover-bg);
+  color: var(--header-hover);
+  background-color: var(--header-hover-bg);
 }
-
-/* header nav a:active {
-  color: #000;
-} */
 
 header nav a::after {
   width: 0%;
@@ -180,16 +183,18 @@ header nav a::after {
   margin: 0 auto;
   padding: 0.1em 0;
   border-bottom: 3px solid;
+  transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
 
   border-bottom-color: transparent;
 }
 
 header nav a:hover::after {
   width: 100%;
-  transition: width ease-in-out 250ms;
-  -moz-transition: width ease-in-out 250ms;
+  transition: width ease-in-out 150ms;
+  -moz-transition: width ease-in-out 150ms;
 
-  border-bottom-color: var(--hover);
+  border-bottom-color: var(--header-hover);
 }
 
 article {
@@ -205,7 +210,7 @@ footer {
   padding: 2em 0 0.05em;
   font-family: "Trebuchet MS", sans-serif;
 
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 1);
   border-color: var(--header-bg);
   /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
   /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
@@ -232,26 +237,44 @@ footer .icons a:hover {
 }
 
 footer .fa-github {
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
 }
 footer .fa-linkedin-in {
-  color: #0077b5;
+  color: rgb(0, 116, 179);
 }
 footer .fa-instagram {
   color: transparent;
   background-clip: text;
-  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
-    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
-    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      rgb(254, 197, 100),
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, rgb(254, 197, 100), transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, rgb(82, 88, 207), transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      rgb(82, 88, 207),
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, rgb(137, 61, 194), transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      rgb(137, 61, 194),
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, rgb(217, 49, 122), transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      rgb(227, 63, 95) 50%,
+      rgb(247, 118, 56) 70%,
+      #fec66d 100%
+    );
   -webkit-background-clip: text;
 }
 footer .fa-facebook {
-  color: #3a5795;
+  color: rgb(58, 87, 149);
 }
 footer .fa-envelope {
   color: rgb(0, 162, 190);
@@ -299,8 +322,6 @@ article.home .greeting {
   line-height: 1;
   margin-bottom: 0.8rem;
   font-family: "MrDeHaviland", cursive;
-
-  color: var(--header-bg);
 }
 
 /* IT -------------------------------------------*/
@@ -340,9 +361,9 @@ article.it a {
 
 article.it a:hover,
 article.it .accordion:hover {
-  color: var(--hover);
-  border: 1px solid yellowgreen;
-  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--greenblue);
+  border: 1px solid var(--greenblue);
+  background-color: var(--header-bg);
 }
 
 article.it .accordion {
@@ -359,7 +380,7 @@ article.it .panel {
   display: none;
   overflow: hidden;
   background-color: rgba(0, 174, 255, 0.05);
-  border: 2px dotted rgba(0, 174, 255, 0.5);
+  border: 2px dotted rgba(43, 71, 83, 0.5);
 }
 
 /* MUSIC -------------------------------------------*/
@@ -420,11 +441,15 @@ article.resume .details {
 }
 
 article.resume .details a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  /* color: rgba(0, 0, 0, 0.6); */
 }
 
 article.resume .bigfive {
+  transition: filter ease-in-out 400ms;
   /* background-color: rgba(0, 0, 0, 1); */
+}
+article.resume .bigfive:hover {
+  filter: saturate(200%) drop-shadow(0 0 1px rgba(0, 0, 0, 0.7));
 }
 article.resume .bigfive .Bi {
   color: #259efa;
@@ -616,8 +641,4 @@ article.resume .skills h3 {
 
 @media (orientation: landscape) and (hover: none), (hover: on-demand) {
   /* targeting touch devices */
-
-  header .greeting {
-    margin: 0rem 0rem 2rem 1.5rem;
-  }
 }
