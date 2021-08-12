@@ -71,8 +71,6 @@ body h2 {
 a,
 button {
   text-decoration: none;
-  transition: color ease-in-out 300ms;
-  -webkit-transition: color ease-in-out 300ms;
 
   color: inherit;
 }
@@ -344,12 +342,23 @@ article.it section {
 article.it section h2 {
   padding: 0.4em;
   border-radius: inherit;
+  color: var(--header-bg);
 
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-article section h3 {
+article.it section h3 {
   margin: 0.8rem 0 0 0.8rem;
+}
+
+article.it section p {
+  margin: 0.8rem 0 0 0.8rem;
+  font-weight: bold;
+}
+
+article.it section ol,
+article.it section ul {
+  margin: 0 0 1.5em 0;
 }
 
 article.it a {
@@ -383,7 +392,6 @@ article.it .panel {
   line-height: 1.1;
   font-size: 0.7em;
   margin-right: 3rem;
-  /* font-weight: 600; */
   font-weight: bold;
 }
 
