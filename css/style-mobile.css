@@ -18,6 +18,11 @@
   src: url("/ttf/MrDeHaviland-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Merriweather", serif;
+  src: url("https://fonts.googleapis.com/css?family=Merriweather");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -335,6 +340,7 @@ article.it section {
   /* flex-grow: 1; */
   border: 1px solid;
   border-radius: 10px 10px 0 0;
+  /* font-family: "Open Sans", sans-serif; */
 
   border-color: rgba(0, 0, 0, 0.15);
 }
@@ -342,13 +348,20 @@ article.it section {
 article.it section h2 {
   padding: 0.4em;
   border-radius: inherit;
-  color: var(--header-bg);
+  font-family: "Merriweather", serif;
 
   background-color: rgba(0, 0, 0, 0.05);
 }
 
 article.it section h3 {
   margin: 0.8rem 0 0 0.8rem;
+}
+
+article.it section :is(h2, h3) a:hover {
+  color: var(--header-bg);
+  text-decoration: none;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 article.it section p {
@@ -361,15 +374,15 @@ article.it section ul {
   margin: 0 0 1.5em 0;
 }
 
-article.it a {
+article.it section a {
   padding: 0.15em 0.3em 0.3em;
   margin-right: 1rem;
   border-radius: 10px;
   border: 1px solid transparent;
 }
 
-article.it a:hover,
-article.it .accordion:hover {
+article.it section a:hover,
+article.it section .accordion:hover {
   color: var(--greenblue);
   border: 1px solid var(--greenblue);
   background-color: var(--header-bg);
