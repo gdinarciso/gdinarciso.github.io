@@ -41,7 +41,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
 
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 header {
@@ -248,32 +248,7 @@ footer .fa-linkedin-in {
 footer .fa-instagram {
   color: transparent;
   background-clip: text;
-  background: radial-gradient(
-      circle farthest-corner at 35% 90%,
-      rgb(254, 197, 100),
-      transparent 50%
-    ),
-    radial-gradient(circle farthest-corner at 0 140%, rgb(254, 197, 100), transparent 50%),
-    radial-gradient(ellipse farthest-corner at 0 -25%, rgb(82, 88, 207), transparent 50%),
-    radial-gradient(
-      ellipse farthest-corner at 20% -50%,
-      rgb(82, 88, 207),
-      transparent 50%
-    ),
-    radial-gradient(ellipse farthest-corner at 100% 0, rgb(137, 61, 194), transparent 50%),
-    radial-gradient(
-      ellipse farthest-corner at 60% -20%,
-      rgb(137, 61, 194),
-      transparent 50%
-    ),
-    radial-gradient(ellipse farthest-corner at 100% 100%, rgb(217, 49, 122), transparent),
-    linear-gradient(
-      #6559ca,
-      #bc318f 30%,
-      rgb(227, 63, 95) 50%,
-      rgb(247, 118, 56) 70%,
-      #fec66d 100%
-    );
+  background: radial-gradient(circle farthest-corner at 35% 90%, rgb(254, 197, 100), transparent 50%), radial-gradient(circle farthest-corner at 0 140%, rgb(254, 197, 100), transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, rgb(82, 88, 207), transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, rgb(82, 88, 207), transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, rgb(137, 61, 194), transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, rgb(137, 61, 194), transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, rgb(217, 49, 122), transparent), linear-gradient(#6559ca, #bc318f 30%, rgb(227, 63, 95) 50%, rgb(247, 118, 56) 70%, #fec66d 100%);
   -webkit-background-clip: text;
 }
 footer .fa-facebook {
@@ -353,7 +328,7 @@ article.it section h2 {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-article.it section h3 {
+article.it section :is(h3, p) {
   margin: 0.8rem 0 0 0.8rem;
 }
 
@@ -365,24 +340,20 @@ article.it section :is(h2, h3) a:hover {
 }
 
 article.it section p {
-  margin: 0.8rem 0 0 0.8rem;
   font-weight: bold;
 }
 
-article.it section ol,
-article.it section ul {
-  margin: 0 0 1.5em 0;
+article.it section :is(ol, ul) {
+  margin: 0.2em 0 1.5em 0;
 }
 
-article.it section a {
+article.it section li a {
   padding: 0.15em 0.3em 0.3em;
-  margin-right: 1rem;
   border-radius: 10px;
   border: 1px solid transparent;
 }
 
-article.it section a:hover,
-article.it section .accordion:hover {
+article.it section :is(li a:hover, .accordion:hover) {
   color: var(--greenblue);
   border: 1px solid var(--greenblue);
   background-color: var(--header-bg);
