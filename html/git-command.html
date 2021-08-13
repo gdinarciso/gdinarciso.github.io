@@ -1,55 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>GitHub command-line</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Narciso Sbrissa Grimaldi - CS50 Git Commands</title>
+    <link rel="stylesheet" href="/css/template.css" />
+    <style>
+      article {
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        width: 70ch;
+        padding: 1em;
+      }
+      article .top {
+        justify-content: stretch;
+        align-self: stretch;
+        flex-grow: 1;
+      }
+    </style>
   </head>
   <body>
-    <h1>CS50 - Web Programming</h1>
-    <h3>On terminal, type:</h3>
-    <br><b>git clone "url of the repository"</b>
-    <br><i>download the repository from GitHub to computer</i>
-    <br>
-    <br><b>touch "filename"</b>
-    <br><i>creates a new file</i>
-    <br>
-    <br><b>git add "filename"</b>
-    <br><i>files to be commit next time in order the keep track them on GitHub</i>
-    <br>
-    <br><b>git commit -m "message"</b>
-    <br><i>get a "snapshot" of current repository and backup it
-    <br>the flag "message" means a brief history of what it was just made</i>
-    <br>
-    <br><b>git commit -am "filename"</b>
-    <br><i>execute add and commit at the same time</i>
-    <br>
-    <br><b>git status</b>
-    <br>
-    <br><b>git push</b>
-    <br><i>upload the files and changes to GitHub
-    <br><b>git push --set-upstream -origin "branchname"</b></i>
-    <br>
-    <br><b>git pull</b>
-    <br><i>download the files and changes on them
-    <br>if someone else make changes the pull command will show each one
-    <br>up to the user decide each maintain</i>
-    <br>
-    <br><b>git log</b>
-    <br>
-    <br><b>git reset
-    <br>--hard "commit"</b><i> bring the file to the "commit" stage</i>
-    <br><b>--hard origin/master</b><i> bring the file back where got it from</i>
-    <br>
-    <br><b>git branch</b>
-    <br><i>list the branches inside the current repository</i>
-    <br><b>git branch "name"</b>
-    <br><i>start a new branch in order to bring the project to a new way</i>
-    <br>
-    <br><b>git checkout "branchname"</b>
-    <br><i>move from current branch to "branchname"</i>
-    <br>
-    <br><b>git merge "branchname"</b>
-    <br><i>merge the branch "branchname" to the current branch</i>
-    <br>
+    <h1 id="title"></h1>
+
+    <article>
+      <section class="top">
+        <h2>On terminal, type:</h2>
+      </section>
+      <section>
+        <p class="command"><strong>git clone "url of the repository"</strong></p>
+        <p class="description">download the repository from GitHub to computer</p>
+
+        <p class="command"><strong>touch "filename"</strong></p>
+        <p class="description">creates a new file</p>
+
+        <p class="command"><strong>git add "filename"</strong></p>
+        <p class="description">files to be commit next time in order the keep track them on GitHub</p>
+
+        <p class="command"><strong>git commit -m "message"</strong></p>
+        <p class="description">get a "snapshot" of current repository and backup it the flag "message" means a brief history of what it was just made</p>
+
+        <p class="command"><strong>git commit -am "filename"</strong></p>
+        <p class="description">execute add and commit at the same time</p>
+
+        <p class="command"><strong>git status</strong></p>
+        <p class="description">Show the working tree status</p>
+
+        <p class="command"><strong>git push</strong></p>
+        <p class="description">upload the files and changes to github</p>
+        <p><strong>git push --set-upstream -origin "branchname"</strong></p>
+
+        <p class="command"><strong>git pull</strong></p>
+        <p class="description">download the files and changes on them if someone else make changes the pull command will show each one up to the user decide each maintain</p>
+
+        <p class="command"><strong>git log</strong></p>
+        <p class="description">Shows the commit logs</p>
+
+        <p class="command">git reset</p>
+        <p class="description">Reset current HEAD to the specified state</p>
+        <p>--hard "commit"</p>
+        <p>bring the file to the "commit" stage</p>
+        <p><strong>--hard origin/master</strong> bring the file back where got it from</p>
+
+        <p class="command"><strong>git branch</strong></p>
+        <p class="description">list the branches inside the current repository</p>
+
+        <p class="command"><strong>git branch "name"</strong></p>
+        <p class="description">start a new branch in order to bring the project to a new way</p>
+
+        <p class="command"><strong>git checkout "branchname"</strong></p>
+        <p class="description">move from current branch to "branchname"</p>
+
+        <p class="command"><strong>git merge "branchname"</strong></p>
+        <p class="description">merge the branch "branchname" to the current branch</p>
+      </section>
+      </article>
+    </article>
+
+    <script src="/js/title.js"></script>
   </body>
 </html>
