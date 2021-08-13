@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --body: white;
+  --body-bg: black;
+  --header-bg: rgba(20, 20, 60, 1);
+}
+
+#title {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  color: var(--body);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: var(--header-bg);
+}
