@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Narciso Sbrissa Grimaldi - Doggos</title>
+
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <link rel="stylesheet" href="/css/template.css" />
+
+    <style>
+      article {
+      }
+      .doggos {
+        /* display: flex; */
+        /* flex-flow: column wrap; */
+      }
+      .doggos-btn {
+        margin: 1em 0;
+        padding: 1em;
+        font-size: 1.5em;
+        font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        float: right;
+      }
+      img {
+        width: 100%;
+        margin: 1em 0;
+        box-shadow: 0 0 25px 4px rgba(0, 0, 0, 1);
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title"></h1>
+    </header>
+
+    <article class="doggos"></article>
+
+    <footer>
+      <button class="doggos-btn">Give me Doggos!</button>
+    </footer>
+
+    <script src="/js/title.js"></script>
+    <script>
+      const DOG_URL = "https://dog.ceo/api/breeds/image/random";
+      //   API that we're request from
+      const doggos = document.querySelector(".doggos");
+
+      function addNewDoggo() {
+        const promise = fetch(DOG_URL);
+        promise
+          .then(function (response) {
+            const processingPromise = response.json();
+            return processingPromise;
+          })
+          .then(function (processedResponse) {
+            const img = document.createElement("img");
+            img.src = processedResponse.message;
+            img.alt = "Cute doggo";
+            doggos.appendChild(img);
+          });
+      }
+      document.querySelector(".doggos-btn").addEventListener("click", addNewDoggo);
+    </script>
+  </body>
+</html>
