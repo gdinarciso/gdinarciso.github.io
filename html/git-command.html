@@ -7,82 +7,83 @@
     <title>Narciso Sbrissa Grimaldi - CS50 Git Commands</title>
     <link rel="stylesheet" href="/css/template.css" />
     <style>
-      body {
-        display: flex;
-        flex-direction: column;
+      .command {
+        font-weight: bold;
+        margin-bottom: 0.3em;
       }
-
-      body article {
-        align-self: center;
+      .description {
+        color: var(--body-bg);
+        filter: opacity(60%);
+        font-style: italic;
+        margin: 0 0 2em;
       }
-      article {
-        display: flex;
-        /* justify-content: center; */
-        /* align-items: center; */
-        width: 70ch;
-        padding: 1em;
+      .margin-bottom {
+        margin-bottom: 2em;
       }
-      article .top {
-        justify-content: stretch;
-        align-self: stretch;
+      .no-margin-top {
+        margin-top: 0.2em;
+      }
+      .no-margin-bottom {
+        margin-bottom: 0;
       }
     </style>
   </head>
   <body>
-    <h1 id="title"></h1>
+    <header>
+      <h1 id="title"></h1>
+    </header>
 
     <article>
-      <section class="top">
-        <h2>On terminal, type:</h2>
-      </section>
-      <section>
-        <p class="command"><strong>git clone "url of the repository"</strong></p>
-        <p class="description">download the repository from GitHub to computer</p>
+      <h2>On terminal, type:</h2>
+      <p class="command"><strong>git clone "url of the repository"</strong></p>
+      <p class="description">download the repository from GitHub to computer</p>
 
-        <p class="command"><strong>touch "filename"</strong></p>
-        <p class="description">creates a new file</p>
+      <p class="command"><strong>touch "filename"</strong></p>
+      <p class="description">creates a new file</p>
 
-        <p class="command"><strong>git add "filename"</strong></p>
-        <p class="description">files to be commit next time in order the keep track them on GitHub</p>
+      <p class="command"><strong>git add "filename"</strong></p>
+      <p class="description">files to be commit next time in order the keep track them on GitHub</p>
 
-        <p class="command"><strong>git commit -m "message"</strong></p>
-        <p class="description">get a "snapshot" of current repository and backup it the flag "message" means a brief history of what it was just made</p>
+      <p class="command"><strong>git commit -m "message"</strong></p>
+      <p class="description">get a "snapshot" of current repository and backup it the flag "message" means a brief history of what it was just made</p>
 
-        <p class="command"><strong>git commit -am "filename"</strong></p>
-        <p class="description">execute add and commit at the same time</p>
+      <p class="command"><strong>git commit -am "filename"</strong></p>
+      <p class="description">execute add and commit at the same time</p>
 
-        <p class="command"><strong>git status</strong></p>
-        <p class="description">Show the working tree status</p>
+      <p class="command"><strong>git status</strong></p>
+      <p class="description">Show the working tree status</p>
 
-        <p class="command"><strong>git push</strong></p>
-        <p class="description">upload the files and changes to github</p>
-        <p><strong>git push --set-upstream -origin "branchname"</strong></p>
+      <p class="command"><strong>git push</strong></p>
+      <p class="description no-margin-bottom">upload the files and changes to github</p>
+      <p class="command no-margin-top margin-bottom"><strong>git push --set-upstream -origin "branchname"</strong></p>
 
-        <p class="command"><strong>git pull</strong></p>
-        <p class="description">download the files and changes on them if someone else make changes the pull command will show each one up to the user decide each maintain</p>
+      <p class="command"><strong>git pull</strong></p>
+      <p class="description">download the files and changes on them if someone else make changes the pull command will show each one up to the user decide each maintain</p>
 
-        <p class="command"><strong>git log</strong></p>
-        <p class="description">Shows the commit logs</p>
+      <p class="command"><strong>git log</strong></p>
+      <p class="description">Shows the commit logs</p>
 
-        <p class="command">git reset</p>
-        <p class="description">Reset current HEAD to the specified state</p>
-        <p>--hard "commit"</p>
-        <p>bring the file to the "commit" stage</p>
-        <p><strong>--hard origin/master</strong> bring the file back where got it from</p>
+      <p class="command">git reset</p>
+      <p class="description no-margin-bottom">Reset current HEAD to the specified state</p>
+      <p class="command no-margin-top">--hard "commit"</p>
+      <p class="description no-margin-bottom">bring the file to the "commit" stage</p>
+      <p class="command no-margin-top"><strong>--hard origin/master</strong></p>
+      <p class="description">bring the file back where got it from</p>
 
-        <p class="command"><strong>git branch</strong></p>
-        <p class="description">list the branches inside the current repository</p>
+      <p class="command"><strong>git branch</strong></p>
+      <p class="description">list the branches inside the current repository</p>
 
-        <p class="command"><strong>git branch "name"</strong></p>
-        <p class="description">start a new branch in order to bring the project to a new way</p>
+      <p class="command"><strong>git branch "name"</strong></p>
+      <p class="description">start a new branch in order to bring the project to a new way</p>
 
-        <p class="command"><strong>git checkout "branchname"</strong></p>
-        <p class="description">move from current branch to "branchname"</p>
+      <p class="command"><strong>git checkout "branchname"</strong></p>
+      <p class="description">move from current branch to "branchname"</p>
 
-        <p class="command"><strong>git merge "branchname"</strong></p>
-        <p class="description">merge the branch "branchname" to the current branch</p>
-      </section>
+      <p class="command"><strong>git merge "branchname"</strong></p>
+      <p class="description">merge the branch "branchname" to the current branch</p>
     </article>
+
+    <footer></footer>
 
     <script src="/js/title.js"></script>
   </body>

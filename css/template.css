@@ -4,15 +4,53 @@
 
 :root {
   --body: white;
-  --body-bg: black;
+  --body-bg: rgba(25, 0, 51, 1);
   --header-bg: rgba(20, 20, 60, 1);
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 70ch auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "left article right"
+    "footer footer footer";
+  min-height: 100vh;
+  margin: 0;
+
+  /* line-height: 1.5; */
+  font-family: Geneva, Tahoma, sans-serif;
+  background-color: var(--body-bg);
+}
+
+header {
+  grid-area: header;
 }
 
 #title {
   text-align: center;
-  font-size: 1.1em;
-  padding: 1em;
+  /* font-size: 1.1em; */
+  padding: 1.5em;
   color: var(--body);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Tahoma, sans-serif;
   background-color: var(--header-bg);
+  margin: 0;
+}
+
+article {
+  grid-area: article;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0 2em;
+  border: 0.5rem outset var(--header-bg);
+  box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 1);
+  border-radius: 12px;
+  margin: 2rem;
+  outline-offset: 0.5rem;
+}
+
+footer {
+  grid-area: footer;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 1);
 }
