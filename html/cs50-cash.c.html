@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Narciso Sbrissa Grimaldi - CS50 cash.c</title>
+
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <link rel="stylesheet" href="/css/template.css" />
+
+    <style>
+      /* STYLE HERE */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title"></h1>
+    </header>
+
+    <article>
+        <h2>cash.c</h2>
+        <code><pre>
+            
+#include <cs50.h>
+#include <stdio.h> /* printf */
+#include <math.h> /* round, remainder */
+
+int main (void)
+{
+    int change, c25, c10, c5, c1;
+    float dollars;
+    do
+    {
+        dollars = get_float ("change owned:");
+        change = round (dollars * 100);
+    }
+    while (dollars < 0);
+    for (c25 = 0; change >= 25; c25++)
+    {
+        change -= 25;
+    }
+    for (c10 = 0; change >= 10; c10++)
+    {
+        change -= 10;
+    }
+    for (c5 = 0; change >= 5; c5++)
+    {
+        change -= 5;
+    }
+    for (c1 = 0; change >= 1; c1++)
+    {
+        change -= 1;
+    }
+    printf ("%i\n", (c25 + c10 + c5 + c1));
+
+}
+</pre>
+</code>
+    </article>
+
+    <footer></footer>
+
+    <script src="/js/title.js"></script>
+  </body>
+</html>
