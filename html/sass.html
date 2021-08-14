@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Narciso Sbrissa Grimaldi - CS50 Web Programming: Sass</title>
+
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <link rel="stylesheet" href="/css/template.css" />
+
+    <style>
+      .command {
+        font-weight: bold;
+        margin-bottom: 0.3em;
+      }
+      .description {
+        color: var(--body-bg);
+        filter: opacity(60%);
+        font-style: italic;
+        margin: 0 0 2em;
+      }
+      .margin-bottom {
+        margin-bottom: 2em;
+      }
+      .no-margin-top {
+        margin-top: 0.2em;
+      }
+      .no-margin-bottom {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title"></h1>
+    </header>
+
+    <article>
+      <h2>On terminal, type:</h2>
+      <p class="command">sass "filename.scss" "desire filename.css"</p>
+      <p class="description">compile the .scss to .css</p>
+      <p class="command">sass --watch "filename.scss:filename.css"</p>
+      <p class="description">sass constantly monitoring those files in order to automatically update them</p>
+    </article>
+
+    <footer></footer>
+
+    <script src="/js/title.js"></script>
+  </body>
+</html>
