@@ -69,11 +69,11 @@ article section {
 
 footer {
   background-color: rgb(17, 17, 17);
-  border-color: var(--hover-dark-bg);
+  border-color: var(--header-bg-dark);
 }
 
 footer .rights {
-  border-color: var(--hover-dark-bg);
+  border-color: var(--hover-bg-dark);
 }
 
 /* HOME -------------------------------------------*/
@@ -101,6 +101,10 @@ article.it a:hover {
 article.it .accordion:hover {
   border-color: var(--bt-hover-dark);
   background-color: var(--header-bg-dark);
+}
+
+article.it section :is(h2, h3) a:hover {
+  color: var(--a-hover-dark);
 }
 
 /* MUSIC -------------------------------------------*/

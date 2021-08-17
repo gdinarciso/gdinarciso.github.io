@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS50 - JavaScript</title>
+    <title>Narciso Sbrissa Grimaldi - CS50 Hello</title>
 
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <link rel="stylesheet" href="/css/template.css" />
+
+    <style>
+      /* STYLE HERE */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title"></h1>
+    </header>
+
+    <article>
+      <h1></h1>
+
+      <form>
+        <input autofocus id="name" placeholder="Name" type="text" />
+        <input type="submit" />
+      </form>
+    </article>
+
+    <footer></footer>
     <script>
-        function hello() {
-            document.querySelector('h1').innerHTML = 'Hellyeah!';
-        }
+      function hello() {
+        document.querySelector("h1").innerHTML = "Hellyeah!";
+      }
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelector('form').onsubmit = function () {
-                const name = document.querySelector('#name').value;
-                alert(`Ciao, ${name}!`);
-            };
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("form").onsubmit = function () {
+          const name = document.querySelector("#name").value;
+          alert(`Ciao, ${name}!`);
+        };
+      });
     </script>
-
-</head>
-
-<body>
-    <h1>0</h1>
-    <button onclick="count()">Click Now!</button>
-
-    <form>
-        <input autofocus id="name" placeholder="Name" type="text">
-        <input type="submit">
-    </form>
-</body>
-
+    <script src="/js/title.js"></script>
+  </body>
 </html>
