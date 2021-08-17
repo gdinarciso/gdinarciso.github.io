@@ -1,0 +1,71 @@
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border-top: solid 3px;
+  padding: 2em 0 0.05em;
+  font-family: "Trebuchet MS", sans-serif;
+
+  background-color: rgba(0, 0, 0, 1);
+  border-color: var(--header-bg);
+  /* background-image: linear-gradient(45deg, #3d2812 0%,#462215 25%,#251844 50%,#1f2d53 75%,#143442 100%); */
+  /* background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#5d27dc 50%,#2350cc 75%,#1888bc 100%); */
+}
+
+footer .icons {
+  display: flex;
+  font-size: 2em;
+  gap: 1em;
+}
+
+footer a {
+  transition: filter ease-in-out 500ms;
+  -webkit-transition: filter ease-in-out 500ms;
+}
+
+footer a:hover {
+  transition: filter ease-in-out 500ms;
+  -webkit-transition: filter ease-in-out 500ms;
+}
+
+footer .icons a:hover {
+  filter: saturate(200%);
+}
+
+footer .fa-github {
+  color: rgba(255, 255, 255, 1);
+}
+footer .fa-linkedin-in {
+  color: rgb(0, 116, 179);
+}
+footer .fa-instagram {
+  color: transparent;
+  background-clip: text;
+  background: radial-gradient(circle farthest-corner at 35% 90%, rgb(254, 197, 100), transparent 50%), radial-gradient(circle farthest-corner at 0 140%, rgb(254, 197, 100), transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, rgb(82, 88, 207), transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, rgb(82, 88, 207), transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, rgb(137, 61, 194), transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, rgb(137, 61, 194), transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, rgb(217, 49, 122), transparent), linear-gradient(#6559ca, #bc318f 30%, rgb(227, 63, 95) 50%, rgb(247, 118, 56) 70%, #fec66d 100%);
+  -webkit-background-clip: text;
+}
+footer .fa-facebook {
+  color: rgb(58, 87, 149);
+}
+footer .fa-envelope {
+  color: rgb(0, 162, 190);
+}
+
+footer .name {
+  font-family: "MrDeHaviland";
+  font-size: 1.5em;
+  margin: 0.5em 0;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer .rights {
+  align-self: stretch;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 0.5em;
+  border-bottom: groove 8px;
+
+  color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(85, 97, 151, 0.5);
+}
