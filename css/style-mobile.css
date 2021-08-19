@@ -76,14 +76,14 @@ body h2 {
 a,
 button {
   text-decoration: none;
+  transition: color ease-in-out 300ms;
+  -webkit-transition: color ease-in-out 300ms;
 
   color: inherit;
 }
 
 a:hover,
 button:hover {
-  transition: color ease-in-out 150ms;
-  -webkit-transition: color ease-in-out 150ms;
   color: var(--a-hover);
 }
 
@@ -218,7 +218,7 @@ article.home .narciso {
 article.home .photo {
   width: 10em;
   border: 6px solid var(--header-bg);
-  border-radius: 100%;
+  border-radius: 50%;
   box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.5);
   filter: brightness(110%) contrast(110%);
 }
